@@ -1,0 +1,127 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP CP_ds
+D Polarized capacitor, small US symbol
+K cap capacitor
+F ~
+$ENDCMP
+#
+$CMP C_ds
+D Unpolarized capacitor, small symbol
+K capacitor cap
+F ~
+$ENDCMP
+#
+$CMP Conn_01x02_Female_ds
+D Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x02_Male_ds
+D Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP Conn_01x04_Shielded_ds
+D Generic shielded connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)
+K connector
+F ~
+$ENDCMP
+#
+$CMP DIN-4_ds
+D 4-pin DIN connector
+K circular DIN connector
+F http://www.mouser.com/ds/2/18/40_c091_abd_e-75918.pdf
+$ENDCMP
+#
+$CMP D_ds
+D Diode, filled shape
+K diode
+F ~
+$ENDCMP
+#
+$CMP ESP32-DEVKITC-32E
+D ESP32-DevKitC V4 is a small-sized ESP32-based development board produced by Espressif. - Transceiver; 802.11 b/g/n (Wi-Fi, WiFi, WLAN), Bluetooth® Smart Ready 4.x Dual Mode For Use With ESP32-WROOM-32E
+K ESP32 WIFI 802.11 Bluetooth
+F https://docs.espressif.com/projects/esp-idf/en/latest/esp32/hw-reference/esp32/get-started-devkitc.html
+$ENDCMP
+#
+$CMP HIP4082
+D Medium Frequency Full Bridge FET Driver, 80V, 1.25A Peak Current H-Bridge FET Driver
+K Full Bridge Gate Driver
+F C:\Users\Digital-Sqrt\Documents\Git_Hub\FirstStep\Data Sheets\hip4082-1528561.pdf
+$ENDCMP
+#
+$CMP Jumper_NC_Small_ds
+D Jumper, normally closed, small symbol
+K jumper link bridge NC
+F ~
+$ENDCMP
+#
+$CMP L_Small_ds
+D Inductor, small symbol
+K inductor choke coil reactor magnetic
+F ~
+$ENDCMP
+#
+$CMP R_Network07_ds
+D 7 resistor network, star topology, bussed resistors, small US symbol
+K R network star-topology
+F http://www.vishay.com/docs/31509/csc.pdf
+$ENDCMP
+#
+$CMP R_ds
+D Resistor, small US symbol
+K r resistor
+F ~
+$ENDCMP
+#
+$CMP SG5032CCN
+F https://abracon.com/Oscillators/ASDMB.pdf
+$ENDCMP
+#
+$CMP SIZ340
+D 30 V TrenchFET Gen IV MOSFET and PowerPAIR
+K transistor NMOS N-MOS N-MOSFET PowerPAIR
+F ~
+$ENDCMP
+#
+$CMP SIZF90
+D 30 V TrenchFET Gen IV MOSFET and PowerPAIR
+K transistor NMOS N-MOS N-MOSFET PowerPAIR
+F ~
+$ENDCMP
+#
+$CMP SW_DIP_x07_ds
+D 7x DIP Switch, Single Pole Single Throw (SPST) switch, small symbol
+K dip switch
+F ~
+$ENDCMP
+#
+$CMP TCMT1600
+D AC/DC Phototransistor Optocoupler, Vce 70V, CTR 80-300%, SOP4
+K NPN AC DC Phototransistor Optocoupler
+F http://www.vishay.com/docs/83512/tcmt1600.pdf
+$ENDCMP
+#
+$CMP TLP182
+D AC/DC Phototransistor Optocoupler, Vce 80V, CTR 50-600%, SOP4
+K NPN AC DC Phototransistor Optocoupler
+F http://www.semicon.toshiba.co.jp/docs/datasheet/en/Opto/TLP290_en_datasheet_120426.pdf
+$ENDCMP
+#
+$CMP TMC262-ds
+D Driver for two-phase stepper motors with external mosfet
+K trinamic tlc262 stepper
+F https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC262_Datasheet.pdf
+$ENDCMP
+#
+$CMP TMC5160-WA
+D Universal high voltage controller/driver for two-phase bipolar stepper motor.
+K Motion Controller,  Encoder Interface, StealthChop2, spreadCycle, dcStep, StallGuard2, CoolStep
+F https://www.trinamic.com/fileadmin/assets/Products/ICs_Documents/TMC5160A_Datasheet_Rev1.14.pdf
+$ENDCMP
+#
+#End Doc Library

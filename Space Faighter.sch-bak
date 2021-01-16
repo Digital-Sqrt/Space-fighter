@@ -1,0 +1,2669 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Wire Wire Line
+	2575 2225 2825 2225
+Wire Wire Line
+	2575 2125 2825 2125
+Wire Wire Line
+	3425 2225 3700 2225
+Wire Wire Line
+	3425 2125 3700 2125
+Wire Wire Line
+	4300 2225 4600 2225
+Wire Wire Line
+	4300 2125 4600 2125
+Wire Wire Line
+	5200 2225 5600 2225
+$Comp
+L power:+5V #PWR024
+U 1 1 5FFFD214
+P 4900 1925
+F 0 "#PWR024" H 4900 1775 50  0001 C CNN
+F 1 "+5V" H 4915 2098 50  0000 C CNN
+F 2 "" H 4900 1925 50  0001 C CNN
+F 3 "" H 4900 1925 50  0001 C CNN
+	1    4900 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR032
+U 1 1 5FFFD20A
+P 4900 2525
+F 0 "#PWR032" H 4900 2275 50  0001 C CNN
+F 1 "GND" H 4905 2352 50  0000 C CNN
+F 2 "" H 4900 2525 50  0001 C CNN
+F 3 "" H 4900 2525 50  0001 C CNN
+	1    4900 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR023
+U 1 1 5FFFBF37
+P 4000 1925
+F 0 "#PWR023" H 4000 1775 50  0001 C CNN
+F 1 "+5V" H 4015 2098 50  0000 C CNN
+F 2 "" H 4000 1925 50  0001 C CNN
+F 3 "" H 4000 1925 50  0001 C CNN
+	1    4000 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR031
+U 1 1 5FFFBF2D
+P 4000 2525
+F 0 "#PWR031" H 4000 2275 50  0001 C CNN
+F 1 "GND" H 4005 2352 50  0000 C CNN
+F 2 "" H 4000 2525 50  0001 C CNN
+F 3 "" H 4000 2525 50  0001 C CNN
+	1    4000 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR022
+U 1 1 5FFFB08E
+P 3125 1925
+F 0 "#PWR022" H 3125 1775 50  0001 C CNN
+F 1 "+5V" H 3140 2098 50  0000 C CNN
+F 2 "" H 3125 1925 50  0001 C CNN
+F 3 "" H 3125 1925 50  0001 C CNN
+	1    3125 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR030
+U 1 1 5FFFB084
+P 3125 2525
+F 0 "#PWR030" H 3125 2275 50  0001 C CNN
+F 1 "GND" H 3130 2352 50  0000 C CNN
+F 2 "" H 3125 2525 50  0001 C CNN
+F 3 "" H 3125 2525 50  0001 C CNN
+	1    3125 2525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1475 1700 1475 1600
+$Comp
+L power:+5V #PWR05
+U 1 1 5FFFA7A4
+P 1100 1425
+F 0 "#PWR05" H 1100 1275 50  0001 C CNN
+F 1 "+5V" H 1115 1598 50  0000 C CNN
+F 2 "" H 1100 1425 50  0001 C CNN
+F 3 "" H 1100 1425 50  0001 C CNN
+	1    1100 1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR03
+U 1 1 5FFF98C6
+P 1575 1600
+F 0 "#PWR03" H 1575 1350 50  0001 C CNN
+F 1 "GND" H 1580 1427 50  0000 C CNN
+F 2 "" H 1575 1600 50  0001 C CNN
+F 3 "" H 1575 1600 50  0001 C CNN
+	1    1575 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR013
+U 1 1 5FFEACF6
+P 2275 1450
+F 0 "#PWR013" H 2275 1200 50  0001 C CNN
+F 1 "GND" H 2280 1277 50  0000 C CNN
+F 2 "" H 2275 1450 50  0001 C CNN
+F 3 "" H 2275 1450 50  0001 C CNN
+	1    2275 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR04
+U 1 1 5FFEA918
+P 2275 1250
+F 0 "#PWR04" H 2275 1100 50  0001 C CNN
+F 1 "+5V" H 2290 1423 50  0000 C CNN
+F 2 "" H 2275 1250 50  0001 C CNN
+F 3 "" H 2275 1250 50  0001 C CNN
+	1    2275 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C1
+U 1 1 5FFEA22E
+P 2275 1350
+F 0 "C1" H 2367 1396 50  0000 L CNN
+F 1 ".1uF" H 2367 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2275 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 2275 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 2275 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 2275 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 2275 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 2275 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 2275 1350 50  0001 C CNN "Manufacturer"
+	1    2275 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR021
+U 1 1 5FFE8CD4
+P 2275 1925
+F 0 "#PWR021" H 2275 1775 50  0001 C CNN
+F 1 "+5V" H 2290 2098 50  0000 C CNN
+F 2 "" H 2275 1925 50  0001 C CNN
+F 3 "" H 2275 1925 50  0001 C CNN
+	1    2275 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR029
+U 1 1 5FFE86B3
+P 2275 2525
+F 0 "#PWR029" H 2275 2275 50  0001 C CNN
+F 1 "GND" H 2280 2352 50  0000 C CNN
+F 2 "" H 2275 2525 50  0001 C CNN
+F 3 "" H 2275 2525 50  0001 C CNN
+	1    2275 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D1
+U 1 1 5FFE676D
+P 2275 2225
+F 0 "D1" H 2125 2500 50  0000 C CNN
+F 1 "APA102-2020" H 2600 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 2325 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 2375 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 2275 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 2275 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 2275 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 2275 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 2275 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 2275 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 2275 2225 50  0001 C CNN "CPN"
+	1    2275 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D2
+U 1 1 60086CED
+P 3125 2225
+F 0 "D2" H 2975 2500 50  0000 C CNN
+F 1 "APA102-2020" H 3450 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 3175 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 3225 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 3125 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3125 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 3125 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 3125 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 3125 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 3125 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 3125 2225 50  0001 C CNN "CPN"
+	1    3125 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D3
+U 1 1 60087494
+P 4000 2225
+F 0 "D3" H 3850 2500 50  0000 C CNN
+F 1 "APA102-2020" H 4325 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 4050 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 4100 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 4000 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4000 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 4000 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 4000 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 4000 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 4000 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 4000 2225 50  0001 C CNN "CPN"
+	1    4000 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D4
+U 1 1 60088061
+P 4900 2225
+F 0 "D4" H 4750 2500 50  0000 C CNN
+F 1 "APA102-2020" H 5225 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 4950 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 5000 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 4900 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4900 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 4900 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 4900 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 4900 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 4900 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 4900 2225 50  0001 C CNN "CPN"
+	1    4900 2225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1100 1425 1100 1700
+Wire Wire Line
+	1825 1600 1825 2125
+Wire Wire Line
+	5600 1625 5600 2225
+Wire Wire Line
+	5475 1625 5475 2125
+$Comp
+L power:GND #PWR012
+U 1 1 600B38C2
+P 3125 1450
+F 0 "#PWR012" H 3125 1200 50  0001 C CNN
+F 1 "GND" H 3130 1277 50  0000 C CNN
+F 2 "" H 3125 1450 50  0001 C CNN
+F 3 "" H 3125 1450 50  0001 C CNN
+	1    3125 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR01
+U 1 1 600B38CC
+P 3125 1250
+F 0 "#PWR01" H 3125 1100 50  0001 C CNN
+F 1 "+5V" H 3140 1423 50  0000 C CNN
+F 2 "" H 3125 1250 50  0001 C CNN
+F 3 "" H 3125 1250 50  0001 C CNN
+	1    3125 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 600B38DB
+P 3125 1350
+F 0 "C2" H 3217 1396 50  0000 L CNN
+F 1 ".1uF" H 3217 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3125 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 3125 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 3125 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3125 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 3125 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 3125 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 3125 1350 50  0001 C CNN "Manufacturer"
+	1    3125 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR014
+U 1 1 600B4AF9
+P 4050 1450
+F 0 "#PWR014" H 4050 1200 50  0001 C CNN
+F 1 "GND" H 4055 1277 50  0000 C CNN
+F 2 "" H 4050 1450 50  0001 C CNN
+F 3 "" H 4050 1450 50  0001 C CNN
+	1    4050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR02
+U 1 1 600B4B03
+P 4050 1250
+F 0 "#PWR02" H 4050 1100 50  0001 C CNN
+F 1 "+5V" H 4065 1423 50  0000 C CNN
+F 2 "" H 4050 1250 50  0001 C CNN
+F 3 "" H 4050 1250 50  0001 C CNN
+	1    4050 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 600B4B12
+P 4050 1350
+F 0 "C3" H 4142 1396 50  0000 L CNN
+F 1 ".1uF" H 4142 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4050 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 4050 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 4050 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4050 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 4050 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 4050 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 4050 1350 50  0001 C CNN "Manufacturer"
+	1    4050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR015
+U 1 1 600B4B1C
+P 4900 1450
+F 0 "#PWR015" H 4900 1200 50  0001 C CNN
+F 1 "GND" H 4905 1277 50  0000 C CNN
+F 2 "" H 4900 1450 50  0001 C CNN
+F 3 "" H 4900 1450 50  0001 C CNN
+	1    4900 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR06
+U 1 1 600B4B26
+P 4900 1250
+F 0 "#PWR06" H 4900 1100 50  0001 C CNN
+F 1 "+5V" H 4915 1423 50  0000 C CNN
+F 2 "" H 4900 1250 50  0001 C CNN
+F 3 "" H 4900 1250 50  0001 C CNN
+	1    4900 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 600B4B35
+P 4900 1350
+F 0 "C4" H 4992 1396 50  0000 L CNN
+F 1 ".1uF" H 4992 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4900 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 4900 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 4900 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4900 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 4900 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 4900 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 4900 1350 50  0001 C CNN "Manufacturer"
+	1    4900 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1975 2125 1825 2125
+Wire Wire Line
+	1700 2225 1975 2225
+Wire Wire Line
+	7500 2225 7750 2225
+Wire Wire Line
+	7500 2125 7750 2125
+Wire Wire Line
+	8350 2225 8625 2225
+Wire Wire Line
+	8350 2125 8625 2125
+Wire Wire Line
+	9225 2225 9525 2225
+Wire Wire Line
+	9225 2125 9525 2125
+Wire Wire Line
+	10125 2225 10525 2225
+Wire Wire Line
+	10125 2125 10400 2125
+$Comp
+L power:+5V #PWR028
+U 1 1 600CE641
+P 9825 1925
+F 0 "#PWR028" H 9825 1775 50  0001 C CNN
+F 1 "+5V" H 9840 2098 50  0000 C CNN
+F 2 "" H 9825 1925 50  0001 C CNN
+F 3 "" H 9825 1925 50  0001 C CNN
+	1    9825 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR036
+U 1 1 600CE64B
+P 9825 2525
+F 0 "#PWR036" H 9825 2275 50  0001 C CNN
+F 1 "GND" H 9830 2352 50  0000 C CNN
+F 2 "" H 9825 2525 50  0001 C CNN
+F 3 "" H 9825 2525 50  0001 C CNN
+	1    9825 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR027
+U 1 1 600CE655
+P 8925 1925
+F 0 "#PWR027" H 8925 1775 50  0001 C CNN
+F 1 "+5V" H 8940 2098 50  0000 C CNN
+F 2 "" H 8925 1925 50  0001 C CNN
+F 3 "" H 8925 1925 50  0001 C CNN
+	1    8925 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR035
+U 1 1 600CE65F
+P 8925 2525
+F 0 "#PWR035" H 8925 2275 50  0001 C CNN
+F 1 "GND" H 8930 2352 50  0000 C CNN
+F 2 "" H 8925 2525 50  0001 C CNN
+F 3 "" H 8925 2525 50  0001 C CNN
+	1    8925 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR026
+U 1 1 600CE669
+P 8050 1925
+F 0 "#PWR026" H 8050 1775 50  0001 C CNN
+F 1 "+5V" H 8065 2098 50  0000 C CNN
+F 2 "" H 8050 1925 50  0001 C CNN
+F 3 "" H 8050 1925 50  0001 C CNN
+	1    8050 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR034
+U 1 1 600CE673
+P 8050 2525
+F 0 "#PWR034" H 8050 2275 50  0001 C CNN
+F 1 "GND" H 8055 2352 50  0000 C CNN
+F 2 "" H 8050 2525 50  0001 C CNN
+F 3 "" H 8050 2525 50  0001 C CNN
+	1    8050 2525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 1700 6400 1600
+$Comp
+L power:+5V #PWR011
+U 1 1 600CE67E
+P 6100 1425
+F 0 "#PWR011" H 6100 1275 50  0001 C CNN
+F 1 "+5V" H 6115 1598 50  0000 C CNN
+F 2 "" H 6100 1425 50  0001 C CNN
+F 3 "" H 6100 1425 50  0001 C CNN
+	1    6100 1425
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR016
+U 1 1 600CE692
+P 7200 1450
+F 0 "#PWR016" H 7200 1200 50  0001 C CNN
+F 1 "GND" H 7205 1277 50  0000 C CNN
+F 2 "" H 7200 1450 50  0001 C CNN
+F 3 "" H 7200 1450 50  0001 C CNN
+	1    7200 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR07
+U 1 1 600CE69C
+P 7200 1250
+F 0 "#PWR07" H 7200 1100 50  0001 C CNN
+F 1 "+5V" H 7215 1423 50  0000 C CNN
+F 2 "" H 7200 1250 50  0001 C CNN
+F 3 "" H 7200 1250 50  0001 C CNN
+	1    7200 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C5
+U 1 1 600CE6AB
+P 7200 1350
+F 0 "C5" H 7292 1396 50  0000 L CNN
+F 1 ".1uF" H 7292 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7200 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 7200 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 7200 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7200 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 7200 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 7200 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 7200 1350 50  0001 C CNN "Manufacturer"
+	1    7200 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR025
+U 1 1 600CE6B5
+P 7200 1925
+F 0 "#PWR025" H 7200 1775 50  0001 C CNN
+F 1 "+5V" H 7215 2098 50  0000 C CNN
+F 2 "" H 7200 1925 50  0001 C CNN
+F 3 "" H 7200 1925 50  0001 C CNN
+	1    7200 1925
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR033
+U 1 1 600CE6BF
+P 7200 2525
+F 0 "#PWR033" H 7200 2275 50  0001 C CNN
+F 1 "GND" H 7205 2352 50  0000 C CNN
+F 2 "" H 7200 2525 50  0001 C CNN
+F 3 "" H 7200 2525 50  0001 C CNN
+	1    7200 2525
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D5
+U 1 1 600CE6D0
+P 7200 2225
+F 0 "D5" H 7050 2500 50  0000 C CNN
+F 1 "APA102-2020" H 7525 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 7250 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 7300 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 7200 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7200 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 7200 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 7200 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 7200 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 7200 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 7200 2225 50  0001 C CNN "CPN"
+	1    7200 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D6
+U 1 1 600CE6E1
+P 8050 2225
+F 0 "D6" H 7900 2500 50  0000 C CNN
+F 1 "APA102-2020" H 8375 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 8100 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 8150 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 8050 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8050 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 8050 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 8050 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 8050 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 8050 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 8050 2225 50  0001 C CNN "CPN"
+	1    8050 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D7
+U 1 1 600CE6F2
+P 8925 2225
+F 0 "D7" H 8775 2500 50  0000 C CNN
+F 1 "APA102-2020" H 9250 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 8975 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 9025 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 8925 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8925 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 8925 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 8925 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 8925 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 8925 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 8925 2225 50  0001 C CNN "CPN"
+	1    8925 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D8
+U 1 1 600CE703
+P 9825 2225
+F 0 "D8" H 9675 2500 50  0000 C CNN
+F 1 "APA102-2020" H 10150 1950 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 9875 1925 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 9925 1850 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 9825 2225 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 9825 2225 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 9825 2225 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 9825 2225 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 9825 2225 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 9825 2225 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 9825 2225 50  0001 C CNN "CPN"
+	1    9825 2225
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J2
+U 2 1 600CE717
+P 6400 1400
+F 0 "J2" H 6725 1400 50  0000 R CNN
+F 1 "6pin_conn" V 6322 1312 50  0001 R CNN
+F 2 "MyLib:Connector" H 6400 1400 50  0001 C CNN
+F 3 "" H 6400 1400 50  0001 C CNN
+	2    6400 1400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 1425 6100 1700
+Wire Wire Line
+	6100 1700 6400 1700
+$Comp
+L MyComp:6pin_conn J2
+U 5 1 600CE739
+P 10400 1425
+F 0 "J2" H 10725 1425 50  0000 R CNN
+F 1 "6pin_conn" V 10322 1337 50  0001 R CNN
+F 2 "MyLib:Connector" H 10400 1425 50  0001 C CNN
+F 3 "" H 10400 1425 50  0001 C CNN
+	5    10400 1425
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J2
+U 6 1 600CE743
+P 10525 1425
+F 0 "J2" H 10850 1425 50  0000 R CNN
+F 1 "6pin_conn" V 10447 1337 50  0001 R CNN
+F 2 "MyLib:Connector" H 10525 1425 50  0001 C CNN
+F 3 "" H 10525 1425 50  0001 C CNN
+	6    10525 1425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10525 1625 10525 2225
+Wire Wire Line
+	10400 1625 10400 2125
+$Comp
+L power:GND #PWR017
+U 1 1 600CE74F
+P 8050 1450
+F 0 "#PWR017" H 8050 1200 50  0001 C CNN
+F 1 "GND" H 8055 1277 50  0000 C CNN
+F 2 "" H 8050 1450 50  0001 C CNN
+F 3 "" H 8050 1450 50  0001 C CNN
+	1    8050 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR08
+U 1 1 600CE759
+P 8050 1250
+F 0 "#PWR08" H 8050 1100 50  0001 C CNN
+F 1 "+5V" H 8065 1423 50  0000 C CNN
+F 2 "" H 8050 1250 50  0001 C CNN
+F 3 "" H 8050 1250 50  0001 C CNN
+	1    8050 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C6
+U 1 1 600CE768
+P 8050 1350
+F 0 "C6" H 8142 1396 50  0000 L CNN
+F 1 ".1uF" H 8142 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8050 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 8050 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 8050 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8050 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 8050 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 8050 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 8050 1350 50  0001 C CNN "Manufacturer"
+	1    8050 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR018
+U 1 1 600CE772
+P 8975 1450
+F 0 "#PWR018" H 8975 1200 50  0001 C CNN
+F 1 "GND" H 8980 1277 50  0000 C CNN
+F 2 "" H 8975 1450 50  0001 C CNN
+F 3 "" H 8975 1450 50  0001 C CNN
+	1    8975 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR09
+U 1 1 600CE77C
+P 8975 1250
+F 0 "#PWR09" H 8975 1100 50  0001 C CNN
+F 1 "+5V" H 8990 1423 50  0000 C CNN
+F 2 "" H 8975 1250 50  0001 C CNN
+F 3 "" H 8975 1250 50  0001 C CNN
+	1    8975 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C7
+U 1 1 600CE78B
+P 8975 1350
+F 0 "C7" H 9067 1396 50  0000 L CNN
+F 1 ".1uF" H 9067 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8975 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 8975 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 8975 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8975 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 8975 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 8975 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 8975 1350 50  0001 C CNN "Manufacturer"
+	1    8975 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR019
+U 1 1 600CE795
+P 9825 1450
+F 0 "#PWR019" H 9825 1200 50  0001 C CNN
+F 1 "GND" H 9830 1277 50  0000 C CNN
+F 2 "" H 9825 1450 50  0001 C CNN
+F 3 "" H 9825 1450 50  0001 C CNN
+	1    9825 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR010
+U 1 1 600CE79F
+P 9825 1250
+F 0 "#PWR010" H 9825 1100 50  0001 C CNN
+F 1 "+5V" H 9840 1423 50  0000 C CNN
+F 2 "" H 9825 1250 50  0001 C CNN
+F 3 "" H 9825 1250 50  0001 C CNN
+	1    9825 1250
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C8
+U 1 1 600CE7AE
+P 9825 1350
+F 0 "C8" H 9917 1396 50  0000 L CNN
+F 1 ".1uF" H 9917 1305 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9825 1350 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 9825 1350 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 9825 1350 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 9825 1350 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 9825 1350 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 9825 1350 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 9825 1350 50  0001 C CNN "Manufacturer"
+	1    9825 1350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2575 4450 2825 4450
+Wire Wire Line
+	2575 4350 2825 4350
+Wire Wire Line
+	3425 4450 3700 4450
+Wire Wire Line
+	3425 4350 3700 4350
+Wire Wire Line
+	4300 4450 4600 4450
+Wire Wire Line
+	4300 4350 4600 4350
+Wire Wire Line
+	5200 4450 5600 4450
+Wire Wire Line
+	5200 4350 5475 4350
+$Comp
+L power:+5V #PWR060
+U 1 1 60103B83
+P 4900 4150
+F 0 "#PWR060" H 4900 4000 50  0001 C CNN
+F 1 "+5V" H 4915 4323 50  0000 C CNN
+F 2 "" H 4900 4150 50  0001 C CNN
+F 3 "" H 4900 4150 50  0001 C CNN
+	1    4900 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR068
+U 1 1 60103B8D
+P 4900 4750
+F 0 "#PWR068" H 4900 4500 50  0001 C CNN
+F 1 "GND" H 4905 4577 50  0000 C CNN
+F 2 "" H 4900 4750 50  0001 C CNN
+F 3 "" H 4900 4750 50  0001 C CNN
+	1    4900 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR059
+U 1 1 60103B97
+P 4000 4150
+F 0 "#PWR059" H 4000 4000 50  0001 C CNN
+F 1 "+5V" H 4015 4323 50  0000 C CNN
+F 2 "" H 4000 4150 50  0001 C CNN
+F 3 "" H 4000 4150 50  0001 C CNN
+	1    4000 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR067
+U 1 1 60103BA1
+P 4000 4750
+F 0 "#PWR067" H 4000 4500 50  0001 C CNN
+F 1 "GND" H 4005 4577 50  0000 C CNN
+F 2 "" H 4000 4750 50  0001 C CNN
+F 3 "" H 4000 4750 50  0001 C CNN
+	1    4000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR058
+U 1 1 60103BAB
+P 3125 4150
+F 0 "#PWR058" H 3125 4000 50  0001 C CNN
+F 1 "+5V" H 3140 4323 50  0000 C CNN
+F 2 "" H 3125 4150 50  0001 C CNN
+F 3 "" H 3125 4150 50  0001 C CNN
+	1    3125 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR066
+U 1 1 60103BB5
+P 3125 4750
+F 0 "#PWR066" H 3125 4500 50  0001 C CNN
+F 1 "GND" H 3130 4577 50  0000 C CNN
+F 2 "" H 3125 4750 50  0001 C CNN
+F 3 "" H 3125 4750 50  0001 C CNN
+	1    3125 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1475 3925 1475 3825
+$Comp
+L power:+5V #PWR045
+U 1 1 60103BC0
+P 1175 3650
+F 0 "#PWR045" H 1175 3500 50  0001 C CNN
+F 1 "+5V" H 1190 3823 50  0000 C CNN
+F 2 "" H 1175 3650 50  0001 C CNN
+F 3 "" H 1175 3650 50  0001 C CNN
+	1    1175 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR055
+U 1 1 60103BCA
+P 1575 3825
+F 0 "#PWR055" H 1575 3575 50  0001 C CNN
+F 1 "GND" H 1580 3652 50  0000 C CNN
+F 2 "" H 1575 3825 50  0001 C CNN
+F 3 "" H 1575 3825 50  0001 C CNN
+	1    1575 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR047
+U 1 1 60103BD4
+P 2275 3675
+F 0 "#PWR047" H 2275 3425 50  0001 C CNN
+F 1 "GND" H 2280 3502 50  0000 C CNN
+F 2 "" H 2275 3675 50  0001 C CNN
+F 3 "" H 2275 3675 50  0001 C CNN
+	1    2275 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR037
+U 1 1 60103BDE
+P 2275 3475
+F 0 "#PWR037" H 2275 3325 50  0001 C CNN
+F 1 "+5V" H 2290 3648 50  0000 C CNN
+F 2 "" H 2275 3475 50  0001 C CNN
+F 3 "" H 2275 3475 50  0001 C CNN
+	1    2275 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C9
+U 1 1 60103BED
+P 2275 3575
+F 0 "C9" H 2367 3621 50  0000 L CNN
+F 1 ".1uF" H 2367 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2275 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 2275 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 2275 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 2275 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 2275 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 2275 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 2275 3575 50  0001 C CNN "Manufacturer"
+	1    2275 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR057
+U 1 1 60103BF7
+P 2275 4150
+F 0 "#PWR057" H 2275 4000 50  0001 C CNN
+F 1 "+5V" H 2290 4323 50  0000 C CNN
+F 2 "" H 2275 4150 50  0001 C CNN
+F 3 "" H 2275 4150 50  0001 C CNN
+	1    2275 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR065
+U 1 1 60103C01
+P 2275 4750
+F 0 "#PWR065" H 2275 4500 50  0001 C CNN
+F 1 "GND" H 2280 4577 50  0000 C CNN
+F 2 "" H 2275 4750 50  0001 C CNN
+F 3 "" H 2275 4750 50  0001 C CNN
+	1    2275 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D9
+U 1 1 60103C12
+P 2275 4450
+F 0 "D9" H 2125 4725 50  0000 C CNN
+F 1 "APA102-2020" H 2600 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 2325 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 2375 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 2275 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 2275 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 2275 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 2275 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 2275 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 2275 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 2275 4450 50  0001 C CNN "CPN"
+	1    2275 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D10
+U 1 1 60103C23
+P 3125 4450
+F 0 "D10" H 2975 4725 50  0000 C CNN
+F 1 "APA102-2020" H 3450 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 3175 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 3225 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 3125 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3125 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 3125 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 3125 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 3125 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 3125 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 3125 4450 50  0001 C CNN "CPN"
+	1    3125 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D11
+U 1 1 60103C34
+P 4000 4450
+F 0 "D11" H 3850 4725 50  0000 C CNN
+F 1 "APA102-2020" H 4325 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 4050 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 4100 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 4000 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4000 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 4000 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 4000 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 4000 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 4000 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 4000 4450 50  0001 C CNN "CPN"
+	1    4000 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D12
+U 1 1 60103C45
+P 4900 4450
+F 0 "D12" H 4750 4725 50  0000 C CNN
+F 1 "APA102-2020" H 5225 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 4950 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 5000 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 4900 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4900 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 4900 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 4900 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 4900 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 4900 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 4900 4450 50  0001 C CNN "CPN"
+	1    4900 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J3
+U 1 1 60103C4F
+P 1575 3625
+F 0 "J3" H 1900 3625 50  0000 R CNN
+F 1 "6pin_conn" V 1497 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 1575 3625 50  0001 C CNN
+F 3 "" H 1575 3625 50  0001 C CNN
+	1    1575 3625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J3
+U 2 1 60103C59
+P 1475 3625
+F 0 "J3" H 1800 3625 50  0000 R CNN
+F 1 "6pin_conn" V 1397 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 1475 3625 50  0001 C CNN
+F 3 "" H 1475 3625 50  0001 C CNN
+	2    1475 3625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1175 3650 1175 3925
+Wire Wire Line
+	1175 3925 1475 3925
+$Comp
+L MyComp:6pin_conn J3
+U 3 1 60103C65
+P 1700 3625
+F 0 "J3" H 2025 3625 50  0000 R CNN
+F 1 "6pin_conn" V 1622 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 1700 3625 50  0001 C CNN
+F 3 "" H 1700 3625 50  0001 C CNN
+	3    1700 3625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J3
+U 4 1 60103C6F
+P 1825 3625
+F 0 "J3" H 2150 3625 50  0000 R CNN
+F 1 "6pin_conn" V 1747 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 1825 3625 50  0001 C CNN
+F 3 "" H 1825 3625 50  0001 C CNN
+	4    1825 3625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1825 3825 1825 4350
+Wire Wire Line
+	1700 4450 1700 3825
+$Comp
+L MyComp:6pin_conn J3
+U 5 1 60103C7B
+P 5475 3650
+F 0 "J3" H 5800 3650 50  0000 R CNN
+F 1 "6pin_conn" V 5397 3562 50  0001 R CNN
+F 2 "MyLib:Connector" H 5475 3650 50  0001 C CNN
+F 3 "" H 5475 3650 50  0001 C CNN
+	5    5475 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J3
+U 6 1 60103C85
+P 5600 3650
+F 0 "J3" H 5925 3650 50  0000 R CNN
+F 1 "6pin_conn" V 5522 3562 50  0001 R CNN
+F 2 "MyLib:Connector" H 5600 3650 50  0001 C CNN
+F 3 "" H 5600 3650 50  0001 C CNN
+	6    5600 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 3850 5600 4450
+Wire Wire Line
+	5475 3850 5475 4350
+$Comp
+L power:GND #PWR048
+U 1 1 60103C91
+P 3125 3675
+F 0 "#PWR048" H 3125 3425 50  0001 C CNN
+F 1 "GND" H 3130 3502 50  0000 C CNN
+F 2 "" H 3125 3675 50  0001 C CNN
+F 3 "" H 3125 3675 50  0001 C CNN
+	1    3125 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR038
+U 1 1 60103C9B
+P 3125 3475
+F 0 "#PWR038" H 3125 3325 50  0001 C CNN
+F 1 "+5V" H 3140 3648 50  0000 C CNN
+F 2 "" H 3125 3475 50  0001 C CNN
+F 3 "" H 3125 3475 50  0001 C CNN
+	1    3125 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C10
+U 1 1 60103CAA
+P 3125 3575
+F 0 "C10" H 3217 3621 50  0000 L CNN
+F 1 ".1uF" H 3217 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3125 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 3125 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 3125 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3125 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 3125 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 3125 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 3125 3575 50  0001 C CNN "Manufacturer"
+	1    3125 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR049
+U 1 1 60103CB4
+P 4050 3675
+F 0 "#PWR049" H 4050 3425 50  0001 C CNN
+F 1 "GND" H 4055 3502 50  0000 C CNN
+F 2 "" H 4050 3675 50  0001 C CNN
+F 3 "" H 4050 3675 50  0001 C CNN
+	1    4050 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR039
+U 1 1 60103CBE
+P 4050 3475
+F 0 "#PWR039" H 4050 3325 50  0001 C CNN
+F 1 "+5V" H 4065 3648 50  0000 C CNN
+F 2 "" H 4050 3475 50  0001 C CNN
+F 3 "" H 4050 3475 50  0001 C CNN
+	1    4050 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C11
+U 1 1 60103CCD
+P 4050 3575
+F 0 "C11" H 4142 3621 50  0000 L CNN
+F 1 ".1uF" H 4142 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4050 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 4050 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 4050 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4050 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 4050 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 4050 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 4050 3575 50  0001 C CNN "Manufacturer"
+	1    4050 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR050
+U 1 1 60103CD7
+P 4900 3675
+F 0 "#PWR050" H 4900 3425 50  0001 C CNN
+F 1 "GND" H 4905 3502 50  0000 C CNN
+F 2 "" H 4900 3675 50  0001 C CNN
+F 3 "" H 4900 3675 50  0001 C CNN
+	1    4900 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR040
+U 1 1 60103CE1
+P 4900 3475
+F 0 "#PWR040" H 4900 3325 50  0001 C CNN
+F 1 "+5V" H 4915 3648 50  0000 C CNN
+F 2 "" H 4900 3475 50  0001 C CNN
+F 3 "" H 4900 3475 50  0001 C CNN
+	1    4900 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C12
+U 1 1 60103CF0
+P 4900 3575
+F 0 "C12" H 4992 3621 50  0000 L CNN
+F 1 ".1uF" H 4992 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4900 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 4900 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 4900 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4900 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 4900 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 4900 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 4900 3575 50  0001 C CNN "Manufacturer"
+	1    4900 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1975 4350 1825 4350
+Wire Wire Line
+	1700 4450 1975 4450
+Wire Wire Line
+	7500 4450 7750 4450
+Wire Wire Line
+	7500 4350 7750 4350
+Wire Wire Line
+	8350 4450 8625 4450
+Wire Wire Line
+	8350 4350 8625 4350
+Wire Wire Line
+	9225 4450 9525 4450
+Wire Wire Line
+	9225 4350 9525 4350
+Wire Wire Line
+	10125 4450 10525 4450
+Wire Wire Line
+	10125 4350 10400 4350
+$Comp
+L power:+5V #PWR064
+U 1 1 60103D04
+P 9825 4150
+F 0 "#PWR064" H 9825 4000 50  0001 C CNN
+F 1 "+5V" H 9840 4323 50  0000 C CNN
+F 2 "" H 9825 4150 50  0001 C CNN
+F 3 "" H 9825 4150 50  0001 C CNN
+	1    9825 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR072
+U 1 1 60103D0E
+P 9825 4750
+F 0 "#PWR072" H 9825 4500 50  0001 C CNN
+F 1 "GND" H 9830 4577 50  0000 C CNN
+F 2 "" H 9825 4750 50  0001 C CNN
+F 3 "" H 9825 4750 50  0001 C CNN
+	1    9825 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR063
+U 1 1 60103D18
+P 8925 4150
+F 0 "#PWR063" H 8925 4000 50  0001 C CNN
+F 1 "+5V" H 8940 4323 50  0000 C CNN
+F 2 "" H 8925 4150 50  0001 C CNN
+F 3 "" H 8925 4150 50  0001 C CNN
+	1    8925 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR071
+U 1 1 60103D22
+P 8925 4750
+F 0 "#PWR071" H 8925 4500 50  0001 C CNN
+F 1 "GND" H 8930 4577 50  0000 C CNN
+F 2 "" H 8925 4750 50  0001 C CNN
+F 3 "" H 8925 4750 50  0001 C CNN
+	1    8925 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR062
+U 1 1 60103D2C
+P 8050 4150
+F 0 "#PWR062" H 8050 4000 50  0001 C CNN
+F 1 "+5V" H 8065 4323 50  0000 C CNN
+F 2 "" H 8050 4150 50  0001 C CNN
+F 3 "" H 8050 4150 50  0001 C CNN
+	1    8050 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR070
+U 1 1 60103D36
+P 8050 4750
+F 0 "#PWR070" H 8050 4500 50  0001 C CNN
+F 1 "GND" H 8055 4577 50  0000 C CNN
+F 2 "" H 8050 4750 50  0001 C CNN
+F 3 "" H 8050 4750 50  0001 C CNN
+	1    8050 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3925 6400 3825
+$Comp
+L power:+5V #PWR046
+U 1 1 60103D41
+P 6100 3650
+F 0 "#PWR046" H 6100 3500 50  0001 C CNN
+F 1 "+5V" H 6115 3823 50  0000 C CNN
+F 2 "" H 6100 3650 50  0001 C CNN
+F 3 "" H 6100 3650 50  0001 C CNN
+	1    6100 3650
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR056
+U 1 1 60103D4B
+P 6500 3825
+F 0 "#PWR056" H 6500 3575 50  0001 C CNN
+F 1 "GND" H 6505 3652 50  0000 C CNN
+F 2 "" H 6500 3825 50  0001 C CNN
+F 3 "" H 6500 3825 50  0001 C CNN
+	1    6500 3825
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR051
+U 1 1 60103D55
+P 7200 3675
+F 0 "#PWR051" H 7200 3425 50  0001 C CNN
+F 1 "GND" H 7205 3502 50  0000 C CNN
+F 2 "" H 7200 3675 50  0001 C CNN
+F 3 "" H 7200 3675 50  0001 C CNN
+	1    7200 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR041
+U 1 1 60103D5F
+P 7200 3475
+F 0 "#PWR041" H 7200 3325 50  0001 C CNN
+F 1 "+5V" H 7215 3648 50  0000 C CNN
+F 2 "" H 7200 3475 50  0001 C CNN
+F 3 "" H 7200 3475 50  0001 C CNN
+	1    7200 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C13
+U 1 1 60103D6E
+P 7200 3575
+F 0 "C13" H 7292 3621 50  0000 L CNN
+F 1 ".1uF" H 7292 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 7200 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 7200 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 7200 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7200 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 7200 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 7200 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 7200 3575 50  0001 C CNN "Manufacturer"
+	1    7200 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR061
+U 1 1 60103D78
+P 7200 4150
+F 0 "#PWR061" H 7200 4000 50  0001 C CNN
+F 1 "+5V" H 7215 4323 50  0000 C CNN
+F 2 "" H 7200 4150 50  0001 C CNN
+F 3 "" H 7200 4150 50  0001 C CNN
+	1    7200 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR069
+U 1 1 60103D82
+P 7200 4750
+F 0 "#PWR069" H 7200 4500 50  0001 C CNN
+F 1 "GND" H 7205 4577 50  0000 C CNN
+F 2 "" H 7200 4750 50  0001 C CNN
+F 3 "" H 7200 4750 50  0001 C CNN
+	1    7200 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D13
+U 1 1 60103D93
+P 7200 4450
+F 0 "D13" H 7050 4725 50  0000 C CNN
+F 1 "APA102-2020" H 7525 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 7250 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 7300 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 7200 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7200 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 7200 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 7200 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 7200 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 7200 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 7200 4450 50  0001 C CNN "CPN"
+	1    7200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D14
+U 1 1 60103DA4
+P 8050 4450
+F 0 "D14" H 7900 4725 50  0000 C CNN
+F 1 "APA102-2020" H 8375 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 8100 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 8150 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 8050 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8050 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 8050 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 8050 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 8050 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 8050 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 8050 4450 50  0001 C CNN "CPN"
+	1    8050 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D15
+U 1 1 60103DB5
+P 8925 4450
+F 0 "D15" H 8775 4725 50  0000 C CNN
+F 1 "APA102-2020" H 9250 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 8975 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 9025 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 8925 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8925 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 8925 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 8925 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 8925 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 8925 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 8925 4450 50  0001 C CNN "CPN"
+	1    8925 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D16
+U 1 1 60103DC6
+P 9825 4450
+F 0 "D16" H 9675 4725 50  0000 C CNN
+F 1 "APA102-2020" H 10150 4175 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 9875 4150 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 9925 4075 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 9825 4450 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 9825 4450 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 9825 4450 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 9825 4450 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 9825 4450 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 9825 4450 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 9825 4450 50  0001 C CNN "CPN"
+	1    9825 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J4
+U 3 1 60103DD0
+P 6625 3625
+F 0 "J4" H 6950 3625 50  0000 R CNN
+F 1 "6pin_conn" V 6547 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 6625 3625 50  0001 C CNN
+F 3 "" H 6625 3625 50  0001 C CNN
+	3    6625 3625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J4
+U 4 1 60103DDA
+P 6750 3625
+F 0 "J4" H 7075 3625 50  0000 R CNN
+F 1 "6pin_conn" V 6672 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 6750 3625 50  0001 C CNN
+F 3 "" H 6750 3625 50  0001 C CNN
+	4    6750 3625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6100 3650 6100 3925
+Wire Wire Line
+	6100 3925 6400 3925
+$Comp
+L MyComp:6pin_conn J4
+U 1 1 60103DE6
+P 6500 3625
+F 0 "J4" H 6825 3625 50  0000 R CNN
+F 1 "6pin_conn" V 6422 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 6500 3625 50  0001 C CNN
+F 3 "" H 6500 3625 50  0001 C CNN
+	1    6500 3625
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J4
+U 2 1 60103DF0
+P 6400 3625
+F 0 "J4" H 6725 3625 50  0000 R CNN
+F 1 "6pin_conn" V 6322 3537 50  0001 R CNN
+F 2 "MyLib:Connector" H 6400 3625 50  0001 C CNN
+F 3 "" H 6400 3625 50  0001 C CNN
+	2    6400 3625
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	6750 3825 6750 4350
+Wire Wire Line
+	6625 4450 6625 3825
+$Comp
+L MyComp:6pin_conn J4
+U 5 1 60103DFC
+P 10400 3650
+F 0 "J4" H 10725 3650 50  0000 R CNN
+F 1 "6pin_conn" V 10322 3562 50  0001 R CNN
+F 2 "MyLib:Connector" H 10400 3650 50  0001 C CNN
+F 3 "" H 10400 3650 50  0001 C CNN
+	5    10400 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J4
+U 6 1 60103E06
+P 10525 3650
+F 0 "J4" H 10850 3650 50  0000 R CNN
+F 1 "6pin_conn" V 10447 3562 50  0001 R CNN
+F 2 "MyLib:Connector" H 10525 3650 50  0001 C CNN
+F 3 "" H 10525 3650 50  0001 C CNN
+	6    10525 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	10525 3850 10525 4450
+Wire Wire Line
+	10400 3850 10400 4350
+$Comp
+L power:GND #PWR052
+U 1 1 60103E12
+P 8050 3675
+F 0 "#PWR052" H 8050 3425 50  0001 C CNN
+F 1 "GND" H 8055 3502 50  0000 C CNN
+F 2 "" H 8050 3675 50  0001 C CNN
+F 3 "" H 8050 3675 50  0001 C CNN
+	1    8050 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR042
+U 1 1 60103E1C
+P 8050 3475
+F 0 "#PWR042" H 8050 3325 50  0001 C CNN
+F 1 "+5V" H 8065 3648 50  0000 C CNN
+F 2 "" H 8050 3475 50  0001 C CNN
+F 3 "" H 8050 3475 50  0001 C CNN
+	1    8050 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C14
+U 1 1 60103E2B
+P 8050 3575
+F 0 "C14" H 8142 3621 50  0000 L CNN
+F 1 ".1uF" H 8142 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8050 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 8050 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 8050 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8050 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 8050 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 8050 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 8050 3575 50  0001 C CNN "Manufacturer"
+	1    8050 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR053
+U 1 1 60103E35
+P 8975 3675
+F 0 "#PWR053" H 8975 3425 50  0001 C CNN
+F 1 "GND" H 8980 3502 50  0000 C CNN
+F 2 "" H 8975 3675 50  0001 C CNN
+F 3 "" H 8975 3675 50  0001 C CNN
+	1    8975 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR043
+U 1 1 60103E3F
+P 8975 3475
+F 0 "#PWR043" H 8975 3325 50  0001 C CNN
+F 1 "+5V" H 8990 3648 50  0000 C CNN
+F 2 "" H 8975 3475 50  0001 C CNN
+F 3 "" H 8975 3475 50  0001 C CNN
+	1    8975 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 60103E4E
+P 8975 3575
+F 0 "C15" H 9067 3621 50  0000 L CNN
+F 1 ".1uF" H 9067 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 8975 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 8975 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 8975 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 8975 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 8975 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 8975 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 8975 3575 50  0001 C CNN "Manufacturer"
+	1    8975 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR054
+U 1 1 60103E58
+P 9825 3675
+F 0 "#PWR054" H 9825 3425 50  0001 C CNN
+F 1 "GND" H 9830 3502 50  0000 C CNN
+F 2 "" H 9825 3675 50  0001 C CNN
+F 3 "" H 9825 3675 50  0001 C CNN
+	1    9825 3675
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR044
+U 1 1 60103E62
+P 9825 3475
+F 0 "#PWR044" H 9825 3325 50  0001 C CNN
+F 1 "+5V" H 9840 3648 50  0000 C CNN
+F 2 "" H 9825 3475 50  0001 C CNN
+F 3 "" H 9825 3475 50  0001 C CNN
+	1    9825 3475
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C16
+U 1 1 60103E71
+P 9825 3575
+F 0 "C16" H 9917 3621 50  0000 L CNN
+F 1 ".1uF" H 9917 3530 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 9825 3575 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 9825 3575 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 9825 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 9825 3575 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 9825 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 9825 3575 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 9825 3575 50  0001 C CNN "Manufacturer"
+	1    9825 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 4350 6750 4350
+Wire Wire Line
+	6625 4450 6900 4450
+Wire Wire Line
+	2575 6650 2825 6650
+Wire Wire Line
+	2575 6550 2825 6550
+Wire Wire Line
+	3425 6650 3700 6650
+Wire Wire Line
+	3425 6550 3700 6550
+Wire Wire Line
+	4300 6650 4600 6650
+Wire Wire Line
+	4300 6550 4600 6550
+Wire Wire Line
+	5200 6650 5600 6650
+Wire Wire Line
+	5200 6550 5475 6550
+$Comp
+L power:+5V #PWR086
+U 1 1 6013AAA0
+P 4900 6350
+F 0 "#PWR086" H 4900 6200 50  0001 C CNN
+F 1 "+5V" H 4915 6523 50  0000 C CNN
+F 2 "" H 4900 6350 50  0001 C CNN
+F 3 "" H 4900 6350 50  0001 C CNN
+	1    4900 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR090
+U 1 1 6013AAAA
+P 4900 6950
+F 0 "#PWR090" H 4900 6700 50  0001 C CNN
+F 1 "GND" H 4905 6777 50  0000 C CNN
+F 2 "" H 4900 6950 50  0001 C CNN
+F 3 "" H 4900 6950 50  0001 C CNN
+	1    4900 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR085
+U 1 1 6013AAB4
+P 4000 6350
+F 0 "#PWR085" H 4000 6200 50  0001 C CNN
+F 1 "+5V" H 4015 6523 50  0000 C CNN
+F 2 "" H 4000 6350 50  0001 C CNN
+F 3 "" H 4000 6350 50  0001 C CNN
+	1    4000 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR089
+U 1 1 6013AABE
+P 4000 6950
+F 0 "#PWR089" H 4000 6700 50  0001 C CNN
+F 1 "GND" H 4005 6777 50  0000 C CNN
+F 2 "" H 4000 6950 50  0001 C CNN
+F 3 "" H 4000 6950 50  0001 C CNN
+	1    4000 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR084
+U 1 1 6013AAC8
+P 3125 6350
+F 0 "#PWR084" H 3125 6200 50  0001 C CNN
+F 1 "+5V" H 3140 6523 50  0000 C CNN
+F 2 "" H 3125 6350 50  0001 C CNN
+F 3 "" H 3125 6350 50  0001 C CNN
+	1    3125 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR088
+U 1 1 6013AAD2
+P 3125 6950
+F 0 "#PWR088" H 3125 6700 50  0001 C CNN
+F 1 "GND" H 3130 6777 50  0000 C CNN
+F 2 "" H 3125 6950 50  0001 C CNN
+F 3 "" H 3125 6950 50  0001 C CNN
+	1    3125 6950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1475 6125 1475 6025
+$Comp
+L power:+5V #PWR077
+U 1 1 6013AADD
+P 1175 5850
+F 0 "#PWR077" H 1175 5700 50  0001 C CNN
+F 1 "+5V" H 1190 6023 50  0000 C CNN
+F 2 "" H 1175 5850 50  0001 C CNN
+F 3 "" H 1175 5850 50  0001 C CNN
+	1    1175 5850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR082
+U 1 1 6013AAE7
+P 1575 6025
+F 0 "#PWR082" H 1575 5775 50  0001 C CNN
+F 1 "GND" H 1580 5852 50  0000 C CNN
+F 2 "" H 1575 6025 50  0001 C CNN
+F 3 "" H 1575 6025 50  0001 C CNN
+	1    1575 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR078
+U 1 1 6013AAF1
+P 2275 5875
+F 0 "#PWR078" H 2275 5625 50  0001 C CNN
+F 1 "GND" H 2280 5702 50  0000 C CNN
+F 2 "" H 2275 5875 50  0001 C CNN
+F 3 "" H 2275 5875 50  0001 C CNN
+	1    2275 5875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR073
+U 1 1 6013AAFB
+P 2275 5675
+F 0 "#PWR073" H 2275 5525 50  0001 C CNN
+F 1 "+5V" H 2290 5848 50  0000 C CNN
+F 2 "" H 2275 5675 50  0001 C CNN
+F 3 "" H 2275 5675 50  0001 C CNN
+	1    2275 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C17
+U 1 1 6013AB0A
+P 2275 5775
+F 0 "C17" H 2367 5821 50  0000 L CNN
+F 1 ".1uF" H 2367 5730 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 2275 5775 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 2275 5775 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 2275 5775 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 2275 5775 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 2275 5775 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 2275 5775 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 2275 5775 50  0001 C CNN "Manufacturer"
+	1    2275 5775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR083
+U 1 1 6013AB14
+P 2275 6350
+F 0 "#PWR083" H 2275 6200 50  0001 C CNN
+F 1 "+5V" H 2290 6523 50  0000 C CNN
+F 2 "" H 2275 6350 50  0001 C CNN
+F 3 "" H 2275 6350 50  0001 C CNN
+	1    2275 6350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR087
+U 1 1 6013AB1E
+P 2275 6950
+F 0 "#PWR087" H 2275 6700 50  0001 C CNN
+F 1 "GND" H 2280 6777 50  0000 C CNN
+F 2 "" H 2275 6950 50  0001 C CNN
+F 3 "" H 2275 6950 50  0001 C CNN
+	1    2275 6950
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D17
+U 1 1 6013AB2F
+P 2275 6650
+F 0 "D17" H 2125 6925 50  0000 C CNN
+F 1 "APA102-2020" H 2600 6375 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 2325 6350 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 2375 6275 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 2275 6650 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 2275 6650 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 2275 6650 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 2275 6650 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 2275 6650 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 2275 6650 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 2275 6650 50  0001 C CNN "CPN"
+	1    2275 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D18
+U 1 1 6013AB40
+P 3125 6650
+F 0 "D18" H 2975 6925 50  0000 C CNN
+F 1 "APA102-2020" H 3450 6375 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 3175 6350 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 3225 6275 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 3125 6650 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3125 6650 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 3125 6650 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 3125 6650 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 3125 6650 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 3125 6650 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 3125 6650 50  0001 C CNN "CPN"
+	1    3125 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D19
+U 1 1 6013AB51
+P 4000 6650
+F 0 "D19" H 3850 6925 50  0000 C CNN
+F 1 "APA102-2020" H 4325 6375 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 4050 6350 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 4100 6275 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 4000 6650 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4000 6650 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 4000 6650 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 4000 6650 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 4000 6650 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 4000 6650 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 4000 6650 50  0001 C CNN "CPN"
+	1    4000 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:APA102-2020 D20
+U 1 1 6013AB62
+P 4900 6650
+F 0 "D20" H 4750 6925 50  0000 C CNN
+F 1 "APA102-2020" H 5225 6375 50  0000 C CNN
+F 2 "MyLib:APA102-2020" H 4950 6350 50  0001 L TNN
+F 3 "http://www.led-color.com/upload/201604/APA102-2020%20SMD%20LED.pdf" H 5000 6275 50  0001 L TNN
+F 4 "APA102-2020 Super LED" H 4900 6650 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4900 6650 50  0001 C CNN "Supplier"
+F 6 "1528-1826-ND" H 4900 6650 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/adafruit-industries-llc/3341/6578337" H 4900 6650 50  0001 C CNN "Supplier Link"
+F 8 "Led-Color" H 4900 6650 50  0001 C CNN "Manufacturer"
+F 9 "4000" H 4900 6650 50  0001 C CNN "Parts Per Reel"
+F 10 "https://www.aliexpress.com/item/32856952551.html?spm=a2g0o.productlist.0.0.47832945cWYrZG&algo_pvid=0fca5305-45cd-4c6a-b7af-9f9252951f5f&algo_expid=0fca5305-45cd-4c6a-b7af-9f9252951f5f-10&btsid=0bb0623a16102918867917742eee6c&ws_ab_test=searchweb0_0,searchweb201602_,searchweb201603_" H 4900 6650 50  0001 C CNN "CPN"
+	1    4900 6650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J5
+U 1 1 6013AB6C
+P 1575 5825
+F 0 "J5" H 1900 5825 50  0000 R CNN
+F 1 "6pin_conn" V 1497 5737 50  0001 R CNN
+F 2 "MyLib:Connector" H 1575 5825 50  0001 C CNN
+F 3 "" H 1575 5825 50  0001 C CNN
+	1    1575 5825
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J5
+U 2 1 6013AB76
+P 1475 5825
+F 0 "J5" H 1800 5825 50  0000 R CNN
+F 1 "6pin_conn" V 1397 5737 50  0001 R CNN
+F 2 "MyLib:Connector" H 1475 5825 50  0001 C CNN
+F 3 "" H 1475 5825 50  0001 C CNN
+	2    1475 5825
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1175 5850 1175 6125
+Wire Wire Line
+	1175 6125 1475 6125
+$Comp
+L MyComp:6pin_conn J5
+U 3 1 6013AB82
+P 1700 5825
+F 0 "J5" H 2025 5825 50  0000 R CNN
+F 1 "6pin_conn" V 1622 5737 50  0001 R CNN
+F 2 "MyLib:Connector" H 1700 5825 50  0001 C CNN
+F 3 "" H 1700 5825 50  0001 C CNN
+	3    1700 5825
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J5
+U 4 1 6013AB8C
+P 1825 5825
+F 0 "J5" H 2150 5825 50  0000 R CNN
+F 1 "6pin_conn" V 1747 5737 50  0001 R CNN
+F 2 "MyLib:Connector" H 1825 5825 50  0001 C CNN
+F 3 "" H 1825 5825 50  0001 C CNN
+	4    1825 5825
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1825 6025 1825 6550
+Wire Wire Line
+	1700 6650 1700 6025
+$Comp
+L MyComp:6pin_conn J5
+U 5 1 6013AB98
+P 5475 5850
+F 0 "J5" H 5800 5850 50  0000 R CNN
+F 1 "6pin_conn" V 5397 5762 50  0001 R CNN
+F 2 "MyLib:Connector" H 5475 5850 50  0001 C CNN
+F 3 "" H 5475 5850 50  0001 C CNN
+	5    5475 5850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J5
+U 6 1 6013ABA2
+P 5600 5850
+F 0 "J5" H 5925 5850 50  0000 R CNN
+F 1 "6pin_conn" V 5522 5762 50  0001 R CNN
+F 2 "MyLib:Connector" H 5600 5850 50  0001 C CNN
+F 3 "" H 5600 5850 50  0001 C CNN
+	6    5600 5850
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5600 6050 5600 6650
+Wire Wire Line
+	5475 6050 5475 6550
+$Comp
+L power:GND #PWR079
+U 1 1 6013ABAE
+P 3125 5875
+F 0 "#PWR079" H 3125 5625 50  0001 C CNN
+F 1 "GND" H 3130 5702 50  0000 C CNN
+F 2 "" H 3125 5875 50  0001 C CNN
+F 3 "" H 3125 5875 50  0001 C CNN
+	1    3125 5875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR074
+U 1 1 6013ABB8
+P 3125 5675
+F 0 "#PWR074" H 3125 5525 50  0001 C CNN
+F 1 "+5V" H 3140 5848 50  0000 C CNN
+F 2 "" H 3125 5675 50  0001 C CNN
+F 3 "" H 3125 5675 50  0001 C CNN
+	1    3125 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C18
+U 1 1 6013ABC7
+P 3125 5775
+F 0 "C18" H 3217 5821 50  0000 L CNN
+F 1 ".1uF" H 3217 5730 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 3125 5775 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 3125 5775 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 3125 5775 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3125 5775 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 3125 5775 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 3125 5775 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 3125 5775 50  0001 C CNN "Manufacturer"
+	1    3125 5775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR080
+U 1 1 6013ABD1
+P 4050 5875
+F 0 "#PWR080" H 4050 5625 50  0001 C CNN
+F 1 "GND" H 4055 5702 50  0000 C CNN
+F 2 "" H 4050 5875 50  0001 C CNN
+F 3 "" H 4050 5875 50  0001 C CNN
+	1    4050 5875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR075
+U 1 1 6013ABDB
+P 4050 5675
+F 0 "#PWR075" H 4050 5525 50  0001 C CNN
+F 1 "+5V" H 4065 5848 50  0000 C CNN
+F 2 "" H 4050 5675 50  0001 C CNN
+F 3 "" H 4050 5675 50  0001 C CNN
+	1    4050 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C19
+U 1 1 6013ABEA
+P 4050 5775
+F 0 "C19" H 4142 5821 50  0000 L CNN
+F 1 ".1uF" H 4142 5730 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4050 5775 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 4050 5775 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 4050 5775 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4050 5775 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 4050 5775 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 4050 5775 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 4050 5775 50  0001 C CNN "Manufacturer"
+	1    4050 5775
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR081
+U 1 1 6013ABF4
+P 4900 5875
+F 0 "#PWR081" H 4900 5625 50  0001 C CNN
+F 1 "GND" H 4905 5702 50  0000 C CNN
+F 2 "" H 4900 5875 50  0001 C CNN
+F 3 "" H 4900 5875 50  0001 C CNN
+	1    4900 5875
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR076
+U 1 1 6013ABFE
+P 4900 5675
+F 0 "#PWR076" H 4900 5525 50  0001 C CNN
+F 1 "+5V" H 4915 5848 50  0000 C CNN
+F 2 "" H 4900 5675 50  0001 C CNN
+F 3 "" H 4900 5675 50  0001 C CNN
+	1    4900 5675
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C20
+U 1 1 6013AC0D
+P 4900 5775
+F 0 "C20" H 4992 5821 50  0000 L CNN
+F 1 ".1uF" H 4992 5730 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603" H 4900 5775 50  0001 C CNN
+F 3 "https://product.tdk.com/info/en/catalog/datasheets/mlcc_commercial_general_en.pdf" H 4900 5775 50  0001 C CNN
+F 4 "C0603X5R1A104K030BC" H 4900 5775 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4900 5775 50  0001 C CNN "Supplier"
+F 6 "445-7318-1-ND" H 4900 5775 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/tdk-corporation/C0603X5R1A104K030BC/2732753" H 4900 5775 50  0001 C CNN "Supplier Link"
+F 8 "TDK Corporation" H 4900 5775 50  0001 C CNN "Manufacturer"
+	1    4900 5775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1975 6550 1825 6550
+Wire Wire Line
+	1700 6650 1975 6650
+$Comp
+L MyComp:1pin_conn J14
+U 1 1 601A5126
+P 1825 1400
+F 0 "J14" H 2075 1400 50  0000 C CNN
+F 1 "1pin_conn" H 1792 1499 50  0001 C CNN
+F 2 "MyLib:Conn_1_Pin" H 1825 1400 50  0001 C CNN
+F 3 "" H 1825 1400 50  0001 C CNN
+	1    1825 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:1pin_conn J11
+U 1 1 601A64C4
+P 1575 1400
+F 0 "J11" H 1825 1400 50  0000 C CNN
+F 1 "1pin_conn" H 1542 1499 50  0001 C CNN
+F 2 "MyLib:Conn_1_Pin" H 1575 1400 50  0001 C CNN
+F 3 "" H 1575 1400 50  0001 C CNN
+	1    1575 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:1pin_conn J12
+U 1 1 601A6A08
+P 1475 1400
+F 0 "J12" H 1725 1400 50  0000 C CNN
+F 1 "1pin_conn" H 1442 1499 50  0001 C CNN
+F 2 "MyLib:Conn_1_Pin" H 1475 1400 50  0001 C CNN
+F 3 "" H 1475 1400 50  0001 C CNN
+	1    1475 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J7
+U 4 1 601D000E
+P 6275 5925
+F 0 "J7" H 6600 5925 50  0000 R CNN
+F 1 "6pin_conn" V 6197 5837 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 5925 50  0001 C CNN
+F 3 "" H 6275 5925 50  0001 C CNN
+	4    6275 5925
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J10
+U 3 1 601D0018
+P 6275 5750
+F 0 "J10" H 6625 5750 50  0000 R CNN
+F 1 "6pin_conn" V 6197 5662 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 5750 50  0001 C CNN
+F 3 "" H 6275 5750 50  0001 C CNN
+	3    6275 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J7
+U 5 1 601D944C
+P 7500 6025
+F 0 "J7" H 7825 6025 50  0000 R CNN
+F 1 "6pin_conn" V 7422 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 7500 6025 50  0001 C CNN
+F 3 "" H 7500 6025 50  0001 C CNN
+	5    7500 6025
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J7
+U 6 1 601D9456
+P 7500 6125
+F 0 "J7" H 7825 6125 50  0000 R CNN
+F 1 "6pin_conn" V 7422 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 7500 6125 50  0001 C CNN
+F 3 "" H 7500 6125 50  0001 C CNN
+	6    7500 6125
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J8
+U 4 1 601DDD2F
+P 6275 6025
+F 0 "J8" H 6600 6025 50  0000 R CNN
+F 1 "6pin_conn" V 6197 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 6025 50  0001 C CNN
+F 3 "" H 6275 6025 50  0001 C CNN
+	4    6275 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J9
+U 4 1 601DE00C
+P 6275 6125
+F 0 "J9" H 6600 6125 50  0000 R CNN
+F 1 "6pin_conn" V 6197 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 6125 50  0001 C CNN
+F 3 "" H 6275 6125 50  0001 C CNN
+	4    6275 6125
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J10
+U 4 1 601DE22C
+P 6275 6225
+F 0 "J10" H 6650 6225 50  0000 R CNN
+F 1 "6pin_conn" V 6197 6137 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 6225 50  0001 C CNN
+F 3 "" H 6275 6225 50  0001 C CNN
+	4    6275 6225
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6075 5925 6075 6025
+Wire Wire Line
+	6075 6025 6075 6125
+Connection ~ 6075 6025
+$Comp
+L power:GND #PWR0103
+U 1 1 601EB2CD
+P 6075 6250
+F 0 "#PWR0103" H 6075 6000 50  0001 C CNN
+F 1 "GND" H 6080 6077 50  0000 C CNN
+F 2 "" H 6075 6250 50  0001 C CNN
+F 3 "" H 6075 6250 50  0001 C CNN
+	1    6075 6250
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J9
+U 3 1 601EF4CC
+P 6275 5650
+F 0 "J9" H 6600 5650 50  0000 R CNN
+F 1 "6pin_conn" V 6197 5562 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 5650 50  0001 C CNN
+F 3 "" H 6275 5650 50  0001 C CNN
+	3    6275 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J8
+U 3 1 601EF742
+P 6275 5550
+F 0 "J8" H 6600 5550 50  0000 R CNN
+F 1 "6pin_conn" V 6197 5462 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 5550 50  0001 C CNN
+F 3 "" H 6275 5550 50  0001 C CNN
+	3    6275 5550
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J7
+U 3 1 601EF944
+P 6275 5450
+F 0 "J7" H 6600 5450 50  0000 R CNN
+F 1 "6pin_conn" V 6197 5362 50  0001 R CNN
+F 2 "MyLib:Connector" H 6275 5450 50  0001 C CNN
+F 3 "" H 6275 5450 50  0001 C CNN
+	3    6275 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 601EFBE6
+P 6075 5400
+F 0 "#PWR0104" H 6075 5250 50  0001 C CNN
+F 1 "+5V" H 6090 5573 50  0000 C CNN
+F 2 "" H 6075 5400 50  0001 C CNN
+F 3 "" H 6075 5400 50  0001 C CNN
+	1    6075 5400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6075 5450 6075 5550
+Wire Wire Line
+	6075 5550 6075 5650
+Connection ~ 6075 5550
+Wire Wire Line
+	6075 5650 6075 5750
+Connection ~ 6075 5650
+$Comp
+L MyComp:6pin_conn J8
+U 1 1 6020370F
+P 7900 6025
+F 0 "J8" H 8225 6025 50  0000 R CNN
+F 1 "6pin_conn" V 7822 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 7900 6025 50  0001 C CNN
+F 3 "" H 7900 6025 50  0001 C CNN
+	1    7900 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J8
+U 2 1 60203719
+P 7900 6125
+F 0 "J8" H 8225 6125 50  0000 R CNN
+F 1 "6pin_conn" V 7822 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 7900 6125 50  0001 C CNN
+F 3 "" H 7900 6125 50  0001 C CNN
+	2    7900 6125
+	1    0    0    -1  
+$EndComp
+Text Notes 7000 6275 0    50   ~ 0
+Wing 01
+$Comp
+L MyComp:6pin_conn J8
+U 5 1 6020F0CB
+P 8600 6025
+F 0 "J8" H 8925 6025 50  0000 R CNN
+F 1 "6pin_conn" V 8522 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 8600 6025 50  0001 C CNN
+F 3 "" H 8600 6025 50  0001 C CNN
+	5    8600 6025
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J8
+U 6 1 6020F0D5
+P 8600 6125
+F 0 "J8" H 8925 6125 50  0000 R CNN
+F 1 "6pin_conn" V 8522 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 8600 6125 50  0001 C CNN
+F 3 "" H 8600 6125 50  0001 C CNN
+	6    8600 6125
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J9
+U 1 1 6020F0DF
+P 9000 6025
+F 0 "J9" H 9325 6025 50  0000 R CNN
+F 1 "6pin_conn" V 8922 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 9000 6025 50  0001 C CNN
+F 3 "" H 9000 6025 50  0001 C CNN
+	1    9000 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J9
+U 2 1 6020F0E9
+P 9000 6125
+F 0 "J9" H 9325 6125 50  0000 R CNN
+F 1 "6pin_conn" V 8922 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 9000 6125 50  0001 C CNN
+F 3 "" H 9000 6125 50  0001 C CNN
+	2    9000 6125
+	1    0    0    -1  
+$EndComp
+Text Notes 8100 6275 0    50   ~ 0
+Wing 02\n
+$Comp
+L MyComp:6pin_conn J9
+U 5 1 60214ABB
+P 9675 6025
+F 0 "J9" H 10000 6025 50  0000 R CNN
+F 1 "6pin_conn" V 9597 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 9675 6025 50  0001 C CNN
+F 3 "" H 9675 6025 50  0001 C CNN
+	5    9675 6025
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J9
+U 6 1 60214AC5
+P 9675 6125
+F 0 "J9" H 10000 6125 50  0000 R CNN
+F 1 "6pin_conn" V 9597 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 9675 6125 50  0001 C CNN
+F 3 "" H 9675 6125 50  0001 C CNN
+	6    9675 6125
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J10
+U 1 1 60214ACF
+P 10075 6025
+F 0 "J10" H 10425 6025 50  0000 R CNN
+F 1 "6pin_conn" V 9997 5937 50  0001 R CNN
+F 2 "MyLib:Connector" H 10075 6025 50  0001 C CNN
+F 3 "" H 10075 6025 50  0001 C CNN
+	1    10075 6025
+	1    0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J10
+U 2 1 60214AD9
+P 10075 6125
+F 0 "J10" H 10425 6125 50  0000 R CNN
+F 1 "6pin_conn" V 9997 6037 50  0001 R CNN
+F 2 "MyLib:Connector" H 10075 6125 50  0001 C CNN
+F 3 "" H 10075 6125 50  0001 C CNN
+	2    10075 6125
+	1    0    0    -1  
+$EndComp
+Text Notes 9150 6275 0    50   ~ 0
+Wing 03\n
+Text Notes 10075 6275 0    50   ~ 0
+Wing 04\n
+Wire Wire Line
+	6075 5450 6075 5400
+Connection ~ 6075 5450
+Wire Notes Line
+	10725 5100 10725 6500
+Wire Notes Line
+	5950 6500 5950 5100
+Text Notes 6775 5650 0    100  ~ 0
+Maine Body and Connector PCB
+Wire Notes Line
+	975  975  5750 975 
+Wire Notes Line
+	5750 975  5750 2825
+Wire Notes Line
+	5750 2825 975  2825
+Wire Notes Line
+	975  2825 975  975 
+Text Notes 975  975  0    100  ~ 0
+BODY
+Wire Notes Line
+	5950 975  10725 975 
+Wire Notes Line
+	5950 2825 5950 975 
+Text Notes 5950 975  0    100  ~ 0
+WING 01
+Wire Notes Line
+	5950 2825 10725 2825
+Wire Notes Line
+	10725 2825 10725 975 
+Wire Notes Line
+	950  3175 5725 3175
+Wire Notes Line
+	950  5025 950  3175
+Text Notes 950  3175 0    100  ~ 0
+WING 02
+Wire Notes Line
+	950  5025 5725 5025
+Wire Notes Line
+	5725 5025 5725 3175
+Wire Notes Line
+	5950 3175 10725 3175
+Wire Notes Line
+	5950 5025 5950 3175
+Text Notes 5950 3175 0    100  ~ 0
+WING 03
+Wire Notes Line
+	5950 5025 10725 5025
+Wire Notes Line
+	10725 5025 10725 3175
+Wire Notes Line
+	950  5375 5725 5375
+Wire Notes Line
+	950  7225 950  5375
+Text Notes 950  5375 0    100  ~ 0
+WING 04
+$Comp
+L MyComp:6pin_conn J10
+U 6 1 6028F46F
+P 9600 5400
+F 0 "J10" H 9950 5400 50  0000 R CNN
+F 1 "6pin_conn" V 9522 5312 50  0001 R CNN
+F 2 "MyLib:Connector" H 9600 5400 50  0001 C CNN
+F 3 "" H 9600 5400 50  0001 C CNN
+	6    9600 5400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L MyComp:6pin_conn J10
+U 5 1 6028F479
+P 9600 5300
+F 0 "J10" H 9950 5300 50  0000 R CNN
+F 1 "6pin_conn" V 9522 5212 50  0001 R CNN
+F 2 "MyLib:Connector" H 9600 5300 50  0001 C CNN
+F 3 "" H 9600 5300 50  0001 C CNN
+	5    9600 5300
+	-1   0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 6029802D
+P 9875 5525
+F 0 "R1" H 9943 5525 50  0000 L CNN
+F 1 "R_Small_US" H 9943 5480 50  0001 L CNN
+F 2 "Resistors_SMD:R_0805" H 9875 5525 50  0001 C CNN
+F 3 "~" H 9875 5525 50  0001 C CNN
+	1    9875 5525
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 602996C7
+P 10100 5525
+F 0 "R2" H 10168 5525 50  0000 L CNN
+F 1 "R_Small_US" H 10168 5480 50  0001 L CNN
+F 2 "Resistors_SMD:R_0805" H 10100 5525 50  0001 C CNN
+F 3 "~" H 10100 5525 50  0001 C CNN
+	1    10100 5525
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9800 5400 9875 5400
+Wire Wire Line
+	9875 5400 9875 5425
+Wire Wire Line
+	9800 5300 10100 5300
+Wire Wire Line
+	10100 5300 10100 5425
+$Comp
+L power:GND #PWR0105
+U 1 1 602A8917
+P 9875 5700
+F 0 "#PWR0105" H 9875 5450 50  0001 C CNN
+F 1 "GND" H 9880 5527 50  0000 C CNN
+F 2 "" H 9875 5700 50  0001 C CNN
+F 3 "" H 9875 5700 50  0001 C CNN
+	1    9875 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	9875 5700 9875 5625
+$Comp
+L power:GND #PWR0106
+U 1 1 602ACB0C
+P 10100 5700
+F 0 "#PWR0106" H 10100 5450 50  0001 C CNN
+F 1 "GND" H 10105 5527 50  0000 C CNN
+F 2 "" H 10100 5700 50  0001 C CNN
+F 3 "" H 10100 5700 50  0001 C CNN
+	1    10100 5700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	10100 5625 10100 5700
+Wire Notes Line
+	950  7225 5725 7225
+Wire Notes Line
+	5725 7225 5725 5375
+$Comp
+L MyComp:1pin_conn J13
+U 1 1 6019FFA1
+P 1700 1400
+F 0 "J13" H 1950 1400 50  0000 C CNN
+F 1 "1pin_conn" H 1667 1499 50  0001 C CNN
+F 2 "MyLib:Conn_1_Pin" H 1700 1400 50  0001 C CNN
+F 3 "" H 1700 1400 50  0001 C CNN
+	1    1700 1400
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1100 1700 1475 1700
+$Comp
+L MyComp:6pin_conn J7
+U 1 1 601D0022
+P 5475 1425
+F 0 "J7" H 5800 1425 50  0000 R CNN
+F 1 "6pin_conn" V 5397 1337 50  0001 R CNN
+F 2 "MyLib:Connector" H 5475 1425 50  0001 C CNN
+F 3 "" H 5475 1425 50  0001 C CNN
+	1    5475 1425
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J7
+U 2 1 601D002C
+P 5600 1425
+F 0 "J7" H 5925 1425 50  0000 R CNN
+F 1 "6pin_conn" V 5522 1337 50  0001 R CNN
+F 2 "MyLib:Connector" H 5600 1425 50  0001 C CNN
+F 3 "" H 5600 1425 50  0001 C CNN
+	2    5600 1425
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	1700 1600 1700 2225
+$Comp
+L Connector:Conn_01x06_Male J99
+U 1 1 601FD1D6
+P 5975 7175
+F 0 "J99" H 6083 7556 50  0001 C CNN
+F 1 "Conn_01x06_Male" H 6083 7465 50  0001 C CNN
+F 2 "" H 5975 7175 50  0001 C CNN
+F 3 "~" H 5975 7175 50  0001 C CNN
+	1    5975 7175
+	1    0    0    -1  
+$EndComp
+Text Notes 5950 6875 0    50   ~ 0
+Wing Connector\nPin Out
+Text GLabel 6275 6975 2    50   Input ~ 0
+SDI
+Text GLabel 6275 7075 2    50   Input ~ 0
+CKI
+Text GLabel 6275 7375 2    50   Input ~ 0
+SDO
+Text GLabel 6275 7475 2    50   Input ~ 0
+CKO
+$Comp
+L power:GND #PWR0101
+U 1 1 60202710
+P 6625 7375
+F 0 "#PWR0101" H 6625 7125 50  0001 C CNN
+F 1 "GND" H 6630 7202 50  0000 C CNN
+F 2 "" H 6625 7375 50  0001 C CNN
+F 3 "" H 6625 7375 50  0001 C CNN
+	1    6625 7375
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0102
+U 1 1 60202B00
+P 6625 7050
+F 0 "#PWR0102" H 6625 6900 50  0001 C CNN
+F 1 "+5V" H 6640 7223 50  0000 C CNN
+F 2 "" H 6625 7050 50  0001 C CNN
+F 3 "" H 6625 7050 50  0001 C CNN
+	1    6625 7050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6175 7175 6625 7175
+Wire Wire Line
+	6625 7175 6625 7050
+Wire Wire Line
+	6175 7275 6625 7275
+Wire Wire Line
+	6625 7275 6625 7375
+Wire Wire Line
+	6175 6975 6275 6975
+Wire Wire Line
+	6175 7075 6275 7075
+Wire Wire Line
+	6175 7375 6275 7375
+Wire Wire Line
+	6175 7475 6275 7475
+Text Notes 5900 7000 0    50   ~ 0
+A
+Text Notes 5900 7100 0    50   ~ 0
+B
+Text Notes 5900 7200 0    50   ~ 0
+C
+Text Notes 5900 7300 0    50   ~ 0
+D
+Text Notes 5900 7400 0    50   ~ 0
+E
+Text Notes 5900 7500 0    50   ~ 0
+F
+Wire Notes Line
+	10725 5100 5950 5100
+Wire Notes Line
+	5950 6500 10725 6500
+Text Notes 5375 1550 1    50   ~ 0
+Wing 01
+$Comp
+L MyComp:6pin_conn J2
+U 1 1 600CE70D
+P 6500 1400
+F 0 "J2" H 6825 1400 50  0000 R CNN
+F 1 "6pin_conn" V 6422 1312 50  0001 R CNN
+F 2 "MyLib:Connector" H 6500 1400 50  0001 C CNN
+F 3 "" H 6500 1400 50  0001 C CNN
+	1    6500 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR020
+U 1 1 600CE688
+P 6500 1600
+F 0 "#PWR020" H 6500 1350 50  0001 C CNN
+F 1 "GND" H 6505 1427 50  0000 C CNN
+F 2 "" H 6500 1600 50  0001 C CNN
+F 3 "" H 6500 1600 50  0001 C CNN
+	1    6500 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6900 2125 6750 2125
+Wire Wire Line
+	5200 2125 5475 2125
+Wire Wire Line
+	6625 2225 6900 2225
+Wire Wire Line
+	6625 2225 6625 1600
+Wire Wire Line
+	6750 1600 6750 2125
+$Comp
+L MyComp:6pin_conn J2
+U 4 1 600CE72D
+P 6750 1400
+F 0 "J2" H 7075 1400 50  0000 R CNN
+F 1 "6pin_conn" V 6672 1312 50  0001 R CNN
+F 2 "MyLib:Connector" H 6750 1400 50  0001 C CNN
+F 3 "" H 6750 1400 50  0001 C CNN
+	4    6750 1400
+	0    -1   -1   0   
+$EndComp
+$Comp
+L MyComp:6pin_conn J2
+U 3 1 600CE723
+P 6625 1400
+F 0 "J2" H 6950 1400 50  0000 R CNN
+F 1 "6pin_conn" V 6547 1312 50  0001 R CNN
+F 2 "MyLib:Connector" H 6625 1400 50  0001 C CNN
+F 3 "" H 6625 1400 50  0001 C CNN
+	3    6625 1400
+	0    -1   -1   0   
+$EndComp
+Connection ~ 6075 6125
+Wire Wire Line
+	6075 6125 6075 6225
+Connection ~ 6075 6225
+Wire Wire Line
+	6075 6225 6075 6250
+$EndSCHEMATC

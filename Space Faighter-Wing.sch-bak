@@ -1,0 +1,508 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:TestPoint CN1
+U 1 1 5FFA4767
+P 3875 3375
+F 0 "CN1" H 3933 3447 50  0000 L CNN
+F 1 " " H 3933 3402 50  0001 L CNN
+F 2 "" H 4075 3375 50  0001 C CNN
+F 3 "~" H 4075 3375 50  0001 C CNN
+	1    3875 3375
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT RED1
+U 1 1 5FFA51C1
+P 3875 3900
+F 0 "RED1" V 3868 3782 50  0000 R CNN
+F 1 "IN-S63ASR" V 3823 3782 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 3875 3900 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 3875 3900 50  0001 C CNN
+F 4 "IN-S63ASR" H 3875 3900 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3875 3900 50  0001 C CNN "Supplier"
+F 6 "1830-1033-1-ND" H 3875 3900 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63ASR/7604927?s=N4IgjCBcoMwOxVAYygMwIYBsDOBTANCAPZQDaIMAnAKwBMYlIAuoQA4AuUIAyuwE4BLAHYBzEAF9CANkbQQKSBhwFiZEABYADJXW1NzNp0g9%2BwsZJB1qieWix5CJSORgxNADkowDIDl16CohKEDJ42CkoOqs4g%2Biy%2BRiaB5oQAtLThUPwAripO5NbxfsYSFhkxmLgAJsziQA" H 3875 3900 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 3875 3900 50  0001 C CNN "Manufacturer"
+	1    3875 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R1
+U 1 1 5FFA5A20
+P 3875 3575
+F 0 "R1" H 3943 3621 50  0000 L CNN
+F 1 "120" H 3943 3530 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 3875 3575 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 3875 3575 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 3875 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 3875 3575 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 3875 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 3875 3575 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 3875 3575 50  0001 C CNN "Manufacturer"
+	1    3875 3575
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint CN2
+U 1 1 5FFA7C8C
+P 3875 4300
+F 0 "CN2" H 3817 4372 50  0000 R CNN
+F 1 " " H 3933 4327 50  0001 L CNN
+F 2 "" H 4075 4300 50  0001 C CNN
+F 3 "~" H 4075 4300 50  0001 C CNN
+	1    3875 4300
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3875 4050 3875 4300
+Wire Wire Line
+	3875 3675 3875 3750
+$Comp
+L Device:LED_ALT RED2
+U 1 1 5FFA8BA2
+P 4325 3900
+F 0 "RED2" V 4318 3782 50  0000 R CNN
+F 1 "IN-S63ASR" V 4273 3782 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 4325 3900 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 4325 3900 50  0001 C CNN
+F 4 "IN-S63ASR" H 4325 3900 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4325 3900 50  0001 C CNN "Supplier"
+F 6 "1830-1033-1-ND" H 4325 3900 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63ASR/7604927?s=N4IgjCBcoMwOxVAYygMwIYBsDOBTANCAPZQDaIMAnAKwBMYlIAuoQA4AuUIAyuwE4BLAHYBzEAF9CANkbQQKSBhwFiZEABYADJXW1NzNp0g9%2BwsZJB1qieWix5CJSORgxNADkowDIDl16CohKEDJ42CkoOqs4g%2Biy%2BRiaB5oQAtLThUPwAripO5NbxfsYSFhkxmLgAJsziQA" H 4325 3900 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 4325 3900 50  0001 C CNN "Manufacturer"
+	1    4325 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R2
+U 1 1 5FFA8BB1
+P 4325 3575
+F 0 "R2" H 4393 3621 50  0000 L CNN
+F 1 "120" H 4393 3530 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4325 3575 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 4325 3575 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 4325 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4325 3575 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 4325 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 4325 3575 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 4325 3575 50  0001 C CNN "Manufacturer"
+	1    4325 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4325 4050 4325 4300
+Wire Wire Line
+	4325 3675 4325 3750
+Wire Wire Line
+	4325 3475 4325 3375
+$Comp
+L Device:LED_ALT BLUE1
+U 1 1 5FFA9E27
+P 4800 3900
+F 0 "BLUE1" V 4793 3783 50  0000 R CNN
+F 1 "IN-S63AS5B" V 4748 3782 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 4800 3900 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 4800 3900 50  0001 C CNN
+F 4 "IN-S63AS5B" H 4800 3900 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4800 3900 50  0001 C CNN "Supplier"
+F 6 "1830-1029-1-ND" H 4800 3900 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63AS5B/7604922?s=N4IgjCBcoKxaBjKAzAhgGwM4FMA0IB7KAbXBAF18AHAFyhAGUaAnASwDsBzEAX3zABs8EEkhoseQiXACAHAIEBOCtTqRGLDtz4gAzAHZho8TnxFIpXQCYADABY7ESiFr0mbLr3x2h0ESgxTKQsQGFl7IWdXdXctLxAlIwCJM2k7G0U7WxUXNQ0PbXxFBSSxQMlzUitFGzBZHOj8uJ0waog-Y3LUkN1FKzs4KLzYzxbFWWUO5KDKkBsG4c1R-FsreqmylODLRV0wXV0FtyXCkFXJxGmKtIF%2Bp1VjgviAWnbLzZnpOt158h1nuylEzXEIwRSKfRWCj-OAbYHdKrQng8IA" H 4800 3900 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 4800 3900 50  0001 C CNN "Manufacturer"
+	1    4800 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R3
+U 1 1 5FFA9E36
+P 4800 3575
+F 0 "R3" H 4868 3621 50  0000 L CNN
+F 1 "120" H 4868 3530 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 4800 3575 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 4800 3575 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 4800 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 4800 3575 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 4800 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 4800 3575 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 4800 3575 50  0001 C CNN "Manufacturer"
+	1    4800 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4800 4050 4800 4300
+Wire Wire Line
+	4800 3675 4800 3750
+Wire Wire Line
+	4800 3475 4800 3375
+Wire Wire Line
+	4325 3375 3875 3375
+Wire Wire Line
+	3875 3375 3875 3475
+Connection ~ 3875 3375
+Wire Wire Line
+	4325 4300 3875 4300
+Connection ~ 3875 4300
+Wire Wire Line
+	4325 4300 4800 4300
+Connection ~ 4325 4300
+$Comp
+L Device:R_Small_US R4
+U 1 1 5FFAC14F
+P 5275 3575
+F 0 "R4" H 5343 3621 50  0000 L CNN
+F 1 "120" H 5343 3530 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 5275 3575 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 5275 3575 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 5275 3575 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 5275 3575 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 5275 3575 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 5275 3575 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 5275 3575 50  0001 C CNN "Manufacturer"
+	1    5275 3575
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5275 4050 5275 4300
+Wire Wire Line
+	5275 3675 5275 3750
+Wire Wire Line
+	5275 3475 5275 3375
+Wire Wire Line
+	5275 3375 4800 3375
+Wire Wire Line
+	4800 4300 5275 4300
+Connection ~ 4800 3375
+Connection ~ 4800 4300
+$Comp
+L Device:LED_ALT BLUE2
+U 1 1 5FFAD407
+P 5275 3900
+F 0 "BLUE2" V 5268 3783 50  0000 R CNN
+F 1 "IN-S63AS5B" V 5223 3782 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 5275 3900 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 5275 3900 50  0001 C CNN
+F 4 "IN-S63AS5B" H 5275 3900 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 5275 3900 50  0001 C CNN "Supplier"
+F 6 "1830-1029-1-ND" H 5275 3900 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63AS5B/7604922?s=N4IgjCBcoKxaBjKAzAhgGwM4FMA0IB7KAbXBAF18AHAFyhAGUaAnASwDsBzEAX3zABs8EEkhoseQiXACAHAIEBOCtTqRGLDtz4gAzAHZho8TnxFIpXQCYADABY7ESiFr0mbLr3x2h0ESgxTKQsQGFl7IWdXdXctLxAlIwCJM2k7G0U7WxUXNQ0PbXxFBSSxQMlzUitFGzBZHOj8uJ0waog-Y3LUkN1FKzs4KLzYzxbFWWUO5KDKkBsG4c1R-FsreqmylODLRV0wXV0FtyXCkFXJxGmKtIF%2Bp1VjgviAWnbLzZnpOt158h1nuylEzXEIwRSKfRWCj-OAbYHdKrQng8IA" H 5275 3900 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 5275 3900 50  0001 C CNN "Manufacturer"
+	1    5275 3900
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint CN3
+U 1 1 5FFADA71
+P 4800 3375
+F 0 "CN3" H 4858 3447 50  0000 L CNN
+F 1 " " H 4858 3402 50  0001 L CNN
+F 2 "" H 5000 3375 50  0001 C CNN
+F 3 "~" H 5000 3375 50  0001 C CNN
+	1    4800 3375
+	1    0    0    -1  
+$EndComp
+Text Notes 3750 2975 0    50   ~ 0
+Wing
+Wire Notes Line
+	3750 3000 5700 3000
+Wire Notes Line
+	5700 3000 5700 4625
+Wire Notes Line
+	5700 4625 3750 4625
+Wire Notes Line
+	3750 4625 3750 3000
+$Comp
+L power:GND #PWR?
+U 1 1 5FFB4B6E
+P 5275 4300
+F 0 "#PWR?" H 5275 4050 50  0001 C CNN
+F 1 "GND" H 5280 4127 50  0000 C CNN
+F 2 "" H 5275 4300 50  0001 C CNN
+F 3 "" H 5275 4300 50  0001 C CNN
+	1    5275 4300
+	1    0    0    -1  
+$EndComp
+Connection ~ 5275 4300
+$Comp
+L power:+5V #PWR?
+U 1 1 5FFB4F46
+P 4325 3375
+F 0 "#PWR?" H 4325 3225 50  0001 C CNN
+F 1 "+5V" H 4340 3548 50  0000 C CNN
+F 2 "" H 4325 3375 50  0001 C CNN
+F 3 "" H 4325 3375 50  0001 C CNN
+	1    4325 3375
+	1    0    0    -1  
+$EndComp
+Connection ~ 4325 3375
+$Comp
+L power:VS #PWR?
+U 1 1 5FFB5145
+P 5275 3375
+F 0 "#PWR?" H 5075 3225 50  0001 C CNN
+F 1 "VS" H 5292 3548 50  0000 C CNN
+F 2 "" H 5275 3375 50  0001 C CNN
+F 3 "" H 5275 3375 50  0001 C CNN
+	1    5275 3375
+	1    0    0    -1  
+$EndComp
+Connection ~ 5275 3375
+$Comp
+L Connector:TestPoint CN?
+U 1 1 5FFCE281
+P 6100 3400
+F 0 "CN?" H 6158 3472 50  0000 L CNN
+F 1 " " H 6158 3427 50  0001 L CNN
+F 2 "" H 6300 3400 50  0001 C CNN
+F 3 "~" H 6300 3400 50  0001 C CNN
+	1    6100 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_ALT Yell1
+U 1 1 5FFCE290
+P 6100 3925
+F 0 "Yell1" V 6093 3808 50  0000 R CNN
+F 1 "IN-S63ASR" V 6048 3807 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 6100 3925 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 6100 3925 50  0001 C CNN
+F 4 "IN-S63ASR" H 6100 3925 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 6100 3925 50  0001 C CNN "Supplier"
+F 6 "1830-1033-1-ND" H 6100 3925 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63ASR/7604927?s=N4IgjCBcoMwOxVAYygMwIYBsDOBTANCAPZQDaIMAnAKwBMYlIAuoQA4AuUIAyuwE4BLAHYBzEAF9CANkbQQKSBhwFiZEABYADJXW1NzNp0g9%2BwsZJB1qieWix5CJSORgxNADkowDIDl16CohKEDJ42CkoOqs4g%2Biy%2BRiaB5oQAtLThUPwAripO5NbxfsYSFhkxmLgAJsziQA" H 6100 3925 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 6100 3925 50  0001 C CNN "Manufacturer"
+	1    6100 3925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5FFCE29F
+P 6100 3600
+F 0 "R?" H 6168 3646 50  0000 L CNN
+F 1 "120" H 6168 3555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 6100 3600 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 6100 3600 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 6100 3600 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 6100 3600 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 6100 3600 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 6100 3600 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 6100 3600 50  0001 C CNN "Manufacturer"
+	1    6100 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:TestPoint CN?
+U 1 1 5FFCE2A9
+P 6100 4325
+F 0 "CN?" H 6042 4397 50  0000 R CNN
+F 1 " " H 6158 4352 50  0001 L CNN
+F 2 "" H 6300 4325 50  0001 C CNN
+F 3 "~" H 6300 4325 50  0001 C CNN
+	1    6100 4325
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	6100 4075 6100 4325
+Wire Wire Line
+	6100 3700 6100 3775
+$Comp
+L Device:LED_ALT Yell2
+U 1 1 5FFCE2BA
+P 6550 3925
+F 0 "Yell2" V 6543 3808 50  0000 R CNN
+F 1 "IN-S63ASR" V 6498 3807 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 6550 3925 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 6550 3925 50  0001 C CNN
+F 4 "IN-S63ASR" H 6550 3925 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 6550 3925 50  0001 C CNN "Supplier"
+F 6 "1830-1033-1-ND" H 6550 3925 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63ASR/7604927?s=N4IgjCBcoMwOxVAYygMwIYBsDOBTANCAPZQDaIMAnAKwBMYlIAuoQA4AuUIAyuwE4BLAHYBzEAF9CANkbQQKSBhwFiZEABYADJXW1NzNp0g9%2BwsZJB1qieWix5CJSORgxNADkowDIDl16CohKEDJ42CkoOqs4g%2Biy%2BRiaB5oQAtLThUPwAripO5NbxfsYSFhkxmLgAJsziQA" H 6550 3925 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 6550 3925 50  0001 C CNN "Manufacturer"
+	1    6550 3925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5FFCE2C9
+P 6550 3600
+F 0 "R?" H 6618 3646 50  0000 L CNN
+F 1 "120" H 6618 3555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 6550 3600 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 6550 3600 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 6550 3600 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 6550 3600 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 6550 3600 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 6550 3600 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 6550 3600 50  0001 C CNN "Manufacturer"
+	1    6550 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6550 4075 6550 4325
+Wire Wire Line
+	6550 3700 6550 3775
+Wire Wire Line
+	6550 3500 6550 3400
+$Comp
+L Device:LED_ALT White1
+U 1 1 5FFCE2DB
+P 7025 3925
+F 0 "White1" V 7018 3807 50  0000 R CNN
+F 1 "IN-S63AS5B" V 6973 3807 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 7025 3925 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 7025 3925 50  0001 C CNN
+F 4 "IN-S63AS5B" H 7025 3925 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7025 3925 50  0001 C CNN "Supplier"
+F 6 "1830-1029-1-ND" H 7025 3925 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63AS5B/7604922?s=N4IgjCBcoKxaBjKAzAhgGwM4FMA0IB7KAbXBAF18AHAFyhAGUaAnASwDsBzEAX3zABs8EEkhoseQiXACAHAIEBOCtTqRGLDtz4gAzAHZho8TnxFIpXQCYADABY7ESiFr0mbLr3x2h0ESgxTKQsQGFl7IWdXdXctLxAlIwCJM2k7G0U7WxUXNQ0PbXxFBSSxQMlzUitFGzBZHOj8uJ0waog-Y3LUkN1FKzs4KLzYzxbFWWUO5KDKkBsG4c1R-FsreqmylODLRV0wXV0FtyXCkFXJxGmKtIF%2Bp1VjgviAWnbLzZnpOt158h1nuylEzXEIwRSKfRWCj-OAbYHdKrQng8IA" H 7025 3925 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 7025 3925 50  0001 C CNN "Manufacturer"
+	1    7025 3925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small_US R?
+U 1 1 5FFCE2EA
+P 7025 3600
+F 0 "R?" H 7093 3646 50  0000 L CNN
+F 1 "120" H 7093 3555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7025 3600 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 7025 3600 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 7025 3600 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7025 3600 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 7025 3600 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 7025 3600 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 7025 3600 50  0001 C CNN "Manufacturer"
+	1    7025 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7025 4075 7025 4325
+Wire Wire Line
+	7025 3700 7025 3775
+Wire Wire Line
+	7025 3500 7025 3400
+Wire Wire Line
+	6550 3400 6100 3400
+Wire Wire Line
+	6100 3400 6100 3500
+Connection ~ 6100 3400
+Wire Wire Line
+	6550 4325 6100 4325
+Connection ~ 6100 4325
+Wire Wire Line
+	6550 4325 7025 4325
+Connection ~ 6550 4325
+$Comp
+L Device:R_Small_US R?
+U 1 1 5FFCE303
+P 7500 3600
+F 0 "R?" H 7568 3646 50  0000 L CNN
+F 1 "120" H 7568 3555 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805_HandSoldering" H 7500 3600 50  0001 C CNN
+F 3 "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RT_1-to-0.01_RoHS_L_12.pdf" H 7500 3600 50  0001 C CNN
+F 4 "RT0805FRE07120RL" H 7500 3600 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7500 3600 50  0001 C CNN "Supplier"
+F 6 "13-RT0805FRE07120RLCT-ND" H 7500 3600 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/yageo/RT0805FRE07120RL/1078930" H 7500 3600 50  0001 C CNN "Supplier Link"
+F 8 "Yageo" H 7500 3600 50  0001 C CNN "Manufacturer"
+	1    7500 3600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7500 4075 7500 4325
+Wire Wire Line
+	7500 3700 7500 3775
+Wire Wire Line
+	7500 3500 7500 3400
+Wire Wire Line
+	7500 3400 7025 3400
+Wire Wire Line
+	7025 4325 7500 4325
+Connection ~ 7025 3400
+Connection ~ 7025 4325
+$Comp
+L Device:LED_ALT White2
+U 1 1 5FFCE319
+P 7500 3925
+F 0 "White2" V 7493 3807 50  0000 R CNN
+F 1 "IN-S63AS5B" V 7448 3807 50  0001 R CNN
+F 2 "LEDs:LED_0603_HandSoldering" H 7500 3925 50  0001 C CNN
+F 3 "http://www.inolux-corp.com/datasheet/SMDLED/Mono%20Color%20Side%20View/IN-S63AS%20Series_V1.0.pdf" H 7500 3925 50  0001 C CNN
+F 4 "IN-S63AS5B" H 7500 3925 50  0001 C CNN "Manufacturer Number"
+F 5 "Digi-Key" H 7500 3925 50  0001 C CNN "Supplier"
+F 6 "1830-1029-1-ND" H 7500 3925 50  0001 C CNN "Supplier Part No"
+F 7 "https://www.digikey.com/en/products/detail/inolux/IN-S63AS5B/7604922?s=N4IgjCBcoKxaBjKAzAhgGwM4FMA0IB7KAbXBAF18AHAFyhAGUaAnASwDsBzEAX3zABs8EEkhoseQiXACAHAIEBOCtTqRGLDtz4gAzAHZho8TnxFIpXQCYADABY7ESiFr0mbLr3x2h0ESgxTKQsQGFl7IWdXdXctLxAlIwCJM2k7G0U7WxUXNQ0PbXxFBSSxQMlzUitFGzBZHOj8uJ0waog-Y3LUkN1FKzs4KLzYzxbFWWUO5KDKkBsG4c1R-FsreqmylODLRV0wXV0FtyXCkFXJxGmKtIF%2Bp1VjgviAWnbLzZnpOt158h1nuylEzXEIwRSKfRWCj-OAbYHdKrQng8IA" H 7500 3925 50  0001 C CNN "Supplier Link"
+F 8 "Inolux" H 7500 3925 50  0001 C CNN "Manufacturer"
+	1    7500 3925
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Connector:TestPoint CN?
+U 1 1 5FFCE323
+P 7025 3400
+F 0 "CN?" H 7083 3472 50  0000 L CNN
+F 1 " " H 7083 3427 50  0001 L CNN
+F 2 "" H 7225 3400 50  0001 C CNN
+F 3 "~" H 7225 3400 50  0001 C CNN
+	1    7025 3400
+	1    0    0    -1  
+$EndComp
+Text Notes 5975 3000 0    50   ~ 0
+Body
+Wire Notes Line
+	5975 3025 7925 3025
+Wire Notes Line
+	7925 3025 7925 4650
+Wire Notes Line
+	7925 4650 5975 4650
+Wire Notes Line
+	5975 4650 5975 3025
+$Comp
+L power:GND #PWR?
+U 1 1 5FFCE332
+P 7500 4325
+F 0 "#PWR?" H 7500 4075 50  0001 C CNN
+F 1 "GND" H 7505 4152 50  0000 C CNN
+F 2 "" H 7500 4325 50  0001 C CNN
+F 3 "" H 7500 4325 50  0001 C CNN
+	1    7500 4325
+	1    0    0    -1  
+$EndComp
+Connection ~ 7500 4325
+$Comp
+L power:+5V #PWR?
+U 1 1 5FFCE33D
+P 6550 3400
+F 0 "#PWR?" H 6550 3250 50  0001 C CNN
+F 1 "+5V" H 6565 3573 50  0000 C CNN
+F 2 "" H 6550 3400 50  0001 C CNN
+F 3 "" H 6550 3400 50  0001 C CNN
+	1    6550 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 6550 3400
+$Comp
+L power:VS #PWR?
+U 1 1 5FFCE348
+P 7500 3400
+F 0 "#PWR?" H 7300 3250 50  0001 C CNN
+F 1 "VS" H 7517 3573 50  0000 C CNN
+F 2 "" H 7500 3400 50  0001 C CNN
+F 3 "" H 7500 3400 50  0001 C CNN
+	1    7500 3400
+	1    0    0    -1  
+$EndComp
+Connection ~ 7500 3400
+$EndSCHEMATC
