@@ -1057,7 +1057,7 @@ Wire Wire Line
 	2150 3200 2150 3150
 Connection ~ 2150 3200
 Text Notes 2900 3450 0    100  ~ 0
-Main Body and Connector PCB
+Maine Body and Connector PCB
 Wire Notes Line
 	2025 1000 6800 1000
 Text Notes 2025 1000 0    100  ~ 0
