@@ -412,7 +412,7 @@
   (module MyLib:Connector (layer F.Cu) (tedit 5FFD1342) (tstamp 5FFEAAA5)
     (at 158.95 98.05 90)
     (path /600CE717)
-    (fp_text reference J2 (at 0.5 -5.25 90) (layer F.SilkS)
+    (fp_text reference J2 (at 0.5 -5.25 90) (layer F.SilkS) hide
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value 6pin_conn (at 0.5 5.25 90) (layer F.Fab)

@@ -1,4 +1,4 @@
-update=01/10/21 22:21:14
+update=01/23/21 21:50:27
 version=1
 last_client=kicad
 [general]
@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=1
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=Space Faighter.net
+LastNetListRead=Space fighter.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0
