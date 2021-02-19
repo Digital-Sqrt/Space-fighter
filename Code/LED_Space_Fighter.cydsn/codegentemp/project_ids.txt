@@ -1,0 +1,8 @@
+C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\LED_Space_Fighter.cyprj|3267e729-db65-4ccb-b6af-070788cc5ee6
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|0c0f5411-08ff-40d9-84a7-0929352af4ca
+C:\Users\Digital-Sqrt\Documents\PSoC Creator\4.4\Downloads ( 4.4).cylib\Downloads ( 4.4).cyprj|e98baade-9a31-4015-b937-4c63bad5d809
+C:\Users\Digital-Sqrt\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|b4875019-04d3-4720-9339-06baa2ce97ac
+C:\Users\Digital-Sqrt\Documents\PSoC Creator\4.1\Downloads ( 4.1).cylib\Downloads ( 4.1).cyprj|24d1622c-64c5-4adf-b51b-c505307b44ae
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|b3bbaa33-79cb-4cc3-814b-f761cbab4df8
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|2a19266c-7609-4b71-8849-6d4cd3141d05
+C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|2921650e-a99a-4852-aac1-30d874714d97

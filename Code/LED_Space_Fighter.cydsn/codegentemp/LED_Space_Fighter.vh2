@@ -1,0 +1,1026 @@
+--
+--	Conversion of LED_Space_Fighter.v to vh2:
+--
+--	Cypress Semiconductor - WARP Version 6.3 IR 41
+--	Sat Feb 06 21:52:26 2021
+--
+
+USE cypress.cypress.all;
+USE cypress.rtlpkg.all;
+ENTITY top_RTL IS
+ATTRIBUTE part_name of top_RTL:TYPE IS "cpsoc3";
+END top_RTL;
+--------------------------------------------------------
+ARCHITECTURE R_T_L OF top_RTL IS
+SIGNAL Net_10 : bit;
+SIGNAL Net_12 : bit;
+SIGNAL \Frame_Timer:Net_260\ : bit;
+SIGNAL Net_5 : bit;
+SIGNAL \Frame_Timer:Net_55\ : bit;
+SIGNAL Net_6 : bit;
+SIGNAL \Frame_Timer:Net_53\ : bit;
+SIGNAL one : bit;
+SIGNAL \Frame_Timer:TimerUDB:ClockOutFromEnBlock\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:Clk_Ctl_i\ : bit;
+SIGNAL zero : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_7\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_6\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_5\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_4\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_3\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_2\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:control_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_enable\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_ten\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_cmode_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_cmode_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_tmode_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_tmode_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_ic_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:ctrl_ic_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:fifo_load_polarized\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:capture_last\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:capt_fifo_load\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:timer_enable\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:run_mode\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:hwEnable\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_tc\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:trigger_enable\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:per_zero\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:tc_i\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:tc_reg_i\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:hwEnable_reg\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:capture_out_reg_i\ : bit;
+SIGNAL Net_3 : bit;
+SIGNAL \Frame_Timer:TimerUDB:capt_fifo_load_int\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:runmode_enable\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:trig_reg\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_6\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_5\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_4\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_2\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:fifo_full\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:status_3\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:fifo_nempty\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:cs_addr_2\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:cs_addr_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:cs_addr_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:zeros_3\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:zeros_2\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce0_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce0_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl0_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl0_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:nc0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff0_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff0_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce1_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce1_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl1_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl1_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:z1_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:z1_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff1_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff1_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:so_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:so_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:nc3\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:nc4\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce0_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl0_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:z0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:z0_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff0_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff0_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce1_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl1_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:z1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:z1_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff1_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff1_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:so_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:so_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f0_bus_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f0_blk_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_0\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:carry\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:sh_right\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:sh_left\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:msb\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_eq_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_eq_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_lt_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_lt_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_zero_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_zero_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_ff_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmp_ff_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cap_1\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cap_0\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cfb\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce0_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce0_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl0_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl0_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff0_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff0_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce1_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce1_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl1_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl1_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:z1_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:z1_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff1_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff1_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:so_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:so_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce0_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl0_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:z0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:z0_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff0_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff0_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ce1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ce1_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cl1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cl1_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:z1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:z1_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ff1_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ff1_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:ov_msb_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:co_msb_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:cmsb_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:so_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:so_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f0_bus_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f0_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_bus_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\ : bit;
+ATTRIBUTE port_state_att of \Frame_Timer:TimerUDB:sT16:timerdp:f1_blk_stat_reg_1\:SIGNAL IS 2;
+SIGNAL \Frame_Timer:Net_102\ : bit;
+SIGNAL \Frame_Timer:Net_266\ : bit;
+SIGNAL Net_76 : bit;
+SIGNAL tmpOE__SPI_DATA_net_0 : bit;
+SIGNAL Net_73 : bit;
+SIGNAL tmpFB_0__SPI_DATA_net_0 : bit;
+SIGNAL tmpIO_0__SPI_DATA_net_0 : bit;
+TERMINAL tmpSIOVREF__SPI_DATA_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__SPI_DATA_net_0 : bit;
+SIGNAL \Spi_LED_Chain:Net_276\ : bit;
+SIGNAL Net_58 : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:clk_fin\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:load_rx_data\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpcounter_one\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:pol_supprt\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:miso_to_dp\ : bit;
+SIGNAL \Spi_LED_Chain:Net_244\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_after_ld\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:so_send\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:so_send_reg\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_fin\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_cpha_0\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:state_2\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:state_1\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:state_0\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_from_dp\ : bit;
+SIGNAL Net_113 : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_cpha_1\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:pre_mosi\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_4\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_3\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_2\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_1\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_0\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_reg\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpcounter_zero\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:load_cond\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpcounter_one_reg\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_0\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_1\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpMOSI_fifo_empty\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_2\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpMOSI_fifo_not_full\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_3\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_4\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_4\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpMISO_fifo_full\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_5\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpMISO_fifo_not_empty\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_6\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_6\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:tx_status_5\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_3\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_2\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_1\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:rx_status_0\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_7\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_6\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_5\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_4\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_3\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_2\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_1\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:control_0\ : bit;
+SIGNAL \Spi_LED_Chain:Net_294\ : bit;
+SIGNAL \Spi_LED_Chain:Net_273\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:ld_ident\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:cnt_enable\ : bit;
+SIGNAL Net_74 : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_6\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:count_5\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:cnt_tc\ : bit;
+SIGNAL Net_88 : bit;
+SIGNAL Net_111 : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ce0\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ce0\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:cl0\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:cl0\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:z0\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:z0\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ff0\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ff0\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ce1\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ce1\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:cl1\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:cl1\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:z1\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:z1\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ff1\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ff1\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ov_msb\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ov_msb\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:co_msb\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:co_msb\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:cmsb\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:cmsb\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ce0_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ce0_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:cl0_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:cl0_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:z0_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:z0_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ff0_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ff0_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ce1_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ce1_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:cl1_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:cl1_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:z1_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:z1_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ff1_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ff1_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:ov_msb_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:ov_msb_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:co_msb_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:co_msb_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:cmsb_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:cmsb_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:so_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:so_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:f0_bus_stat_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:f0_bus_stat_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:f0_blk_stat_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:f0_blk_stat_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:f1_bus_stat_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:f1_bus_stat_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:BSPIM:sR8:Dp:f1_blk_stat_reg\ : bit;
+ATTRIBUTE port_state_att of \Spi_LED_Chain:BSPIM:sR8:Dp:f1_blk_stat_reg\:SIGNAL IS 2;
+SIGNAL \Spi_LED_Chain:Net_289\ : bit;
+SIGNAL Net_78 : bit;
+SIGNAL tmpOE__SPI_CLK_net_0 : bit;
+SIGNAL tmpFB_0__SPI_CLK_net_0 : bit;
+SIGNAL tmpIO_0__SPI_CLK_net_0 : bit;
+TERMINAL tmpSIOVREF__SPI_CLK_net_0 : bit;
+SIGNAL tmpINTERRUPT_0__SPI_CLK_net_0 : bit;
+SIGNAL \Frame_Timer:TimerUDB:capture_last\\D\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:tc_reg_i\\D\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:hwEnable_reg\\D\ : bit;
+SIGNAL \Frame_Timer:TimerUDB:capture_out_reg_i\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:so_send_reg\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:state_2\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:state_1\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:state_0\\D\ : bit;
+SIGNAL Net_113D : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_hs_reg\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_pre_reg\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_reg\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:load_cond\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:dpcounter_one_reg\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:ld_ident\\D\ : bit;
+SIGNAL \Spi_LED_Chain:BSPIM:cnt_enable\\D\ : bit;
+SIGNAL Net_74D : bit;
+BEGIN
+
+Net_12 <=  ('0') ;
+
+one <=  ('1') ;
+
+\Frame_Timer:TimerUDB:status_tc\ <= ((\Frame_Timer:TimerUDB:control_7\ and \Frame_Timer:TimerUDB:per_zero\));
+
+\Spi_LED_Chain:BSPIM:load_rx_data\ <= ((not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_2\ and not \Spi_LED_Chain:BSPIM:count_1\ and \Spi_LED_Chain:BSPIM:count_0\));
+
+Net_73 <= ((not \Spi_LED_Chain:BSPIM:state_0\ and not Net_113 and \Spi_LED_Chain:BSPIM:mosi_hs_reg\)
+	OR (not Net_113 and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_hs_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not Net_113 and \Spi_LED_Chain:BSPIM:mosi_hs_reg\));
+
+\Spi_LED_Chain:BSPIM:load_cond\\D\ <= ((not \Spi_LED_Chain:BSPIM:state_1\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\)
+	OR (\Spi_LED_Chain:BSPIM:count_0\ and \Spi_LED_Chain:BSPIM:load_cond\)
+	OR (\Spi_LED_Chain:BSPIM:count_1\ and \Spi_LED_Chain:BSPIM:load_cond\)
+	OR (\Spi_LED_Chain:BSPIM:count_2\ and \Spi_LED_Chain:BSPIM:load_cond\)
+	OR (\Spi_LED_Chain:BSPIM:count_3\ and \Spi_LED_Chain:BSPIM:load_cond\)
+	OR (\Spi_LED_Chain:BSPIM:count_4\ and \Spi_LED_Chain:BSPIM:load_cond\));
+
+\Spi_LED_Chain:BSPIM:tx_status_0\ <= ((not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\));
+
+\Spi_LED_Chain:BSPIM:tx_status_4\ <= ((not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_1\ and not \Spi_LED_Chain:BSPIM:state_0\));
+
+\Spi_LED_Chain:BSPIM:rx_status_6\ <= ((not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_2\ and not \Spi_LED_Chain:BSPIM:count_1\ and \Spi_LED_Chain:BSPIM:count_0\ and \Spi_LED_Chain:BSPIM:rx_status_4\));
+
+\Spi_LED_Chain:BSPIM:state_2\\D\ <= ((not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_2\ and not \Spi_LED_Chain:BSPIM:count_0\ and not \Spi_LED_Chain:BSPIM:ld_ident\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_1\)
+	OR (not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_0\ and not \Spi_LED_Chain:BSPIM:tx_status_1\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_2\ and \Spi_LED_Chain:BSPIM:count_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\)
+	OR (\Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\));
+
+\Spi_LED_Chain:BSPIM:state_1\\D\ <= ((not \Spi_LED_Chain:BSPIM:count_2\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:count_2\ and \Spi_LED_Chain:BSPIM:tx_status_1\)
+	OR (\Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:count_4\)
+	OR (\Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:count_3\)
+	OR (not \Spi_LED_Chain:BSPIM:count_1\ and \Spi_LED_Chain:BSPIM:state_1\)
+	OR (\Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:count_0\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\)
+	OR (\Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\));
+
+\Spi_LED_Chain:BSPIM:state_0\\D\ <= ((not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_2\ and not \Spi_LED_Chain:BSPIM:count_0\ and not \Spi_LED_Chain:BSPIM:ld_ident\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and not \Spi_LED_Chain:BSPIM:tx_status_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\));
+
+Net_113D <= ((not \Spi_LED_Chain:BSPIM:state_0\ and Net_113)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_1\ and not \Spi_LED_Chain:BSPIM:state_0\)
+	OR (not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\)
+	OR (\Spi_LED_Chain:BSPIM:state_1\ and Net_113));
+
+\Spi_LED_Chain:BSPIM:cnt_enable\\D\ <= ((not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:cnt_enable\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:cnt_enable\)
+	OR (\Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:cnt_enable\));
+
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\\D\ <= ((not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_2\ and not \Spi_LED_Chain:BSPIM:count_1\ and not \Spi_LED_Chain:BSPIM:count_0\ and not \Spi_LED_Chain:BSPIM:ld_ident\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and not \Spi_LED_Chain:BSPIM:count_4\ and not \Spi_LED_Chain:BSPIM:count_3\ and not \Spi_LED_Chain:BSPIM:count_2\ and not \Spi_LED_Chain:BSPIM:count_1\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:count_0\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\ and \Spi_LED_Chain:BSPIM:count_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_1\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_0\ and not \Spi_LED_Chain:BSPIM:count_0\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\ and \Spi_LED_Chain:BSPIM:count_2\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\ and \Spi_LED_Chain:BSPIM:count_3\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\ and \Spi_LED_Chain:BSPIM:count_4\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\)
+	OR (\Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_0\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_2\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_3\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:count_4\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_2\ and not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_pre_reg\));
+
+Net_74D <= ((\Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\ and Net_74)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_1\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\));
+
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\\D\ <= ((not \Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\)
+	OR (\Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_from_dp\)
+	OR (not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:mosi_hs_reg\)
+	OR (not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:mosi_hs_reg\));
+
+\Spi_LED_Chain:BSPIM:ld_ident\\D\ <= ((not \Spi_LED_Chain:BSPIM:state_1\ and not \Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:state_2\)
+	OR (not \Spi_LED_Chain:BSPIM:count_0\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:count_1\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:count_2\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:count_3\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:count_4\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:state_0\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (not \Spi_LED_Chain:BSPIM:state_1\ and \Spi_LED_Chain:BSPIM:ld_ident\)
+	OR (\Spi_LED_Chain:BSPIM:state_2\ and \Spi_LED_Chain:BSPIM:ld_ident\));
+
+Frame_CLK:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"85934d96-0871-4374-beb6-0cc4997a8ecb",
+		source_clock_id=>"61737EF6-3B74-48f9-8B91-F7473A442AE7",
+		divisor=>0,
+		period=>"1000000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_10,
+		dig_domain_out=>open);
+\Frame_Timer:TimerUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_10,
+		enable=>one,
+		clock_out=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\);
+\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:cy_psoc3_udb_Ctl_Clk_Sync\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_10,
+		enable=>one,
+		clock_out=>\Frame_Timer:TimerUDB:Clk_Ctl_i\);
+\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\:cy_psoc3_control
+	GENERIC MAP(cy_init_value=>"00000000",
+		cy_force_order=>'1',
+		cy_ctrl_mode_1=>"00000000",
+		cy_ctrl_mode_0=>"11111111",
+		cy_ext_reset=>'0')
+	PORT MAP(reset=>Net_12,
+		clock=>\Frame_Timer:TimerUDB:Clk_Ctl_i\,
+		control=>(\Frame_Timer:TimerUDB:control_7\, \Frame_Timer:TimerUDB:control_6\, \Frame_Timer:TimerUDB:control_5\, \Frame_Timer:TimerUDB:control_4\,
+			\Frame_Timer:TimerUDB:control_3\, \Frame_Timer:TimerUDB:control_2\, \Frame_Timer:TimerUDB:control_1\, \Frame_Timer:TimerUDB:control_0\));
+\Frame_Timer:TimerUDB:rstSts:stsreg\:cy_psoc3_statusi
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"0000011",
+		cy_int_mask=>"1111111")
+	PORT MAP(reset=>Net_12,
+		clock=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		status=>(Net_12, Net_12, Net_12, \Frame_Timer:TimerUDB:status_3\,
+			\Frame_Timer:TimerUDB:status_2\, Net_12, \Frame_Timer:TimerUDB:status_tc\),
+		interrupt=>Net_5);
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>Net_12,
+		clk=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(Net_12, \Frame_Timer:TimerUDB:control_7\, \Frame_Timer:TimerUDB:per_zero\),
+		route_si=>Net_12,
+		route_ci=>Net_12,
+		f0_load=>Net_12,
+		f1_load=>Net_12,
+		d0_load=>Net_12,
+		d1_load=>Net_12,
+		ce0=>open,
+		cl0=>open,
+		z0=>\Frame_Timer:TimerUDB:nc0\,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>open,
+		f0_bus_stat=>\Frame_Timer:TimerUDB:nc3\,
+		f0_blk_stat=>\Frame_Timer:TimerUDB:nc4\,
+		f1_bus_stat=>open,
+		f1_blk_stat=>open,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>Net_12,
+		co=>\Frame_Timer:TimerUDB:sT16:timerdp:carry\,
+		sir=>Net_12,
+		sor=>open,
+		sil=>\Frame_Timer:TimerUDB:sT16:timerdp:sh_right\,
+		sol=>\Frame_Timer:TimerUDB:sT16:timerdp:sh_left\,
+		msbi=>\Frame_Timer:TimerUDB:sT16:timerdp:msb\,
+		msbo=>open,
+		cei=>(Net_12, Net_12),
+		ceo=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_eq_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_eq_0\),
+		cli=>(Net_12, Net_12),
+		clo=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_lt_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_lt_0\),
+		zi=>(Net_12, Net_12),
+		zo=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_zero_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_zero_0\),
+		fi=>(Net_12, Net_12),
+		fo=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_ff_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_ff_0\),
+		capi=>(Net_12, Net_12),
+		capo=>(\Frame_Timer:TimerUDB:sT16:timerdp:cap_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cap_0\),
+		cfbi=>Net_12,
+		cfbo=>\Frame_Timer:TimerUDB:sT16:timerdp:cfb\,
+		pi=>(Net_12, Net_12, Net_12, Net_12,
+			Net_12, Net_12, Net_12, Net_12),
+		po=>open);
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111100000110000000000000001000000110000000000011000",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>Net_12,
+		clk=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		cs_addr=>(Net_12, \Frame_Timer:TimerUDB:control_7\, \Frame_Timer:TimerUDB:per_zero\),
+		route_si=>Net_12,
+		route_ci=>Net_12,
+		f0_load=>Net_12,
+		f1_load=>Net_12,
+		d0_load=>Net_12,
+		d1_load=>Net_12,
+		ce0=>open,
+		cl0=>open,
+		z0=>\Frame_Timer:TimerUDB:per_zero\,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>open,
+		f0_bus_stat=>\Frame_Timer:TimerUDB:status_3\,
+		f0_blk_stat=>\Frame_Timer:TimerUDB:status_2\,
+		f1_bus_stat=>open,
+		f1_blk_stat=>open,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>\Frame_Timer:TimerUDB:sT16:timerdp:carry\,
+		co=>open,
+		sir=>\Frame_Timer:TimerUDB:sT16:timerdp:sh_left\,
+		sor=>\Frame_Timer:TimerUDB:sT16:timerdp:sh_right\,
+		sil=>Net_12,
+		sol=>open,
+		msbi=>Net_12,
+		msbo=>\Frame_Timer:TimerUDB:sT16:timerdp:msb\,
+		cei=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_eq_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_eq_0\),
+		ceo=>open,
+		cli=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_lt_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_lt_0\),
+		clo=>open,
+		zi=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_zero_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_zero_0\),
+		zo=>open,
+		fi=>(\Frame_Timer:TimerUDB:sT16:timerdp:cmp_ff_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cmp_ff_0\),
+		fo=>open,
+		capi=>(\Frame_Timer:TimerUDB:sT16:timerdp:cap_1\, \Frame_Timer:TimerUDB:sT16:timerdp:cap_0\),
+		capo=>open,
+		cfbi=>\Frame_Timer:TimerUDB:sT16:timerdp:cfb\,
+		cfbo=>open,
+		pi=>(Net_12, Net_12, Net_12, Net_12,
+			Net_12, Net_12, Net_12, Net_12),
+		po=>open);
+SPI_DATA:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"e851a3b9-efb8-48be-bbb8-b303b216c393",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"1",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"O",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>Net_73,
+		fb=>(tmpFB_0__SPI_DATA_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__SPI_DATA_net_0),
+		siovref=>(tmpSIOVREF__SPI_DATA_net_0),
+		annotation=>(open),
+		in_clock=>Net_12,
+		in_clock_en=>one,
+		in_reset=>Net_12,
+		out_clock=>Net_12,
+		out_clock_en=>one,
+		out_reset=>Net_12,
+		interrupt=>tmpINTERRUPT_0__SPI_DATA_net_0);
+\Spi_LED_Chain:BSPIM:ClkEn\:cy_psoc3_udb_clock_enable_v1_0
+	GENERIC MAP(sync_mode=>'1')
+	PORT MAP(clock_in=>Net_58,
+		enable=>one,
+		clock_out=>\Spi_LED_Chain:BSPIM:clk_fin\);
+\Spi_LED_Chain:BSPIM:BitCounter\:cy_psoc3_count7
+	GENERIC MAP(cy_period=>"0001111",
+		cy_init_value=>"0000000",
+		cy_route_ld=>'0',
+		cy_route_en=>'1',
+		cy_alt_mode=>'0')
+	PORT MAP(clock=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		reset=>Net_12,
+		load=>Net_12,
+		enable=>\Spi_LED_Chain:BSPIM:cnt_enable\,
+		count=>(\Spi_LED_Chain:BSPIM:count_6\, \Spi_LED_Chain:BSPIM:count_5\, \Spi_LED_Chain:BSPIM:count_4\, \Spi_LED_Chain:BSPIM:count_3\,
+			\Spi_LED_Chain:BSPIM:count_2\, \Spi_LED_Chain:BSPIM:count_1\, \Spi_LED_Chain:BSPIM:count_0\),
+		tc=>\Spi_LED_Chain:BSPIM:cnt_tc\);
+\Spi_LED_Chain:BSPIM:TxStsReg\:cy_psoc3_statusi
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"0001001",
+		cy_int_mask=>"0000000")
+	PORT MAP(reset=>Net_12,
+		clock=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		status=>(Net_12, Net_12, \Spi_LED_Chain:BSPIM:tx_status_4\, \Spi_LED_Chain:BSPIM:load_rx_data\,
+			\Spi_LED_Chain:BSPIM:tx_status_2\, \Spi_LED_Chain:BSPIM:tx_status_1\, \Spi_LED_Chain:BSPIM:tx_status_0\),
+		interrupt=>Net_88);
+\Spi_LED_Chain:BSPIM:RxStsReg\:cy_psoc3_statusi
+	GENERIC MAP(cy_force_order=>'1',
+		cy_md_select=>"1000000",
+		cy_int_mask=>"0000000")
+	PORT MAP(reset=>Net_12,
+		clock=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		status=>(\Spi_LED_Chain:BSPIM:rx_status_6\, \Spi_LED_Chain:BSPIM:rx_status_5\, \Spi_LED_Chain:BSPIM:rx_status_4\, Net_12,
+			Net_12, Net_12, Net_12),
+		interrupt=>Net_111);
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\:cy_psoc3_dp
+	GENERIC MAP(cy_dpconfig=>"0000000000000000000000001100000000000001010000000001000100010000000000011100000000010001000000000000000101000000000000010100000011111111000000001111111111111111000000000010001000001000111100000000000000000100",
+		d0_init=>"00000000",
+		d1_init=>"00000000",
+		a0_init=>"00000000",
+		a1_init=>"00000000",
+		ce0_sync=>'1',
+		cl0_sync=>'1',
+		z0_sync=>'1',
+		ff0_sync=>'1',
+		ce1_sync=>'1',
+		cl1_sync=>'1',
+		z1_sync=>'1',
+		ff1_sync=>'1',
+		ov_msb_sync=>'1',
+		co_msb_sync=>'1',
+		cmsb_sync=>'1',
+		so_sync=>'1',
+		f0_bus_sync=>'1',
+		f0_blk_sync=>'1',
+		f1_bus_sync=>'1',
+		f1_blk_sync=>'1')
+	PORT MAP(reset=>Net_12,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		cs_addr=>(\Spi_LED_Chain:BSPIM:state_2\, \Spi_LED_Chain:BSPIM:state_1\, \Spi_LED_Chain:BSPIM:state_0\),
+		route_si=>one,
+		route_ci=>Net_12,
+		f0_load=>Net_12,
+		f1_load=>\Spi_LED_Chain:BSPIM:load_rx_data\,
+		d0_load=>Net_12,
+		d1_load=>Net_12,
+		ce0=>open,
+		cl0=>open,
+		z0=>open,
+		ff0=>open,
+		ce1=>open,
+		cl1=>open,
+		z1=>open,
+		ff1=>open,
+		ov_msb=>open,
+		co_msb=>open,
+		cmsb=>open,
+		so=>\Spi_LED_Chain:BSPIM:mosi_from_dp\,
+		f0_bus_stat=>\Spi_LED_Chain:BSPIM:tx_status_2\,
+		f0_blk_stat=>\Spi_LED_Chain:BSPIM:tx_status_1\,
+		f1_bus_stat=>\Spi_LED_Chain:BSPIM:rx_status_5\,
+		f1_blk_stat=>\Spi_LED_Chain:BSPIM:rx_status_4\,
+		ce0_reg=>open,
+		cl0_reg=>open,
+		z0_reg=>open,
+		ff0_reg=>open,
+		ce1_reg=>open,
+		cl1_reg=>open,
+		z1_reg=>open,
+		ff1_reg=>open,
+		ov_msb_reg=>open,
+		co_msb_reg=>open,
+		cmsb_reg=>open,
+		so_reg=>open,
+		f0_bus_stat_reg=>open,
+		f0_blk_stat_reg=>open,
+		f1_bus_stat_reg=>open,
+		f1_blk_stat_reg=>open,
+		ci=>Net_12,
+		co=>open,
+		sir=>Net_12,
+		sor=>open,
+		sil=>Net_12,
+		sol=>open,
+		msbi=>Net_12,
+		msbo=>open,
+		cei=>(Net_12, Net_12),
+		ceo=>open,
+		cli=>(Net_12, Net_12),
+		clo=>open,
+		zi=>(Net_12, Net_12),
+		zo=>open,
+		fi=>(Net_12, Net_12),
+		fo=>open,
+		capi=>(Net_12, Net_12),
+		capo=>open,
+		cfbi=>Net_12,
+		cfbo=>open,
+		pi=>(Net_12, Net_12, Net_12, Net_12,
+			Net_12, Net_12, Net_12, Net_12),
+		po=>open);
+\Spi_LED_Chain:TxInternalInterrupt\:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_88);
+I2C_CLK:cy_clock_v1_0
+	GENERIC MAP(cy_registers=>"",
+		id=>"d63e3c31-06bb-4b92-9fb2-102854725f29",
+		source_clock_id=>"61737EF6-3B74-48f9-8B91-F7473A442AE7",
+		divisor=>0,
+		period=>"500000000000",
+		is_direct=>'0',
+		is_digital=>'1')
+	PORT MAP(clock_out=>Net_58,
+		dig_domain_out=>open);
+isr_spi_tx_done:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_88);
+SPI_CLK:cy_psoc3_pins_v1_10
+	GENERIC MAP(id=>"b8fa8750-d322-4c2e-9799-ae58c4531905",
+		drive_mode=>"110",
+		ibuf_enabled=>"1",
+		init_dr_st=>"0",
+		input_sync=>"1",
+		input_clk_en=>'0',
+		input_sync_mode=>"0",
+		intr_mode=>"00",
+		invert_in_clock=>'0',
+		invert_in_clock_en=>'0',
+		invert_in_reset=>'0',
+		invert_out_clock=>'0',
+		invert_out_clock_en=>'0',
+		invert_out_reset=>'0',
+		io_voltage=>"",
+		layout_mode=>"CONTIGUOUS",
+		output_conn=>"1",
+		output_sync=>"0",
+		output_clk_en=>'0',
+		output_mode=>"0",
+		output_reset=>'0',
+		output_clock_mode=>"0",
+		oe_sync=>"0",
+		oe_conn=>"0",
+		oe_reset=>'0',
+		pin_aliases=>"",
+		pin_mode=>"O",
+		por_state=>4,
+		sio_group_cnt=>0,
+		sio_hifreq=>"00000000",
+		sio_hyst=>"1",
+		sio_ibuf=>"00000000",
+		sio_info=>"00",
+		sio_obuf=>"00000000",
+		sio_refsel=>"00000000",
+		sio_vtrip=>"00000000",
+		sio_vohsel=>"00000000",
+		slew_rate=>"0",
+		spanning=>'0',
+		sw_only=>'0',
+		vtrip=>"10",
+		width=>1,
+		port_alias_required=>'0',
+		port_alias_group=>"",
+		use_annotation=>"0",
+		pa_in_clock=>-1,
+		pa_in_clock_en=>-1,
+		pa_in_reset=>-1,
+		pa_out_clock=>-1,
+		pa_out_clock_en=>-1,
+		pa_out_reset=>-1,
+		ovt_needed=>"0",
+		ovt_slew_control=>"00",
+		ovt_hyst_trim=>"0",
+		input_buffer_sel=>"00")
+	PORT MAP(oe=>(one),
+		y=>Net_74,
+		fb=>(tmpFB_0__SPI_CLK_net_0),
+		analog=>(open),
+		io=>(tmpIO_0__SPI_CLK_net_0),
+		siovref=>(tmpSIOVREF__SPI_CLK_net_0),
+		annotation=>(open),
+		in_clock=>Net_12,
+		in_clock_en=>one,
+		in_reset=>Net_12,
+		out_clock=>Net_12,
+		out_clock_en=>one,
+		out_reset=>Net_12,
+		interrupt=>tmpINTERRUPT_0__SPI_CLK_net_0);
+isr_frame:cy_isr_v1_0
+	GENERIC MAP(int_type=>"10",
+		is_nmi=>'0')
+	PORT MAP(int_signal=>Net_5);
+\Frame_Timer:TimerUDB:capture_last\:cy_dff
+	PORT MAP(d=>Net_12,
+		clk=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Frame_Timer:TimerUDB:capture_last\);
+\Frame_Timer:TimerUDB:tc_reg_i\:cy_dff
+	PORT MAP(d=>\Frame_Timer:TimerUDB:status_tc\,
+		clk=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Frame_Timer:TimerUDB:tc_reg_i\);
+\Frame_Timer:TimerUDB:hwEnable_reg\:cy_dff
+	PORT MAP(d=>\Frame_Timer:TimerUDB:control_7\,
+		clk=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Frame_Timer:TimerUDB:hwEnable_reg\);
+\Frame_Timer:TimerUDB:capture_out_reg_i\:cy_dff
+	PORT MAP(d=>Net_12,
+		clk=>\Frame_Timer:TimerUDB:ClockOutFromEnBlock\,
+		q=>\Frame_Timer:TimerUDB:capture_out_reg_i\);
+\Spi_LED_Chain:BSPIM:so_send_reg\:cy_dff
+	PORT MAP(d=>Net_12,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:so_send_reg\);
+\Spi_LED_Chain:BSPIM:state_2\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:state_2\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:state_2\);
+\Spi_LED_Chain:BSPIM:state_1\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:state_1\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:state_1\);
+\Spi_LED_Chain:BSPIM:state_0\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:state_0\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:state_0\);
+Net_113:cy_dff
+	PORT MAP(d=>Net_113D,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>Net_113);
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:mosi_hs_reg\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:mosi_hs_reg\);
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:mosi_pre_reg\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:mosi_pre_reg\);
+\Spi_LED_Chain:BSPIM:mosi_reg\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:mosi_pre_reg\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:mosi_reg\);
+\Spi_LED_Chain:BSPIM:load_cond\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:load_cond\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:load_cond\);
+\Spi_LED_Chain:BSPIM:dpcounter_one_reg\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:load_rx_data\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:dpcounter_one_reg\);
+\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:mosi_from_dp\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\);
+\Spi_LED_Chain:BSPIM:ld_ident\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:ld_ident\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:ld_ident\);
+\Spi_LED_Chain:BSPIM:cnt_enable\:cy_dff
+	PORT MAP(d=>\Spi_LED_Chain:BSPIM:cnt_enable\\D\,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>\Spi_LED_Chain:BSPIM:cnt_enable\);
+Net_74:cy_dff
+	PORT MAP(d=>Net_74D,
+		clk=>\Spi_LED_Chain:BSPIM:clk_fin\,
+		q=>Net_74);
+
+END R_T_L;

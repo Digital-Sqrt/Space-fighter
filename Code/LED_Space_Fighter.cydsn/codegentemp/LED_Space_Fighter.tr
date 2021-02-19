@@ -1,0 +1,3639 @@
+##################################################################### 
+                    Table of Contents
+===================================================================== 
+	1::Clock Frequency Summary
+	2::Clock Relationship Summary
+	3::Datasheet Report
+		3.1::Setup to Clock
+		3.2::Clock to Out
+		3.3::Pad to Pad
+	4::Path Details for Clock Frequency Summary
+		4.1::Critical Path Report for Frame_CLK
+		4.2::Critical Path Report for I2C_CLK
+	5::Path Details for Clock Relationship Summary
+		5.1::Critical Path Report for (I2C_CLK:R vs. I2C_CLK:R)
+		5.2::Critical Path Report for (Frame_CLK:R vs. Frame_CLK:R)
+===================================================================== 
+                    End of Table of Contents
+##################################################################### 
+
+##################################################################### 
+                    1::Clock Frequency Summary
+===================================================================== 
+Number of clocks: 7
+Clock: CyBUS_CLK     | N/A                   | Target: 24.00 MHz  | 
+Clock: CyILO         | N/A                   | Target: 0.00 MHz   | 
+Clock: CyIMO         | N/A                   | Target: 3.00 MHz   | 
+Clock: CyMASTER_CLK  | N/A                   | Target: 24.00 MHz  | 
+Clock: CyPLL_OUT     | N/A                   | Target: 24.00 MHz  | 
+Clock: Frame_CLK     | Frequency: 62.10 MHz  | Target: 0.00 MHz   | 
+Clock: I2C_CLK       | Frequency: 51.37 MHz  | Target: 0.00 MHz   | 
+
+ =====================================================================
+                    End of Clock Frequency Summary
+ #####################################################################
+
+
+ #####################################################################
+                    2::Clock Relationship Summary
+ =====================================================================
+
+Launch Clock  Capture Clock  Constraint(R-R)  Slack(R-R)  Constraint(R-F)  Slack(R-F)  Constraint(F-F)  Slack(F-F)  Constraint(F-R)  Slack(F-R)  
+------------  -------------  ---------------  ----------  ---------------  ----------  ---------------  ----------  ---------------  ----------  
+Frame_CLK     Frame_CLK      1e+009           999983897   N/A              N/A         N/A              N/A         N/A              N/A         
+I2C_CLK       I2C_CLK        5e+008           499980532   N/A              N/A         N/A              N/A         N/A              N/A         
+
+ =====================================================================
+                    End of Clock Relationship Summary
+ #####################################################################
+
+
+ #####################################################################
+                    3::Datasheet Report
+
+All values are in Picoseconds
+ =====================================================================
+
+3.1::Setup to Clock                     
+-------------------                     
+
+Port Name  Setup to Clk  Clock Name:Phase  
+---------  ------------  ----------------  
+
+
+-----------------------3.2::Clock to Out
+----------------------------------------
+
+Port Name        Clock to Out  Clock Name:Phase  
+---------------  ------------  ----------------  
+SPI_CLK(0)_PAD   23121         I2C_CLK:R         
+SPI_DATA(0)_PAD  33213         I2C_CLK:R         
+
+
+                         3.3::Pad to Pad
+                         ---------------
+
+Port Name (Source)  Port Name (Destination)  Delay  
+------------------  -----------------------  -----  
+
+===================================================================== 
+                    End of Datasheet Report
+##################################################################### 
+##################################################################### 
+                    4::Path Details for Clock Frequency Summary
+===================================================================== 
+4.1::Critical Path Report for Frame_CLK
+***************************************
+Clock: Frame_CLK
+Frequency: 62.10 MHz | Target: 0.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/ci
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock
+Path slack     : 999983897p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -4230
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999995770
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11873
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11873
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0         datapathcell1    760    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0i        datapathcell2      0    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0_comb    datapathcell2   2740   3500  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_0  datapathcell1   3243   6743  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/co_msb     datapathcell1   5130  11873  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/ci         datapathcell2      0  11873  999983897  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock               datapathcell2       0      0  RISE       1
+
+
+===================================================================== 
+4.2::Critical Path Report for I2C_CLK
+*************************************
+Clock: I2C_CLK
+Frequency: 51.37 MHz | Target: 0.00 MHz
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb
+Path End       : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0
+Path slack     : 499980532p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       15958
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           15958
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                         model name     delay     AT      slack  edge  Fanout
+-----------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb          datapathcell3   5360   5360  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\/main_3  macrocell1      4963  10323  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\/q       macrocell1      3350  13673  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_0        macrocell15     2284  15958  499980532  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0                 macrocell15         0      0  RISE       1
+
+
+
+===================================================================== 
+                    End of Path Details for Clock Frequency Summary
+##################################################################### 
+
+
+##################################################################### 
+                    5::Path Details for Clock Relationship Summary
+===================================================================== 
+
+5.1::Critical Path Report for (I2C_CLK:R vs. I2C_CLK:R)
+*******************************************************
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb
+Path End       : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0
+Path slack     : 499980532p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       15958
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           15958
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                         model name     delay     AT      slack  edge  Fanout
+-----------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb          datapathcell3   5360   5360  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\/main_3  macrocell1      4963  10323  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\/q       macrocell1      3350  13673  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_0        macrocell15     2284  15958  499980532  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0                 macrocell15         0      0  RISE       1
+
+
+5.2::Critical Path Report for (Frame_CLK:R vs. Frame_CLK:R)
+***********************************************************
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/ci
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock
+Path slack     : 999983897p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -4230
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999995770
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11873
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11873
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0         datapathcell1    760    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0i        datapathcell2      0    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0_comb    datapathcell2   2740   3500  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_0  datapathcell1   3243   6743  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/co_msb     datapathcell1   5130  11873  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/ci         datapathcell2      0  11873  999983897  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock               datapathcell2       0      0  RISE       1
+
+
+
+===================================================================== 
+                    End of Path Details for Clock Relationship Summary
+##################################################################### 
+
+##################################################################### 
+                    Detailed Report for all timing paths 
+===================================================================== 
+
+++++ Path 1 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb
+Path End       : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0
+Path slack     : 499980532p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       15958
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           15958
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                         model name     delay     AT      slack  edge  Fanout
+-----------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb          datapathcell3   5360   5360  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\/main_3  macrocell1      4963  10323  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\/q       macrocell1      3350  13673  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_0        macrocell15     2284  15958  499980532  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0                 macrocell15         0      0  RISE       1
+
+
+
+++++ Path 2 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb
+Path End       : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0
+Path slack     : 499981317p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       15173
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           15173
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                           model name     delay     AT      slack  edge  Fanout
+-------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb            datapathcell3   5360   5360  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\/main_3  macrocell9      4181   9541  499981317  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\/q       macrocell9      3350  12891  499981317  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/main_1          macrocell15     2282  15173  499981317  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_pre_reg\/clock_0                 macrocell15         0      0  RISE       1
+
+
+
+++++ Path 3 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f1_load
+Capture Clock  : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock
+Path slack     : 499983233p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -2850
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499997150
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       13917
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           13917
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                   model name     delay     AT      slack  edge  Fanout
+-----------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3   count7cell      1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:load_rx_data\/main_1  macrocell3      6332   8272  499983233  RISE       1
+\Spi_LED_Chain:BSPIM:load_rx_data\/q       macrocell3      3350  11622  499983233  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f1_load    datapathcell3   2294  13917  499983233  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+
+
+++++ Path 4 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb
+Path End       : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0
+Path slack     : 499984202p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       12288
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           12288
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                  model name     delay     AT      slack  edge  Fanout
+----------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb   datapathcell3   5360   5360  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_3  macrocell14     6928  12288  499984202  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+
+
+++++ Path 5 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb
+Path End       : \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/clock_0
+Path slack     : 499985239p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11251
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11251
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                       model name     delay     AT      slack  edge  Fanout
+---------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/so_comb        datapathcell3   5360   5360  499980532  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/main_0  macrocell17     5891  11251  499985239  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/clock_0             macrocell17         0      0  RISE       1
+
+
+
+++++ Path 6 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:TxStsReg\/status_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:TxStsReg\/clock
+Path slack     : 499985566p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                        -500
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       13934
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           13934
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                   model name    delay     AT      slack  edge  Fanout
+-----------------------------------------  ------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3   count7cell     1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:load_rx_data\/main_1  macrocell3     6332   8272  499983233  RISE       1
+\Spi_LED_Chain:BSPIM:load_rx_data\/q       macrocell3     3350  11622  499983233  RISE       1
+\Spi_LED_Chain:BSPIM:TxStsReg\/status_3    statusicell2   2312  13934  499985566  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:TxStsReg\/clock                       statusicell2        0      0  RISE       1
+
+
+
+++++ Path 7 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:RxStsReg\/status_6
+Capture Clock  : \Spi_LED_Chain:BSPIM:RxStsReg\/clock
+Path slack     : 499985578p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                        -500
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       13922
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           13922
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name    delay     AT      slack  edge  Fanout
+----------------------------------------  ------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3  count7cell     1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:rx_status_6\/main_1  macrocell7     6298   8238  499985578  RISE       1
+\Spi_LED_Chain:BSPIM:rx_status_6\/q       macrocell7     3350  11588  499985578  RISE       1
+\Spi_LED_Chain:BSPIM:RxStsReg\/status_6   statusicell3   2335  13922  499985578  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:RxStsReg\/clock                       statusicell3        0      0  RISE       1
+
+
+
+++++ Path 8 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/cs_addr_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock
+Path slack     : 499986859p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -6010
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499993990
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7131
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7131
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                                   model name     delay     AT      slack  edge  Fanout
+-----------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q            macrocell10     1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/cs_addr_2  datapathcell3   5881   7131  499986859  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+
+
+++++ Path 9 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/cs_addr_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock
+Path slack     : 499987926p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -6010
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499993990
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6064
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6064
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                                   model name     delay     AT      slack  edge  Fanout
+-----------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q            macrocell12     1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/cs_addr_0  datapathcell3   4814   6064  499987926  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+
+
+++++ Path 10 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/cs_addr_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock
+Path slack     : 499988049p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -6010
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499993990
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5941
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5941
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                                   model name     delay     AT      slack  edge  Fanout
+-----------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q            macrocell11     1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/cs_addr_1  datapathcell3   4691   5941  499988049  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+
+
+++++ Path 11 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_4
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499988218p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       8272
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           8272
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3  count7cell    1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_4    macrocell16   6332   8272  499988218  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 12 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:TxStsReg\/status_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:TxStsReg\/clock
+Path slack     : 499988282p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                        -500
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11218
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11218
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                                  model name    delay     AT      slack  edge  Fanout
+----------------------------------------  ------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q           macrocell10    1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:tx_status_0\/main_0  macrocell5     3708   4958  499988282  RISE       1
+\Spi_LED_Chain:BSPIM:tx_status_0\/q       macrocell5     3350   8308  499988282  RISE       1
+\Spi_LED_Chain:BSPIM:TxStsReg\/status_0   statusicell2   2909  11218  499988282  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:TxStsReg\/clock                       statusicell2        0      0  RISE       1
+
+
+
+++++ Path 13 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_8
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499988642p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7848
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7848
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb  datapathcell3   3580   3580  499988642  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_8              macrocell11     4268   7848  499988642  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 14 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_8
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499988642p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7848
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7848
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb  datapathcell3   3580   3580  499988642  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_8              macrocell12     4268   7848  499988642  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 15 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_8
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499988659p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7831
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7831
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/clock                      datapathcell3       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:sR8:Dp:u0\/f0_blk_stat_comb  datapathcell3   3580   3580  499988642  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_8              macrocell10     4251   7831  499988659  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 16 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_4
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499989145p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7345
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7345
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3  count7cell    1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_4      macrocell10   5405   7345  499989145  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 17 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_4
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499989145p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7345
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7345
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3  count7cell    1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_4     macrocell18   5405   7345  499989145  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 18 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_1
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_6
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499989476p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7014
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7014
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_1  count7cell    1940   1940  499984393  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_6      macrocell10   5074   7014  499989476  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 19 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_1
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_6
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499989476p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       7014
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           7014
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_1  count7cell    1940   1940  499984393  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_6     macrocell18   5074   7014  499989476  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 20 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : Net_74/main_0
+Capture Clock  : Net_74/clock_0
+Path slack     : 499989761p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6729
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6729
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                         model name   delay     AT      slack  edge  Fanout
+-------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q  macrocell10   1250   1250  499985898  RISE       1
+Net_74/main_0                    macrocell20   5479   6729  499989761  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_74/clock_0                                             macrocell20         0      0  RISE       1
+
+
+
+++++ Path 21 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : Net_113/main_0
+Capture Clock  : Net_113/clock_0
+Path slack     : 499989763p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6727
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6727
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                         model name   delay     AT      slack  edge  Fanout
+-------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q  macrocell10   1250   1250  499985898  RISE       1
+Net_113/main_0                   macrocell13   5477   6727  499989763  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_113/clock_0                                            macrocell13         0      0  RISE       1
+
+
+
+++++ Path 22 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_1
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_6
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499990128p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6362
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6362
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_1  count7cell    1940   1940  499984393  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_6    macrocell16   4422   6362  499990128  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 23 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_4
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499990177p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6313
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6313
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3  count7cell    1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_4      macrocell11   4373   6313  499990177  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 24 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_3
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_4
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499990177p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6313
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6313
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_3  count7cell    1940   1940  499982111  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_4      macrocell12   4373   6313  499990177  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 25 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_0
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_7
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499990351p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6139
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6139
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_0  count7cell    1940   1940  499985367  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_7    macrocell16   4199   6139  499990351  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 26 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_2
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_5
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499990352p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6138
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6138
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_2  count7cell    1940   1940  499985368  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_5    macrocell16   4198   6138  499990352  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 27 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : Net_74/main_2
+Capture Clock  : Net_74/clock_0
+Path slack     : 499990422p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6068
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6068
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                         model name   delay     AT      slack  edge  Fanout
+-------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q  macrocell12   1250   1250  499986032  RISE       1
+Net_74/main_2                    macrocell20   4818   6068  499990422  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_74/clock_0                                             macrocell20         0      0  RISE       1
+
+
+
+++++ Path 28 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_4
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499990471p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6019
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6019
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_4  count7cell    1940   1940  499985484  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_3    macrocell16   4079   6019  499990471  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 29 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:cnt_enable\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:cnt_enable\/clock_0
+Path slack     : 499990472p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6018
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6018
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT      slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q          macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/main_0  macrocell19   4768   6018  499990472  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/clock_0                   macrocell19         0      0  RISE       1
+
+
+
+++++ Path 30 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0
+Path slack     : 499990473p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6017
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6017
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q           macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_0  macrocell14   4767   6017  499990473  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+
+
+++++ Path 31 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : Net_74/main_1
+Capture Clock  : Net_74/clock_0
+Path slack     : 499990538p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5952
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5952
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                         model name   delay     AT      slack  edge  Fanout
+-------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q  macrocell11   1250   1250  499986336  RISE       1
+Net_74/main_1                    macrocell20   4702   5952  499990538  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_74/clock_0                                             macrocell20         0      0  RISE       1
+
+
+
+++++ Path 32 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : Net_113/main_1
+Capture Clock  : Net_113/clock_0
+Path slack     : 499990543p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5947
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5947
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                         model name   delay     AT      slack  edge  Fanout
+-------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q  macrocell11   1250   1250  499986336  RISE       1
+Net_113/main_1                   macrocell13   4697   5947  499990543  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_113/clock_0                                            macrocell13         0      0  RISE       1
+
+
+
+++++ Path 33 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499990567p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5923
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5923
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                                model name   delay     AT      slack  edge  Fanout
+--------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q         macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_2  macrocell16   4673   5923  499990567  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 34 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : Net_113/main_2
+Capture Clock  : Net_113/clock_0
+Path slack     : 499990578p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5912
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5912
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                         model name   delay     AT      slack  edge  Fanout
+-------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q  macrocell12   1250   1250  499986032  RISE       1
+Net_113/main_2                   macrocell13   4662   5912  499990578  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_113/clock_0                                            macrocell13         0      0  RISE       1
+
+
+
+++++ Path 35 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:cnt_enable\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:cnt_enable\/clock_0
+Path slack     : 499990771p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5719
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5719
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT      slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q          macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/main_2  macrocell19   4469   5719  499990771  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/clock_0                   macrocell19         0      0  RISE       1
+
+
+
+++++ Path 36 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_1
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_6
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499990905p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5585
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5585
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_1  count7cell    1940   1940  499984393  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_6      macrocell11   3645   5585  499990905  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 37 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_1
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_6
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499990905p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5585
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5585
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_1  count7cell    1940   1940  499984393  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_6      macrocell12   3645   5585  499990905  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 38 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0
+Path slack     : 499990909p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5581
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5581
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q           macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_1  macrocell14   4331   5581  499990909  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+
+
+++++ Path 39 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:cnt_enable\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:cnt_enable\/clock_0
+Path slack     : 499990912p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5578
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5578
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT      slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q          macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/main_1  macrocell19   4328   5578  499990912  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/clock_0                   macrocell19         0      0  RISE       1
+
+
+
+++++ Path 40 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499990997p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5493
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5493
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                                model name   delay     AT      slack  edge  Fanout
+--------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q         macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_0  macrocell16   4243   5493  499990997  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 41 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0
+Path slack     : 499991049p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5441
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5441
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q           macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_2  macrocell14   4191   5441  499991049  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+
+
+++++ Path 42 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499991060p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5430
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5430
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                                model name   delay     AT      slack  edge  Fanout
+--------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q         macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_1  macrocell16   4180   5430  499991060  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 43 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_4
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499991128p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5362
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5362
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_4  count7cell    1940   1940  499985484  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_3      macrocell11   3422   5362  499991128  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 44 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_4
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499991128p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5362
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5362
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_4  count7cell    1940   1940  499985484  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_3      macrocell12   3422   5362  499991128  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 45 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_0
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_7
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991276p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5214
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5214
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_0  count7cell    1940   1940  499985367  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_7      macrocell10   3274   5214  499991276  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 46 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_0
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_7
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991276p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5214
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5214
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_0  count7cell    1940   1940  499985367  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_7     macrocell18   3274   5214  499991276  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 47 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_2
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_5
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991279p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5211
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5211
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_2  count7cell    1940   1940  499985368  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_5      macrocell10   3271   5211  499991279  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 48 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_2
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_5
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991279p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5211
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5211
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_2  count7cell    1940   1940  499985368  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_5     macrocell18   3271   5211  499991279  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 49 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_0
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_7
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499991285p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5205
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5205
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_0  count7cell    1940   1940  499985367  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_7      macrocell11   3265   5205  499991285  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 50 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_0
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_7
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499991285p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5205
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5205
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_0  count7cell    1940   1940  499985367  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_7      macrocell12   3265   5205  499991285  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 51 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_2
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_5
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499991294p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5196
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5196
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_2  count7cell    1940   1940  499985368  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_5      macrocell11   3256   5196  499991294  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 52 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_2
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_5
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499991294p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5196
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5196
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_2  count7cell    1940   1940  499985368  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_5      macrocell12   3256   5196  499991294  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 53 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:cnt_enable\/q
+Path End       : \Spi_LED_Chain:BSPIM:BitCounter\/enable
+Capture Clock  : \Spi_LED_Chain:BSPIM:BitCounter\/clock
+Path slack     : 499991324p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -4060
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499995940
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4616
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4616
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/clock_0                   macrocell19         0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT      slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:cnt_enable\/q       macrocell19   1250   1250  499991324  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/enable  count7cell    3366   4616  499991324  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+
+
+++++ Path 54 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_4
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991398p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5092
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5092
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_4  count7cell    1940   1940  499985484  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_3      macrocell10   3152   5092  499991398  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 55 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:BitCounter\/count_4
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991398p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       5092
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           5092
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:BitCounter\/clock                     count7cell          0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:BitCounter\/count_4  count7cell    1940   1940  499985484  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_3     macrocell18   3152   5092  499991398  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 56 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499991532p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4958
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4958
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q       macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_0  macrocell11   3708   4958  499991532  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 57 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499991532p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4958
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4958
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q       macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_0  macrocell12   3708   4958  499991532  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 58 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991665p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4825
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4825
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q       macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_2  macrocell10   3575   4825  499991665  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 59 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991665p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4825
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4825
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                               model name   delay     AT      slack  edge  Fanout
+-------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q        macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_2  macrocell18   3575   4825  499991665  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 60 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499991673p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4817
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4817
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q       macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_2  macrocell11   3567   4817  499991673  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 61 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_0\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_2
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499991673p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4817
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4817
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_0\/q       macrocell12   1250   1250  499986032  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_2  macrocell12   3567   4817  499991673  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 62 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : Net_74/q
+Path End       : Net_74/main_3
+Capture Clock  : Net_74/clock_0
+Path slack     : 499991764p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4726
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4726
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_74/clock_0                                             macrocell20         0      0  RISE       1
+
+Data path
+pin name       model name   delay     AT      slack  edge  Fanout
+-------------  -----------  -----  -----  ---------  ----  ------
+Net_74/q       macrocell20   1250   1250  499991764  RISE       1
+Net_74/main_3  macrocell20   3476   4726  499991764  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_74/clock_0                                             macrocell20         0      0  RISE       1
+
+
+
+++++ Path 63 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991798p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4692
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4692
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q       macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_0  macrocell10   3442   4692  499991798  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 64 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_2\/q
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_0
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991798p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4692
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4692
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+Data path
+pin name                               model name   delay     AT      slack  edge  Fanout
+-------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_2\/q        macrocell10   1250   1250  499985898  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_0  macrocell18   3442   4692  499991798  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 65 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:ld_ident\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_9
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991856p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4634
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4634
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:ld_ident\/q      macrocell18   1250   1250  499986218  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_9  macrocell10   3384   4634  499991856  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 66 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:ld_ident\/q
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_8
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991856p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4634
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4634
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+Data path
+pin name                               model name   delay     AT      slack  edge  Fanout
+-------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:ld_ident\/q       macrocell18   1250   1250  499986218  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_8  macrocell18   3384   4634  499991856  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 67 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_2\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_2\/clock_0
+Path slack     : 499991986p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4504
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4504
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q       macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/main_1  macrocell10   3254   4504  499991986  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_2\/clock_0                      macrocell10         0      0  RISE       1
+
+
+
+++++ Path 68 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:ld_ident\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:ld_ident\/clock_0
+Path slack     : 499991986p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4504
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4504
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                               model name   delay     AT      slack  edge  Fanout
+-------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q        macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/main_1  macrocell18   3254   4504  499991986  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+
+
+++++ Path 69 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499991986p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4504
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4504
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q       macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_1  macrocell11   3254   4504  499991986  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 70 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:state_1\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_1
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499991986p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4504
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4504
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:state_1\/q       macrocell11   1250   1250  499986336  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_1  macrocell12   3254   4504  499991986  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 71 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/q
+Path End       : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_4
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0
+Path slack     : 499992078p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4412
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4412
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/q       macrocell14   1250   1250  499992078  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_4  macrocell14   3162   4412  499992078  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+
+
+++++ Path 72 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:ld_ident\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_1\/main_9
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_1\/clock_0
+Path slack     : 499992145p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4345
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4345
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:ld_ident\/q      macrocell18   1250   1250  499986218  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/main_9  macrocell11   3095   4345  499992145  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_1\/clock_0                      macrocell11         0      0  RISE       1
+
+
+
+++++ Path 73 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:ld_ident\/q
+Path End       : \Spi_LED_Chain:BSPIM:state_0\/main_9
+Capture Clock  : \Spi_LED_Chain:BSPIM:state_0\/clock_0
+Path slack     : 499992145p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4345
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4345
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:ld_ident\/clock_0                     macrocell18         0      0  RISE       1
+
+Data path
+pin name                              model name   delay     AT      slack  edge  Fanout
+------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:ld_ident\/q      macrocell18   1250   1250  499986218  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/main_9  macrocell12   3095   4345  499992145  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:state_0\/clock_0                      macrocell12         0      0  RISE       1
+
+
+
+++++ Path 74 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:cnt_enable\/q
+Path End       : \Spi_LED_Chain:BSPIM:cnt_enable\/main_3
+Capture Clock  : \Spi_LED_Chain:BSPIM:cnt_enable\/clock_0
+Path slack     : 499992601p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       3889
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           3889
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/clock_0                   macrocell19         0      0  RISE       1
+
+Data path
+pin name                                 model name   delay     AT      slack  edge  Fanout
+---------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:cnt_enable\/q       macrocell19   1250   1250  499991324  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/main_3  macrocell19   2639   3889  499992601  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:cnt_enable\/clock_0                   macrocell19         0      0  RISE       1
+
+
+
+++++ Path 75 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : Net_113/q
+Path End       : Net_113/main_3
+Capture Clock  : Net_113/clock_0
+Path slack     : 499992665p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       3825
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           3825
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_113/clock_0                                            macrocell13         0      0  RISE       1
+
+Data path
+pin name        model name   delay     AT      slack  edge  Fanout
+--------------  -----------  -----  -----  ---------  ----  ------
+Net_113/q       macrocell13   1250   1250  499992665  RISE       1
+Net_113/main_3  macrocell13   2575   3825  499992665  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+Net_113/clock_0                                            macrocell13         0      0  RISE       1
+
+
+
+++++ Path 76 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:load_cond\/q
+Path End       : \Spi_LED_Chain:BSPIM:load_cond\/main_8
+Capture Clock  : \Spi_LED_Chain:BSPIM:load_cond\/clock_0
+Path slack     : 499992936p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       3554
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           3554
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+Data path
+pin name                                model name   delay     AT      slack  edge  Fanout
+--------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:load_cond\/q       macrocell16   1250   1250  499992936  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/main_8  macrocell16   2304   3554  499992936  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:load_cond\/clock_0                    macrocell16         0      0  RISE       1
+
+
+
+++++ Path 77 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/q
+Path End       : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_5
+Capture Clock  : \Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0
+Path slack     : 499992951p
+
+Capture Clock Arrival Time                             0
++ Clock path delay                                     0
++ Cycle adjust (I2C_CLK:R#1 vs. I2C_CLK:R#2)   500000000
+- Setup time                                       -3510
+--------------------------------------------   --------- 
+End-of-path required time (ps)                 499996490
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       3539
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           3539
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/clock_0             macrocell17         0      0  RISE       1
+
+Data path
+pin name                                  model name   delay     AT      slack  edge  Fanout
+----------------------------------------  -----------  -----  -----  ---------  ----  ------
+\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\/q  macrocell17   1250   1250  499992951  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/main_5  macrocell14   2289   3539  499992951  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_0                                      clockblockcell      0      0  RISE       1
+\Spi_LED_Chain:BSPIM:mosi_hs_reg\/clock_0                  macrocell14         0      0  RISE       1
+
+
+
+++++ Path 78 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/ci
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock
+Path slack     : 999983897p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -4230
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999995770
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       11873
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           11873
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0         datapathcell1    760    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0i        datapathcell2      0    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0_comb    datapathcell2   2740   3500  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_0  datapathcell1   3243   6743  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/co_msb     datapathcell1   5130  11873  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/ci         datapathcell2      0  11873  999983897  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock               datapathcell2       0      0  RISE       1
+
+
+
+++++ Path 79 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0
+Path End       : \Frame_Timer:TimerUDB:rstSts:stsreg\/status_0
+Capture Clock  : \Frame_Timer:TimerUDB:rstSts:stsreg\/clock
+Path slack     : 999987058p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                             -500
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999999500
+
+Launch Clock Arrival Time                       0
++ Clock path delay                          0
++ Data path delay                       12442
+-------------------------------------   ----- 
+End-of-path arrival time (ps)           12442
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+Data path
+pin name                                        model name     delay     AT      slack  edge  Fanout
+----------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0       datapathcell1    760    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0i      datapathcell2      0    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0_comb  datapathcell2   2740   3500  999983897  RISE       1
+\Frame_Timer:TimerUDB:status_tc\/main_1         macrocell2      3280   6780  999987058  RISE       1
+\Frame_Timer:TimerUDB:status_tc\/q              macrocell2      3350  10130  999987058  RISE       1
+\Frame_Timer:TimerUDB:rstSts:stsreg\/status_0   statusicell1    2312  12442  999987058  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:rstSts:stsreg\/clock                 statusicell1        0      0  RISE       1
+
+
+
+++++ Path 80 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_0
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock
+Path slack     : 999987197p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -6060
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999993940
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6743
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6743
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0         datapathcell1    760    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0i        datapathcell2      0    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0_comb    datapathcell2   2740   3500  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_0  datapathcell1   3243   6743  999987197  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+
+
+++++ Path 81 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/cs_addr_0
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock
+Path slack     : 999987203p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -6060
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999993940
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       6737
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           6737
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+Data path
+pin name                                          model name     delay     AT      slack  edge  Fanout
+------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/z0         datapathcell1    760    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0i        datapathcell2      0    760  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/z0_comb    datapathcell2   2740   3500  999983897  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/cs_addr_0  datapathcell2   3237   6737  999987203  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock               datapathcell2       0      0  RISE       1
+
+
+
+++++ Path 82 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/cs_addr_1
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock
+Path slack     : 999989649p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -6060
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999993940
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4291
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4291
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock      controlcell1        0      0  RISE       1
+
+Data path
+pin name                                                   model name     delay     AT      slack  edge  Fanout
+---------------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7  controlcell1    1210   1210  999986466  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/cs_addr_1           datapathcell2   3081   4291  999989649  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u1\/clock               datapathcell2       0      0  RISE       1
+
+
+
+++++ Path 83 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+
+Path Begin     : \Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7
+Path End       : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1
+Capture Clock  : \Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock
+Path slack     : 999989766p
+
+Capture Clock Arrival Time                                  0
++ Clock path delay                                          0
++ Cycle adjust (Frame_CLK:R#1 vs. Frame_CLK:R#2)   1000000000
+- Setup time                                            -6060
+------------------------------------------------   ---------- 
+End-of-path required time (ps)                      999993940
+
+Launch Clock Arrival Time                      0
++ Clock path delay                         0
++ Data path delay                       4174
+-------------------------------------   ---- 
+End-of-path arrival time (ps)           4174
+ 
+Launch Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock      controlcell1        0      0  RISE       1
+
+Data path
+pin name                                                   model name     delay     AT      slack  edge  Fanout
+---------------------------------------------------------  -------------  -----  -----  ---------  ----  ------
+\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7  controlcell1    1210   1210  999986466  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1           datapathcell1   2964   4174  999989766  RISE       1
+
+Capture Clock Path
+pin name                                                   model name      delay     AT  edge  Fanout
+---------------------------------------------------------  --------------  -----  -----  ----  ------
+ClockBlock/dclk_glb_1                                      clockblockcell      0      0  RISE       1
+\Frame_Timer:TimerUDB:sT16:timerdp:u0\/clock               datapathcell1       0      0  RISE       1
+
+
+===================================================================== 
+                    End of Detailed Report for all timing paths 
+##################################################################### 
+
+##################################################################### 
+                    End of Timing Report 
+##################################################################### 
+

@@ -1,0 +1,571 @@
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"DOT_STAR.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	EndLedChain
+  20              		.global	StartLedChain
+  21              		.section	.rodata
+  22              		.align	2
+  23              		.type	EndLedChain, %object
+  24              		.size	EndLedChain, 4
+  25              	EndLedChain:
+  26 0000 00000000 		.space	4
+  27              		.type	StartLedChain, %object
+  28              		.size	StartLedChain, 4
+  29              	StartLedChain:
+  30 0004 FFFFFFFF 		.word	-1
+  31              		.text
+  32              	.Letext0:
+  33              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  34              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.4\\psoc creator\\import\\gnu\\arm\\5.4.
+  35              		.file 3 "DOT_STAR.h"
+  36              		.file 4 "DOT_STAR.c"
+  37              		.section	.debug_info,"",%progbits
+  38              	.Ldebug_info0:
+  39 0000 41010000 		.4byte	0x141
+  40 0004 0400     		.2byte	0x4
+  41 0006 00000000 		.4byte	.Ldebug_abbrev0
+  42 000a 04       		.byte	0x4
+  43 000b 01       		.uleb128 0x1
+  44 000c 6A010000 		.4byte	.LASF24
+  45 0010 0C       		.byte	0xc
+  46 0011 2F010000 		.4byte	.LASF25
+  47 0015 47000000 		.4byte	.LASF26
+  48 0019 00000000 		.4byte	.Ldebug_line0
+  49 001d 02       		.uleb128 0x2
+  50 001e 01       		.byte	0x1
+  51 001f 06       		.byte	0x6
+  52 0020 C1000000 		.4byte	.LASF0
+  53 0024 03       		.uleb128 0x3
+  54 0025 A3000000 		.4byte	.LASF5
+  55 0029 01       		.byte	0x1
+  56 002a 1D       		.byte	0x1d
+  57 002b 2F000000 		.4byte	0x2f
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 2
+
+
+  58 002f 02       		.uleb128 0x2
+  59 0030 01       		.byte	0x1
+  60 0031 08       		.byte	0x8
+  61 0032 B3000000 		.4byte	.LASF1
+  62 0036 02       		.uleb128 0x2
+  63 0037 02       		.byte	0x2
+  64 0038 05       		.byte	0x5
+  65 0039 00000000 		.4byte	.LASF2
+  66 003d 02       		.uleb128 0x2
+  67 003e 02       		.byte	0x2
+  68 003f 07       		.byte	0x7
+  69 0040 01010000 		.4byte	.LASF3
+  70 0044 02       		.uleb128 0x2
+  71 0045 04       		.byte	0x4
+  72 0046 05       		.byte	0x5
+  73 0047 9A000000 		.4byte	.LASF4
+  74 004b 03       		.uleb128 0x3
+  75 004c 10000000 		.4byte	.LASF6
+  76 0050 01       		.byte	0x1
+  77 0051 41       		.byte	0x41
+  78 0052 56000000 		.4byte	0x56
+  79 0056 02       		.uleb128 0x2
+  80 0057 04       		.byte	0x4
+  81 0058 07       		.byte	0x7
+  82 0059 3A010000 		.4byte	.LASF7
+  83 005d 02       		.uleb128 0x2
+  84 005e 08       		.byte	0x8
+  85 005f 05       		.byte	0x5
+  86 0060 39000000 		.4byte	.LASF8
+  87 0064 02       		.uleb128 0x2
+  88 0065 08       		.byte	0x8
+  89 0066 07       		.byte	0x7
+  90 0067 CD000000 		.4byte	.LASF9
+  91 006b 04       		.uleb128 0x4
+  92 006c 04       		.byte	0x4
+  93 006d 05       		.byte	0x5
+  94 006e 696E7400 		.ascii	"int\000"
+  95 0072 02       		.uleb128 0x2
+  96 0073 04       		.byte	0x4
+  97 0074 07       		.byte	0x7
+  98 0075 ED000000 		.4byte	.LASF10
+  99 0079 03       		.uleb128 0x3
+ 100 007a 20000000 		.4byte	.LASF11
+ 101 007e 02       		.byte	0x2
+ 102 007f 18       		.byte	0x18
+ 103 0080 24000000 		.4byte	0x24
+ 104 0084 03       		.uleb128 0x3
+ 105 0085 E4000000 		.4byte	.LASF12
+ 106 0089 02       		.byte	0x2
+ 107 008a 30       		.byte	0x30
+ 108 008b 4B000000 		.4byte	0x4b
+ 109 008f 02       		.uleb128 0x2
+ 110 0090 04       		.byte	0x4
+ 111 0091 04       		.byte	0x4
+ 112 0092 33000000 		.4byte	.LASF13
+ 113 0096 02       		.uleb128 0x2
+ 114 0097 08       		.byte	0x8
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 3
+
+
+ 115 0098 04       		.byte	0x4
+ 116 0099 5A010000 		.4byte	.LASF14
+ 117 009d 02       		.uleb128 0x2
+ 118 009e 01       		.byte	0x1
+ 119 009f 08       		.byte	0x8
+ 120 00a0 1E010000 		.4byte	.LASF15
+ 121 00a4 05       		.uleb128 0x5
+ 122 00a5 FA000000 		.4byte	.LASF27
+ 123 00a9 04       		.byte	0x4
+ 124 00aa 03       		.byte	0x3
+ 125 00ab 1F       		.byte	0x1f
+ 126 00ac F3000000 		.4byte	0xf3
+ 127 00b0 06       		.uleb128 0x6
+ 128 00b1 F8010000 		.4byte	.LASF16
+ 129 00b5 03       		.byte	0x3
+ 130 00b6 20       		.byte	0x20
+ 131 00b7 79000000 		.4byte	0x79
+ 132 00bb 01       		.byte	0x1
+ 133 00bc 03       		.byte	0x3
+ 134 00bd 05       		.byte	0x5
+ 135 00be 00       		.byte	0
+ 136 00bf 06       		.uleb128 0x6
+ 137 00c0 14010000 		.4byte	.LASF17
+ 138 00c4 03       		.byte	0x3
+ 139 00c5 21       		.byte	0x21
+ 140 00c6 79000000 		.4byte	0x79
+ 141 00ca 01       		.byte	0x1
+ 142 00cb 05       		.byte	0x5
+ 143 00cc 00       		.byte	0
+ 144 00cd 00       		.byte	0
+ 145 00ce 07       		.uleb128 0x7
+ 146 00cf 72656400 		.ascii	"red\000"
+ 147 00d3 03       		.byte	0x3
+ 148 00d4 22       		.byte	0x22
+ 149 00d5 79000000 		.4byte	0x79
+ 150 00d9 01       		.byte	0x1
+ 151 00da 08       		.uleb128 0x8
+ 152 00db AD000000 		.4byte	.LASF18
+ 153 00df 03       		.byte	0x3
+ 154 00e0 23       		.byte	0x23
+ 155 00e1 79000000 		.4byte	0x79
+ 156 00e5 02       		.byte	0x2
+ 157 00e6 08       		.uleb128 0x8
+ 158 00e7 1B000000 		.4byte	.LASF19
+ 159 00eb 03       		.byte	0x3
+ 160 00ec 24       		.byte	0x24
+ 161 00ed 79000000 		.4byte	0x79
+ 162 00f1 03       		.byte	0x3
+ 163 00f2 00       		.byte	0
+ 164 00f3 09       		.uleb128 0x9
+ 165 00f4 28000000 		.4byte	.LASF28
+ 166 00f8 04       		.byte	0x4
+ 167 00f9 03       		.byte	0x3
+ 168 00fa 27       		.byte	0x27
+ 169 00fb 16010000 		.4byte	0x116
+ 170 00ff 0A       		.uleb128 0xa
+ 171 0100 0A000000 		.4byte	.LASF20
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 4
+
+
+ 172 0104 03       		.byte	0x3
+ 173 0105 28       		.byte	0x28
+ 174 0106 84000000 		.4byte	0x84
+ 175 010a 0B       		.uleb128 0xb
+ 176 010b 4C454400 		.ascii	"LED\000"
+ 177 010f 03       		.byte	0x3
+ 178 0110 29       		.byte	0x29
+ 179 0111 A4000000 		.4byte	0xa4
+ 180 0115 00       		.byte	0
+ 181 0116 02       		.uleb128 0x2
+ 182 0117 04       		.byte	0x4
+ 183 0118 07       		.byte	0x7
+ 184 0119 61010000 		.4byte	.LASF21
+ 185 011d 0C       		.uleb128 0xc
+ 186 011e 4C010000 		.4byte	.LASF22
+ 187 0122 04       		.byte	0x4
+ 188 0123 0F       		.byte	0xf
+ 189 0124 2E010000 		.4byte	0x12e
+ 190 0128 05       		.uleb128 0x5
+ 191 0129 03       		.byte	0x3
+ 192 012a 00000000 		.4byte	StartLedChain
+ 193 012e 0D       		.uleb128 0xd
+ 194 012f F3000000 		.4byte	0xf3
+ 195 0133 0C       		.uleb128 0xc
+ 196 0134 23010000 		.4byte	.LASF23
+ 197 0138 04       		.byte	0x4
+ 198 0139 10       		.byte	0x10
+ 199 013a 2E010000 		.4byte	0x12e
+ 200 013e 05       		.uleb128 0x5
+ 201 013f 03       		.byte	0x3
+ 202 0140 00000000 		.4byte	EndLedChain
+ 203 0144 00       		.byte	0
+ 204              		.section	.debug_abbrev,"",%progbits
+ 205              	.Ldebug_abbrev0:
+ 206 0000 01       		.uleb128 0x1
+ 207 0001 11       		.uleb128 0x11
+ 208 0002 01       		.byte	0x1
+ 209 0003 25       		.uleb128 0x25
+ 210 0004 0E       		.uleb128 0xe
+ 211 0005 13       		.uleb128 0x13
+ 212 0006 0B       		.uleb128 0xb
+ 213 0007 03       		.uleb128 0x3
+ 214 0008 0E       		.uleb128 0xe
+ 215 0009 1B       		.uleb128 0x1b
+ 216 000a 0E       		.uleb128 0xe
+ 217 000b 10       		.uleb128 0x10
+ 218 000c 17       		.uleb128 0x17
+ 219 000d 00       		.byte	0
+ 220 000e 00       		.byte	0
+ 221 000f 02       		.uleb128 0x2
+ 222 0010 24       		.uleb128 0x24
+ 223 0011 00       		.byte	0
+ 224 0012 0B       		.uleb128 0xb
+ 225 0013 0B       		.uleb128 0xb
+ 226 0014 3E       		.uleb128 0x3e
+ 227 0015 0B       		.uleb128 0xb
+ 228 0016 03       		.uleb128 0x3
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 5
+
+
+ 229 0017 0E       		.uleb128 0xe
+ 230 0018 00       		.byte	0
+ 231 0019 00       		.byte	0
+ 232 001a 03       		.uleb128 0x3
+ 233 001b 16       		.uleb128 0x16
+ 234 001c 00       		.byte	0
+ 235 001d 03       		.uleb128 0x3
+ 236 001e 0E       		.uleb128 0xe
+ 237 001f 3A       		.uleb128 0x3a
+ 238 0020 0B       		.uleb128 0xb
+ 239 0021 3B       		.uleb128 0x3b
+ 240 0022 0B       		.uleb128 0xb
+ 241 0023 49       		.uleb128 0x49
+ 242 0024 13       		.uleb128 0x13
+ 243 0025 00       		.byte	0
+ 244 0026 00       		.byte	0
+ 245 0027 04       		.uleb128 0x4
+ 246 0028 24       		.uleb128 0x24
+ 247 0029 00       		.byte	0
+ 248 002a 0B       		.uleb128 0xb
+ 249 002b 0B       		.uleb128 0xb
+ 250 002c 3E       		.uleb128 0x3e
+ 251 002d 0B       		.uleb128 0xb
+ 252 002e 03       		.uleb128 0x3
+ 253 002f 08       		.uleb128 0x8
+ 254 0030 00       		.byte	0
+ 255 0031 00       		.byte	0
+ 256 0032 05       		.uleb128 0x5
+ 257 0033 13       		.uleb128 0x13
+ 258 0034 01       		.byte	0x1
+ 259 0035 03       		.uleb128 0x3
+ 260 0036 0E       		.uleb128 0xe
+ 261 0037 0B       		.uleb128 0xb
+ 262 0038 0B       		.uleb128 0xb
+ 263 0039 3A       		.uleb128 0x3a
+ 264 003a 0B       		.uleb128 0xb
+ 265 003b 3B       		.uleb128 0x3b
+ 266 003c 0B       		.uleb128 0xb
+ 267 003d 01       		.uleb128 0x1
+ 268 003e 13       		.uleb128 0x13
+ 269 003f 00       		.byte	0
+ 270 0040 00       		.byte	0
+ 271 0041 06       		.uleb128 0x6
+ 272 0042 0D       		.uleb128 0xd
+ 273 0043 00       		.byte	0
+ 274 0044 03       		.uleb128 0x3
+ 275 0045 0E       		.uleb128 0xe
+ 276 0046 3A       		.uleb128 0x3a
+ 277 0047 0B       		.uleb128 0xb
+ 278 0048 3B       		.uleb128 0x3b
+ 279 0049 0B       		.uleb128 0xb
+ 280 004a 49       		.uleb128 0x49
+ 281 004b 13       		.uleb128 0x13
+ 282 004c 0B       		.uleb128 0xb
+ 283 004d 0B       		.uleb128 0xb
+ 284 004e 0D       		.uleb128 0xd
+ 285 004f 0B       		.uleb128 0xb
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 6
+
+
+ 286 0050 0C       		.uleb128 0xc
+ 287 0051 0B       		.uleb128 0xb
+ 288 0052 38       		.uleb128 0x38
+ 289 0053 0B       		.uleb128 0xb
+ 290 0054 00       		.byte	0
+ 291 0055 00       		.byte	0
+ 292 0056 07       		.uleb128 0x7
+ 293 0057 0D       		.uleb128 0xd
+ 294 0058 00       		.byte	0
+ 295 0059 03       		.uleb128 0x3
+ 296 005a 08       		.uleb128 0x8
+ 297 005b 3A       		.uleb128 0x3a
+ 298 005c 0B       		.uleb128 0xb
+ 299 005d 3B       		.uleb128 0x3b
+ 300 005e 0B       		.uleb128 0xb
+ 301 005f 49       		.uleb128 0x49
+ 302 0060 13       		.uleb128 0x13
+ 303 0061 38       		.uleb128 0x38
+ 304 0062 0B       		.uleb128 0xb
+ 305 0063 00       		.byte	0
+ 306 0064 00       		.byte	0
+ 307 0065 08       		.uleb128 0x8
+ 308 0066 0D       		.uleb128 0xd
+ 309 0067 00       		.byte	0
+ 310 0068 03       		.uleb128 0x3
+ 311 0069 0E       		.uleb128 0xe
+ 312 006a 3A       		.uleb128 0x3a
+ 313 006b 0B       		.uleb128 0xb
+ 314 006c 3B       		.uleb128 0x3b
+ 315 006d 0B       		.uleb128 0xb
+ 316 006e 49       		.uleb128 0x49
+ 317 006f 13       		.uleb128 0x13
+ 318 0070 38       		.uleb128 0x38
+ 319 0071 0B       		.uleb128 0xb
+ 320 0072 00       		.byte	0
+ 321 0073 00       		.byte	0
+ 322 0074 09       		.uleb128 0x9
+ 323 0075 17       		.uleb128 0x17
+ 324 0076 01       		.byte	0x1
+ 325 0077 03       		.uleb128 0x3
+ 326 0078 0E       		.uleb128 0xe
+ 327 0079 0B       		.uleb128 0xb
+ 328 007a 0B       		.uleb128 0xb
+ 329 007b 3A       		.uleb128 0x3a
+ 330 007c 0B       		.uleb128 0xb
+ 331 007d 3B       		.uleb128 0x3b
+ 332 007e 0B       		.uleb128 0xb
+ 333 007f 01       		.uleb128 0x1
+ 334 0080 13       		.uleb128 0x13
+ 335 0081 00       		.byte	0
+ 336 0082 00       		.byte	0
+ 337 0083 0A       		.uleb128 0xa
+ 338 0084 0D       		.uleb128 0xd
+ 339 0085 00       		.byte	0
+ 340 0086 03       		.uleb128 0x3
+ 341 0087 0E       		.uleb128 0xe
+ 342 0088 3A       		.uleb128 0x3a
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 7
+
+
+ 343 0089 0B       		.uleb128 0xb
+ 344 008a 3B       		.uleb128 0x3b
+ 345 008b 0B       		.uleb128 0xb
+ 346 008c 49       		.uleb128 0x49
+ 347 008d 13       		.uleb128 0x13
+ 348 008e 00       		.byte	0
+ 349 008f 00       		.byte	0
+ 350 0090 0B       		.uleb128 0xb
+ 351 0091 0D       		.uleb128 0xd
+ 352 0092 00       		.byte	0
+ 353 0093 03       		.uleb128 0x3
+ 354 0094 08       		.uleb128 0x8
+ 355 0095 3A       		.uleb128 0x3a
+ 356 0096 0B       		.uleb128 0xb
+ 357 0097 3B       		.uleb128 0x3b
+ 358 0098 0B       		.uleb128 0xb
+ 359 0099 49       		.uleb128 0x49
+ 360 009a 13       		.uleb128 0x13
+ 361 009b 00       		.byte	0
+ 362 009c 00       		.byte	0
+ 363 009d 0C       		.uleb128 0xc
+ 364 009e 34       		.uleb128 0x34
+ 365 009f 00       		.byte	0
+ 366 00a0 03       		.uleb128 0x3
+ 367 00a1 0E       		.uleb128 0xe
+ 368 00a2 3A       		.uleb128 0x3a
+ 369 00a3 0B       		.uleb128 0xb
+ 370 00a4 3B       		.uleb128 0x3b
+ 371 00a5 0B       		.uleb128 0xb
+ 372 00a6 49       		.uleb128 0x49
+ 373 00a7 13       		.uleb128 0x13
+ 374 00a8 3F       		.uleb128 0x3f
+ 375 00a9 19       		.uleb128 0x19
+ 376 00aa 02       		.uleb128 0x2
+ 377 00ab 18       		.uleb128 0x18
+ 378 00ac 00       		.byte	0
+ 379 00ad 00       		.byte	0
+ 380 00ae 0D       		.uleb128 0xd
+ 381 00af 26       		.uleb128 0x26
+ 382 00b0 00       		.byte	0
+ 383 00b1 49       		.uleb128 0x49
+ 384 00b2 13       		.uleb128 0x13
+ 385 00b3 00       		.byte	0
+ 386 00b4 00       		.byte	0
+ 387 00b5 00       		.byte	0
+ 388              		.section	.debug_aranges,"",%progbits
+ 389 0000 14000000 		.4byte	0x14
+ 390 0004 0200     		.2byte	0x2
+ 391 0006 00000000 		.4byte	.Ldebug_info0
+ 392 000a 04       		.byte	0x4
+ 393 000b 00       		.byte	0
+ 394 000c 0000     		.2byte	0
+ 395 000e 0000     		.2byte	0
+ 396 0010 00000000 		.4byte	0
+ 397 0014 00000000 		.4byte	0
+ 398              		.section	.debug_line,"",%progbits
+ 399              	.Ldebug_line0:
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 8
+
+
+ 400 0000 32010000 		.section	.debug_str,"MS",%progbits,1
+ 400      02002C01 
+ 400      00000201 
+ 400      FB0E0D00 
+ 400      01010101 
+ 401              	.LASF2:
+ 402 0000 73686F72 		.ascii	"short int\000"
+ 402      7420696E 
+ 402      7400
+ 403              	.LASF20:
+ 404 000a 636F6C6F 		.ascii	"color\000"
+ 404      7200
+ 405              	.LASF6:
+ 406 0010 5F5F7569 		.ascii	"__uint32_t\000"
+ 406      6E743332 
+ 406      5F7400
+ 407              	.LASF19:
+ 408 001b 626C7565 		.ascii	"blue\000"
+ 408      00
+ 409              	.LASF11:
+ 410 0020 75696E74 		.ascii	"uint8_t\000"
+ 410      385F7400 
+ 411              	.LASF28:
+ 412 0028 446F7453 		.ascii	"DotStarLed\000"
+ 412      7461724C 
+ 412      656400
+ 413              	.LASF13:
+ 414 0033 666C6F61 		.ascii	"float\000"
+ 414      7400
+ 415              	.LASF8:
+ 416 0039 6C6F6E67 		.ascii	"long long int\000"
+ 416      206C6F6E 
+ 416      6720696E 
+ 416      7400
+ 417              	.LASF26:
+ 418 0047 433A5C55 		.ascii	"C:\\Users\\Digital-Sqrt\\Documents\\Git_Hub\\Space-"
+ 418      73657273 
+ 418      5C446967 
+ 418      6974616C 
+ 418      2D537172 
+ 419 0075 66696768 		.ascii	"fighter\\Code\\LED_Space_Fighter.cydsn\000"
+ 419      7465725C 
+ 419      436F6465 
+ 419      5C4C4544 
+ 419      5F537061 
+ 420              	.LASF4:
+ 421 009a 6C6F6E67 		.ascii	"long int\000"
+ 421      20696E74 
+ 421      00
+ 422              	.LASF5:
+ 423 00a3 5F5F7569 		.ascii	"__uint8_t\000"
+ 423      6E74385F 
+ 423      7400
+ 424              	.LASF18:
+ 425 00ad 67726565 		.ascii	"green\000"
+ 425      6E00
+ 426              	.LASF1:
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 9
+
+
+ 427 00b3 756E7369 		.ascii	"unsigned char\000"
+ 427      676E6564 
+ 427      20636861 
+ 427      7200
+ 428              	.LASF0:
+ 429 00c1 7369676E 		.ascii	"signed char\000"
+ 429      65642063 
+ 429      68617200 
+ 430              	.LASF9:
+ 431 00cd 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 431      206C6F6E 
+ 431      6720756E 
+ 431      7369676E 
+ 431      65642069 
+ 432              	.LASF12:
+ 433 00e4 75696E74 		.ascii	"uint32_t\000"
+ 433      33325F74 
+ 433      00
+ 434              	.LASF10:
+ 435 00ed 756E7369 		.ascii	"unsigned int\000"
+ 435      676E6564 
+ 435      20696E74 
+ 435      00
+ 436              	.LASF27:
+ 437 00fa 4F6E654C 		.ascii	"OneLed\000"
+ 437      656400
+ 438              	.LASF3:
+ 439 0101 73686F72 		.ascii	"short unsigned int\000"
+ 439      7420756E 
+ 439      7369676E 
+ 439      65642069 
+ 439      6E7400
+ 440              	.LASF17:
+ 441 0114 696E7465 		.ascii	"intensity\000"
+ 441      6E736974 
+ 441      7900
+ 442              	.LASF15:
+ 443 011e 63686172 		.ascii	"char\000"
+ 443      00
+ 444              	.LASF23:
+ 445 0123 456E644C 		.ascii	"EndLedChain\000"
+ 445      65644368 
+ 445      61696E00 
+ 446              	.LASF25:
+ 447 012f 444F545F 		.ascii	"DOT_STAR.c\000"
+ 447      53544152 
+ 447      2E6300
+ 448              	.LASF7:
+ 449 013a 6C6F6E67 		.ascii	"long unsigned int\000"
+ 449      20756E73 
+ 449      69676E65 
+ 449      6420696E 
+ 449      7400
+ 450              	.LASF22:
+ 451 014c 53746172 		.ascii	"StartLedChain\000"
+ 451      744C6564 
+ 451      43686169 
+ARM GAS  C:\Users\DIGITA~1\AppData\Local\Temp\cceDU8qj.s 			page 10
+
+
+ 451      6E00
+ 452              	.LASF14:
+ 453 015a 646F7562 		.ascii	"double\000"
+ 453      6C6500
+ 454              	.LASF21:
+ 455 0161 73697A65 		.ascii	"sizetype\000"
+ 455      74797065 
+ 455      00
+ 456              	.LASF24:
+ 457 016a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 457      43313120 
+ 457      352E342E 
+ 457      31203230 
+ 457      31363036 
+ 458 019d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 458      20726576 
+ 458      6973696F 
+ 458      6E203233 
+ 458      37373135 
+ 459 01d0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 459      66756E63 
+ 459      74696F6E 
+ 459      2D736563 
+ 459      74696F6E 
+ 460              	.LASF16:
+ 461 01f8 756E7573 		.ascii	"unused\000"
+ 461      656400
+ 462              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
