@@ -1,5 +1,5 @@
 -- Project:   C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\LED_Space_Fighter.cyprj
--- Generated: 02/06/2021 21:52:33
+-- Generated: 02/28/2021 00:47:38
 -- PSoC Creator  4.4
 
 ENTITY LED_Space_Fighter IS
@@ -34,18 +34,17 @@ ARCHITECTURE __DEFAULT__ OF LED_Space_Fighter IS
     ATTRIBUTE global_signal OF Net_10 : SIGNAL IS true;
     SIGNAL Net_10_local : bit;
     SIGNAL Net_113 : bit;
-    ATTRIBUTE placement_force OF Net_113 : SIGNAL IS "U(1,1,B)1";
+    ATTRIBUTE placement_force OF Net_113 : SIGNAL IS "U(1,3,A)2";
     SIGNAL Net_12 : bit;
     ATTRIBUTE GROUND OF Net_12 : SIGNAL IS true;
-    SIGNAL Net_5 : bit;
     SIGNAL Net_58 : bit;
     ATTRIBUTE udbclken_assigned OF Net_58 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_58 : SIGNAL IS true;
     SIGNAL Net_58_local : bit;
     SIGNAL Net_73 : bit;
-    ATTRIBUTE placement_force OF Net_73 : SIGNAL IS "U(1,1,A)0";
+    ATTRIBUTE placement_force OF Net_73 : SIGNAL IS "U(1,3,A)1";
     SIGNAL Net_74 : bit;
-    ATTRIBUTE placement_force OF Net_74 : SIGNAL IS "U(0,1,B)0";
+    ATTRIBUTE placement_force OF Net_74 : SIGNAL IS "U(0,3,A)1";
     SIGNAL Net_88 : bit;
     SIGNAL SPI_CLK(0)__PA : bit;
     SIGNAL SPI_DATA(0)__PA : bit;
@@ -63,7 +62,7 @@ ARCHITECTURE __DEFAULT__ OF LED_Space_Fighter IS
     SIGNAL \Frame_Timer:TimerUDB:status_tc\ : bit;
     ATTRIBUTE placement_force OF \Frame_Timer:TimerUDB:status_tc\ : SIGNAL IS "U(1,3,A)0";
     SIGNAL \Spi_LED_Chain:BSPIM:cnt_enable\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:cnt_enable\ : SIGNAL IS "U(1,3,A)1";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:cnt_enable\ : SIGNAL IS "U(1,2,B)3";
     SIGNAL \Spi_LED_Chain:BSPIM:cnt_tc\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:count_0\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:count_1\ : bit;
@@ -73,40 +72,40 @@ ARCHITECTURE __DEFAULT__ OF LED_Space_Fighter IS
     SIGNAL \Spi_LED_Chain:BSPIM:count_5\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:count_6\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:ld_ident\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:ld_ident\ : SIGNAL IS "U(0,2,A)1";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:ld_ident\ : SIGNAL IS "U(0,1,A)1";
     SIGNAL \Spi_LED_Chain:BSPIM:load_cond\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:load_cond\ : SIGNAL IS "U(0,1,A)0";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:load_cond\ : SIGNAL IS "U(0,2,B)0";
     SIGNAL \Spi_LED_Chain:BSPIM:load_rx_data\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:load_rx_data\ : SIGNAL IS "U(0,1,A)3";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:load_rx_data\ : SIGNAL IS "U(0,2,B)2";
     SIGNAL \Spi_LED_Chain:BSPIM:mosi_from_dp\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : SIGNAL IS "U(0,3,B)2";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : SIGNAL IS "U(1,3,B)1";
     SIGNAL \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : SIGNAL IS "U(0,3,A)1";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : SIGNAL IS "U(1,3,B)0";
     SIGNAL \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : SIGNAL IS "U(1,2,B)1";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : SIGNAL IS "U(1,1,B)1";
     SIGNAL \Spi_LED_Chain:BSPIM:mosi_pre_reg_split\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split\ : SIGNAL IS "U(1,2,A)0";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split\ : SIGNAL IS "U(1,1,A)0";
     SIGNAL \Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\ : SIGNAL IS "U(1,2,B)0";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\ : SIGNAL IS "U(1,1,B)0";
     SIGNAL \Spi_LED_Chain:BSPIM:rx_status_4\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:rx_status_5\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:rx_status_6\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:rx_status_6\ : SIGNAL IS "U(0,3,A)2";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:rx_status_6\ : SIGNAL IS "U(0,1,A)3";
     SIGNAL \Spi_LED_Chain:BSPIM:state_0\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:state_0\ : SIGNAL IS "U(0,2,B)0";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:state_0\ : SIGNAL IS "U(0,1,B)0";
     SIGNAL \Spi_LED_Chain:BSPIM:state_1\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:state_1\ : SIGNAL IS "U(0,2,B)2";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:state_1\ : SIGNAL IS "U(0,1,A)0";
     SIGNAL \Spi_LED_Chain:BSPIM:state_2\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:state_2\ : SIGNAL IS "U(0,2,A)0";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:state_2\ : SIGNAL IS "U(0,1,B)2";
     SIGNAL \Spi_LED_Chain:BSPIM:tx_status_0\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:tx_status_0\ : SIGNAL IS "U(0,2,B)3";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:tx_status_0\ : SIGNAL IS "U(0,1,B)3";
     SIGNAL \Spi_LED_Chain:BSPIM:tx_status_1\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:tx_status_2\ : bit;
     SIGNAL \Spi_LED_Chain:BSPIM:tx_status_4\ : bit;
-    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:tx_status_4\ : SIGNAL IS "U(0,1,A)2";
+    ATTRIBUTE placement_force OF \Spi_LED_Chain:BSPIM:tx_status_4\ : SIGNAL IS "U(0,2,A)3";
     SIGNAL __ONE__ : bit;
-    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(0,0,A)0";
+    ATTRIBUTE placement_force OF __ONE__ : SIGNAL IS "U(0,0,A)1";
     ATTRIBUTE POWER OF __ONE__ : SIGNAL IS true;
     SIGNAL __ZERO__ : bit;
     ATTRIBUTE GROUND OF __ZERO__ : SIGNAL IS true;
@@ -126,7 +125,7 @@ ARCHITECTURE __DEFAULT__ OF LED_Space_Fighter IS
     SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:u1.sor__sig\ : bit;
     SIGNAL \Frame_Timer:TimerUDB:sT16:timerdp:u1.cmsbo__sig\ : bit;
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split\ : LABEL IS "macrocell1";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split\ : LABEL IS "U(1,1)";
     ATTRIBUTE Location OF ClockBlock : LABEL IS "F(Clock,0)";
     ATTRIBUTE lib_model OF SPI_DATA(0) : LABEL IS "iocell1";
     ATTRIBUTE Location OF SPI_DATA(0) : LABEL IS "P1[6]";
@@ -135,59 +134,57 @@ ARCHITECTURE __DEFAULT__ OF LED_Space_Fighter IS
     ATTRIBUTE lib_model OF \Frame_Timer:TimerUDB:status_tc\ : LABEL IS "macrocell2";
     ATTRIBUTE Location OF \Frame_Timer:TimerUDB:status_tc\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:load_rx_data\ : LABEL IS "macrocell3";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:load_rx_data\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:load_rx_data\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF Net_73 : LABEL IS "macrocell4";
-    ATTRIBUTE Location OF Net_73 : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF Net_73 : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:tx_status_0\ : LABEL IS "macrocell5";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:tx_status_0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:tx_status_0\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:tx_status_4\ : LABEL IS "macrocell6";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:tx_status_4\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:tx_status_4\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:rx_status_6\ : LABEL IS "macrocell7";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:rx_status_6\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:rx_status_6\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF __ONE__ : LABEL IS "macrocell8";
     ATTRIBUTE Location OF __ONE__ : LABEL IS "U(0,0)";
     ATTRIBUTE lib_model OF \Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "controlcell1";
-    ATTRIBUTE Location OF \Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\ : LABEL IS "macrocell9";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \Frame_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "statusicell1";
     ATTRIBUTE Location OF \Frame_Timer:TimerUDB:rstSts:stsreg\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \Frame_Timer:TimerUDB:sT16:timerdp:u0\ : LABEL IS "datapathcell1";
     ATTRIBUTE Location OF \Frame_Timer:TimerUDB:sT16:timerdp:u0\ : LABEL IS "U(0,3)";
     ATTRIBUTE lib_model OF \Frame_Timer:TimerUDB:sT16:timerdp:u1\ : LABEL IS "datapathcell2";
     ATTRIBUTE Location OF \Frame_Timer:TimerUDB:sT16:timerdp:u1\ : LABEL IS "U(1,3)";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:BitCounter\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:BitCounter\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:TxStsReg\ : LABEL IS "statusicell2";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:TxStsReg\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:TxStsReg\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:RxStsReg\ : LABEL IS "statusicell3";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:RxStsReg\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:RxStsReg\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:sR8:Dp:u0\ : LABEL IS "datapathcell3";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:sR8:Dp:u0\ : LABEL IS "U(0,1)";
-    ATTRIBUTE Location OF \Spi_LED_Chain:TxInternalInterrupt\ : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
-    ATTRIBUTE Location OF isr_spi_tx_done : LABEL IS "[IntrContainer=(0)][IntrId=(2)]";
-    ATTRIBUTE Location OF isr_frame : LABEL IS "[IntrContainer=(0)][IntrId=(1)]";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:sR8:Dp:u0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF isr_spi_tx_done : LABEL IS "[IntrContainer=(0)][IntrId=(0)]";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:state_2\ : LABEL IS "macrocell10";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:state_2\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:state_2\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:state_1\ : LABEL IS "macrocell11";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:state_1\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:state_1\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:state_0\ : LABEL IS "macrocell12";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:state_0\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:state_0\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF Net_113 : LABEL IS "macrocell13";
-    ATTRIBUTE Location OF Net_113 : LABEL IS "U(1,1)";
+    ATTRIBUTE Location OF Net_113 : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : LABEL IS "macrocell14";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_hs_reg\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : LABEL IS "macrocell15";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : LABEL IS "U(1,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_pre_reg\ : LABEL IS "U(1,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:load_cond\ : LABEL IS "macrocell16";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:load_cond\ : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:load_cond\ : LABEL IS "U(0,2)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : LABEL IS "macrocell17";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : LABEL IS "U(0,3)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ : LABEL IS "U(1,3)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:ld_ident\ : LABEL IS "macrocell18";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:ld_ident\ : LABEL IS "U(0,2)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:ld_ident\ : LABEL IS "U(0,1)";
     ATTRIBUTE lib_model OF \Spi_LED_Chain:BSPIM:cnt_enable\ : LABEL IS "macrocell19";
-    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:cnt_enable\ : LABEL IS "U(1,3)";
+    ATTRIBUTE Location OF \Spi_LED_Chain:BSPIM:cnt_enable\ : LABEL IS "U(1,2)";
     ATTRIBUTE lib_model OF Net_74 : LABEL IS "macrocell20";
-    ATTRIBUTE Location OF Net_74 : LABEL IS "U(0,1)";
+    ATTRIBUTE Location OF Net_74 : LABEL IS "U(0,3)";
     COMPONENT clockblockcell
         PORT (
             dclk_0 : OUT std_ulogic;
@@ -849,8 +846,7 @@ BEGIN
             status_3 => \Frame_Timer:TimerUDB:status_3\,
             status_2 => \Frame_Timer:TimerUDB:status_2\,
             status_1 => open,
-            status_0 => \Frame_Timer:TimerUDB:status_tc\,
-            interrupt => Net_5);
+            status_0 => \Frame_Timer:TimerUDB:status_tc\);
 
     \Frame_Timer:TimerUDB:sT16:timerdp:u0\:datapathcell
         GENERIC MAP(
@@ -1045,28 +1041,12 @@ BEGIN
             f1_blk_stat_comb => \Spi_LED_Chain:BSPIM:rx_status_4\,
             busclk => ClockBlock_BUS_CLK);
 
-    \Spi_LED_Chain:TxInternalInterrupt\:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_88,
-            clock => ClockBlock_BUS_CLK);
-
     isr_spi_tx_done:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_88,
-            clock => ClockBlock_BUS_CLK);
-
-    isr_frame:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_5,
             clock => ClockBlock_BUS_CLK);
 
     \Spi_LED_Chain:BSPIM:state_2\:macrocell

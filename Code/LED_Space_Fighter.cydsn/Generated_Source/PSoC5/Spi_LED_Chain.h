@@ -42,7 +42,7 @@
 /* Internal interrupt handling */
 #define Spi_LED_Chain_TX_BUFFER_SIZE             (4u)
 #define Spi_LED_Chain_RX_BUFFER_SIZE             (4u)
-#define Spi_LED_Chain_INTERNAL_TX_INT_ENABLED    (1u)
+#define Spi_LED_Chain_INTERNAL_TX_INT_ENABLED    (0u)
 #define Spi_LED_Chain_INTERNAL_RX_INT_ENABLED    (0u)
 
 #define Spi_LED_Chain_SINGLE_REG_SIZE            (8u)

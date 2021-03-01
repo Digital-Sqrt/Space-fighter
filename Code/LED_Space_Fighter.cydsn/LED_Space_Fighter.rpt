@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.410ms
+Loading plugins phase: Elapsed time ==> 1s.921ms
 <CYPRESSTAG name="CyDsfit arguments...">
 cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\LED_Space_Fighter.cyprj -d CY8C5888LTI-LP097 -s C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 2s.344ms
+Elaboration phase: Elapsed time ==> 7s.890ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.112ms
+HDL generation phase: Elapsed time ==> 0s.046ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -41,7 +41,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Digit
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Sat Feb 06 21:52:25 2021
+Sun Feb 28 00:47:30 2021
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 LED_Space_Fighter.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Sat Feb 06 21:52:25 2021
+Sun Feb 28 00:47:31 2021
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'
@@ -93,7 +93,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Digit
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Sat Feb 06 21:52:26 2021
+Sun Feb 28 00:47:31 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -127,7 +127,7 @@ Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Digit
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Sat Feb 06 21:52:26 2021
+Sun Feb 28 00:47:32 2021
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -157,6 +157,7 @@ Detecting unused logic.
 ----------------------------------------------------------
     User names
 	\Frame_Timer:Net_260\
+	Net_5
 	Net_6
 	\Frame_Timer:Net_53\
 	\Frame_Timer:TimerUDB:ctrl_ten\
@@ -187,7 +188,7 @@ Detecting unused logic.
 	Net_78
 
 
-Deleted 29 User equations/components.
+Deleted 30 User equations/components.
 Deleted 0 Synthesized equations/components.
 
 ------------------------------------------------------
@@ -217,7 +218,6 @@ Aliasing \Frame_Timer:TimerUDB:hwEnable_reg\\D\ to \Frame_Timer:TimerUDB:run_mod
 Aliasing \Frame_Timer:TimerUDB:capture_out_reg_i\\D\ to \Frame_Timer:TimerUDB:capt_fifo_load_int\
 Aliasing \Spi_LED_Chain:BSPIM:so_send_reg\\D\ to Net_12
 Aliasing \Spi_LED_Chain:BSPIM:dpcounter_one_reg\\D\ to \Spi_LED_Chain:BSPIM:load_rx_data\
-Removing Rhs of wire Net_5[4] = \Frame_Timer:Net_55\[5]
 Removing Lhs of wire zero[14] = Net_12[2]
 Removing Lhs of wire \Frame_Timer:TimerUDB:ctrl_enable\[23] = \Frame_Timer:TimerUDB:control_7\[15]
 Removing Lhs of wire \Frame_Timer:TimerUDB:ctrl_cmode_1\[25] = Net_12[2]
@@ -258,19 +258,19 @@ Removing Lhs of wire \Spi_LED_Chain:BSPIM:rx_status_2\[199] = Net_12[2]
 Removing Lhs of wire \Spi_LED_Chain:BSPIM:rx_status_1\[200] = Net_12[2]
 Removing Lhs of wire \Spi_LED_Chain:BSPIM:rx_status_0\[201] = Net_12[2]
 Removing Lhs of wire \Spi_LED_Chain:Net_273\[211] = Net_12[2]
-Removing Lhs of wire \Spi_LED_Chain:Net_289\[252] = Net_12[2]
-Removing Lhs of wire tmpOE__SPI_CLK_net_0[257] = one[9]
-Removing Lhs of wire \Frame_Timer:TimerUDB:capture_last\\D\[263] = Net_12[2]
-Removing Lhs of wire \Frame_Timer:TimerUDB:tc_reg_i\\D\[264] = \Frame_Timer:TimerUDB:status_tc\[37]
-Removing Lhs of wire \Frame_Timer:TimerUDB:hwEnable_reg\\D\[265] = \Frame_Timer:TimerUDB:control_7\[15]
-Removing Lhs of wire \Frame_Timer:TimerUDB:capture_out_reg_i\\D\[266] = \Frame_Timer:TimerUDB:capt_fifo_load\[33]
-Removing Lhs of wire \Spi_LED_Chain:BSPIM:so_send_reg\\D\[267] = Net_12[2]
-Removing Lhs of wire \Spi_LED_Chain:BSPIM:mosi_reg\\D\[274] = \Spi_LED_Chain:BSPIM:mosi_pre_reg\[178]
-Removing Lhs of wire \Spi_LED_Chain:BSPIM:dpcounter_one_reg\\D\[276] = \Spi_LED_Chain:BSPIM:load_rx_data\[155]
-Removing Lhs of wire \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\\D\[277] = \Spi_LED_Chain:BSPIM:mosi_from_dp\[168]
+Removing Lhs of wire \Spi_LED_Chain:Net_289\[251] = Net_12[2]
+Removing Lhs of wire tmpOE__SPI_CLK_net_0[256] = one[9]
+Removing Lhs of wire \Frame_Timer:TimerUDB:capture_last\\D\[261] = Net_12[2]
+Removing Lhs of wire \Frame_Timer:TimerUDB:tc_reg_i\\D\[262] = \Frame_Timer:TimerUDB:status_tc\[37]
+Removing Lhs of wire \Frame_Timer:TimerUDB:hwEnable_reg\\D\[263] = \Frame_Timer:TimerUDB:control_7\[15]
+Removing Lhs of wire \Frame_Timer:TimerUDB:capture_out_reg_i\\D\[264] = \Frame_Timer:TimerUDB:capt_fifo_load\[33]
+Removing Lhs of wire \Spi_LED_Chain:BSPIM:so_send_reg\\D\[265] = Net_12[2]
+Removing Lhs of wire \Spi_LED_Chain:BSPIM:mosi_reg\\D\[272] = \Spi_LED_Chain:BSPIM:mosi_pre_reg\[178]
+Removing Lhs of wire \Spi_LED_Chain:BSPIM:dpcounter_one_reg\\D\[274] = \Spi_LED_Chain:BSPIM:load_rx_data\[155]
+Removing Lhs of wire \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\\D\[275] = \Spi_LED_Chain:BSPIM:mosi_from_dp\[168]
 
 ------------------------------------------------------
-Aliased 0 equations, 51 wires.
+Aliased 0 equations, 50 wires.
 ------------------------------------------------------
 
 ----------------------------------------------------------
@@ -344,14 +344,14 @@ CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\wa
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\warp\bin\warp.exe
 Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\LED_Space_Fighter.cyprj -dcpsoc3 LED_Space_Fighter.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 1s.040ms
+Warp synthesis phase: Elapsed time ==> 2s.750ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Saturday, 06 February 2021 21:52:26
+cyp3fit: V4.4.0.80, Family: PSoC3, Started at: Sunday, 28 February 2021 00:47:33
 Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\LED_Space_Fighter.cyprj -d CY8C5888LTI-LP097 LED_Space_Fighter.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.122ms
+Design parsing phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -973,8 +973,7 @@ Design Equations
             clock => Net_10 ,
             status_3 => \Frame_Timer:TimerUDB:status_3\ ,
             status_2 => \Frame_Timer:TimerUDB:status_2\ ,
-            status_0 => \Frame_Timer:TimerUDB:status_tc\ ,
-            interrupt => Net_5 );
+            status_0 => \Frame_Timer:TimerUDB:status_tc\ );
         Properties:
         {
             cy_force_order = 1
@@ -1084,27 +1083,9 @@ Design Equations
     Interrupt listing
     ------------------------------------------------------------
 
-    interrupt: Name =\Spi_LED_Chain:TxInternalInterrupt\
-        PORT MAP (
-            interrupt => Net_88 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-
     interrupt: Name =isr_spi_tx_done
         PORT MAP (
             interrupt => Net_88 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-
-    interrupt: Name =isr_frame
-        PORT MAP (
-            interrupt => Net_5 );
         Properties:
         {
             int_type = "10"
@@ -1124,7 +1105,7 @@ Digital Clocks                :    2 :    6 :    8 : 25.00 %
 Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
-Interrupts                    :    3 :   29 :   32 :  9.38 %
+Interrupts                    :    1 :   31 :   32 :  3.13 %
 IO                            :    5 :   43 :   48 : 10.42 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
@@ -1152,17 +1133,17 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.390ms
-Tech Mapping phase: Elapsed time ==> 0s.649ms
+Technology Mapping: Elapsed time ==> 0s.109ms
+Tech Mapping phase: Elapsed time ==> 0s.218ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
 IO_7@[IOP=(1)][IoId=(7)] : SPI_CLK(0) (fixed)
 IO_6@[IOP=(1)][IoId=(6)] : SPI_DATA(0) (fixed)
-Analog Placement phase: Elapsed time ==> 0s.131ms
+Analog Placement phase: Elapsed time ==> 0s.015ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
-Analog Routing phase: Elapsed time ==> 0s.002ms
+Analog Routing phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Code Generation">
 ============ Analog Final Answer Routes ============
@@ -1177,11 +1158,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.418ms
+Analog Code Generation phase: Elapsed time ==> 0s.421ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 1.2 sec.
+I2076: Total run-time: 1.4 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -1192,27 +1173,27 @@ PLD Packing Summary
 ------------------------------------------------------------
             Resource Type : Used : Free :  Max :  % Used
     ====================================================
-                     PLDs :   12 :   36 :   48 :  25.00%
+                     PLDs :   11 :   37 :   48 :  22.92%
 
 <CYPRESSTAG name="PLD Statistics">
 
         PLD Resource Type :     Average/LAB
     =======================================
                    Inputs :            7.00
-                   Pterms :            4.42
-               Macrocells :            1.67
+                   Pterms :            4.82
+               Macrocells :            1.82
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.036ms
+PLD Packing: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.138ms
+Partitioning: Elapsed time ==> 0s.031ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -1222,7 +1203,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          7 :       8.00 :       2.86
+                 UDB :          7 :       7.14 :       2.86
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -1232,7 +1213,8 @@ Component Placement Details
 UDB [UDB=(0,0)] contents:
 LAB@[UDB=(0,0)][LB=0] #macrocells=1, #inputs=0, #pterms=0
 {
-    [McSlotId=0]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=0]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=__ONE__, Mode=(Combinatorial) @ [UDB=(0,0)][LB=0][MC=1]
         Total # of inputs        : 0
         Total # of product terms : 0
             Clock Enable: True
@@ -1245,15 +1227,189 @@ LAB@[UDB=(0,0)][LB=0] #macrocells=1, #inputs=0, #pterms=0
         {
         }
 
-    [McSlotId=1]: (empty)
     [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
 UDB [UDB=(0,1)] contents:
-LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=9, #pterms=6
+LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=11, #pterms=7
 {
-    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:load_cond\, Mode=(T-Register) @ [UDB=(0,1)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:state_1\, Mode=(D-Register) @ [UDB=(0,1)][LB=0][MC=0]
+        Total # of inputs        : 10
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        !(
+              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              !\Spi_LED_Chain:BSPIM:state_0\
+            + !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\ * !\Spi_LED_Chain:BSPIM:count_4\ * 
+              !\Spi_LED_Chain:BSPIM:count_3\ * !\Spi_LED_Chain:BSPIM:count_2\ * 
+              \Spi_LED_Chain:BSPIM:count_1\ * !\Spi_LED_Chain:BSPIM:count_0\ * 
+              !\Spi_LED_Chain:BSPIM:ld_ident\
+            + !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\ * !\Spi_LED_Chain:BSPIM:count_4\ * 
+              !\Spi_LED_Chain:BSPIM:count_3\ * \Spi_LED_Chain:BSPIM:count_2\ * 
+              \Spi_LED_Chain:BSPIM:count_1\ * !\Spi_LED_Chain:BSPIM:count_0\ * 
+              !\Spi_LED_Chain:BSPIM:tx_status_1\
+            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\
+        );
+        Output = \Spi_LED_Chain:BSPIM:state_1\ (fanout=15)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:ld_ident\, Mode=(T-Register) @ [UDB=(0,1)][LB=0][MC=1]
+        Total # of inputs        : 9
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              !\Spi_LED_Chain:BSPIM:state_0\ * !\Spi_LED_Chain:BSPIM:count_4\ * 
+              !\Spi_LED_Chain:BSPIM:count_3\ * !\Spi_LED_Chain:BSPIM:count_2\ * 
+              !\Spi_LED_Chain:BSPIM:count_1\ * \Spi_LED_Chain:BSPIM:count_0\ * 
+              \Spi_LED_Chain:BSPIM:ld_ident\
+            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              !\Spi_LED_Chain:BSPIM:state_0\ * 
+              !\Spi_LED_Chain:BSPIM:ld_ident\
+        );
+        Output = \Spi_LED_Chain:BSPIM:ld_ident\ (fanout=6)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:rx_status_6\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=3]
+        Total # of inputs        : 6
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
+              !\Spi_LED_Chain:BSPIM:count_2\ * !\Spi_LED_Chain:BSPIM:count_1\ * 
+              \Spi_LED_Chain:BSPIM:count_0\ * 
+              \Spi_LED_Chain:BSPIM:rx_status_4\
+        );
+        Output = \Spi_LED_Chain:BSPIM:rx_status_6\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,1)][LB=1] #macrocells=3, #inputs=10, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:state_0\, Mode=(T-Register) @ [UDB=(0,1)][LB=1][MC=0]
+        Total # of inputs        : 10
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        !(
+              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\
+            + !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:tx_status_1\
+            + !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_0\ * 
+              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
+              !\Spi_LED_Chain:BSPIM:count_2\ * \Spi_LED_Chain:BSPIM:count_1\ * 
+              !\Spi_LED_Chain:BSPIM:count_0\ * 
+              !\Spi_LED_Chain:BSPIM:ld_ident\
+        );
+        Output = \Spi_LED_Chain:BSPIM:state_0\ (fanout=15)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:state_2\, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=2]
+        Total # of inputs        : 10
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\
+            + \Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\
+            + \Spi_LED_Chain:BSPIM:state_1\ * \Spi_LED_Chain:BSPIM:state_0\ * 
+              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
+              !\Spi_LED_Chain:BSPIM:count_2\ * \Spi_LED_Chain:BSPIM:count_1\ * 
+              !\Spi_LED_Chain:BSPIM:count_0\ * 
+              !\Spi_LED_Chain:BSPIM:ld_ident\
+            + \Spi_LED_Chain:BSPIM:state_1\ * \Spi_LED_Chain:BSPIM:state_0\ * 
+              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
+              \Spi_LED_Chain:BSPIM:count_2\ * \Spi_LED_Chain:BSPIM:count_1\ * 
+              !\Spi_LED_Chain:BSPIM:count_0\ * 
+              !\Spi_LED_Chain:BSPIM:tx_status_1\
+        );
+        Output = \Spi_LED_Chain:BSPIM:state_2\ (fanout=15)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=1][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\
+        );
+        Output = \Spi_LED_Chain:BSPIM:tx_status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+statusicell: Name =\Spi_LED_Chain:BSPIM:RxStsReg\
+    PORT MAP (
+        clock => Net_58 ,
+        status_6 => \Spi_LED_Chain:BSPIM:rx_status_6\ ,
+        status_5 => \Spi_LED_Chain:BSPIM:rx_status_5\ ,
+        status_4 => \Spi_LED_Chain:BSPIM:rx_status_4\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "0000000"
+        cy_md_select = "1000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(0,2)] contents:
+LAB@[UDB=(0,2)][LB=0] #macrocells=1, #inputs=3, #pterms=1
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:tx_status_4\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=0][MC=3]
+        Total # of inputs        : 3
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              !\Spi_LED_Chain:BSPIM:state_0\
+        );
+        Output = \Spi_LED_Chain:BSPIM:tx_status_4\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(0,2)][LB=1] #macrocells=2, #inputs=9, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:load_cond\, Mode=(T-Register) @ [UDB=(0,2)][LB=1][MC=0]
         Total # of inputs        : 9
         Total # of product terms : 4
         List of special equations: 
@@ -1283,21 +1439,7 @@ LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=9, #pterms=6
         }
 
     [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:tx_status_4\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=2]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              !\Spi_LED_Chain:BSPIM:state_0\
-        );
-        Output = \Spi_LED_Chain:BSPIM:tx_status_4\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:load_rx_data\, Mode=(Combinatorial) @ [UDB=(0,1)][LB=0][MC=3]
+    [McSlotId=2]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:load_rx_data\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=1][MC=2]
         Total # of inputs        : 5
         Total # of product terms : 1
             Clock Enable: True
@@ -1311,30 +1453,7 @@ LAB@[UDB=(0,1)][LB=0] #macrocells=3, #inputs=9, #pterms=6
         Properties               : 
         {
         }
-}
 
-LAB@[UDB=(0,1)][LB=1] #macrocells=1, #inputs=4, #pterms=3
-{
-    [McSlotId=0]:     MacroCell: Name=Net_74, Mode=(D-Register) @ [UDB=(0,1)][LB=1][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        (
-              \Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              Net_74
-            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_0\
-            + \Spi_LED_Chain:BSPIM:state_1\ * !\Spi_LED_Chain:BSPIM:state_0\
-        );
-        Output = Net_74 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
@@ -1396,198 +1515,29 @@ statusicell: Name =\Spi_LED_Chain:BSPIM:TxStsReg\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(0,2)] contents:
-LAB@[UDB=(0,2)][LB=0] #macrocells=2, #inputs=10, #pterms=6
+UDB [UDB=(0,3)] contents:
+LAB@[UDB=(0,3)][LB=0] #macrocells=1, #inputs=4, #pterms=3
 {
-    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:state_2\, Mode=(D-Register) @ [UDB=(0,2)][LB=0][MC=0]
-        Total # of inputs        : 10
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\
-            + \Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\
-            + \Spi_LED_Chain:BSPIM:state_1\ * \Spi_LED_Chain:BSPIM:state_0\ * 
-              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
-              !\Spi_LED_Chain:BSPIM:count_2\ * \Spi_LED_Chain:BSPIM:count_1\ * 
-              !\Spi_LED_Chain:BSPIM:count_0\ * 
-              !\Spi_LED_Chain:BSPIM:ld_ident\
-            + \Spi_LED_Chain:BSPIM:state_1\ * \Spi_LED_Chain:BSPIM:state_0\ * 
-              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
-              \Spi_LED_Chain:BSPIM:count_2\ * \Spi_LED_Chain:BSPIM:count_1\ * 
-              !\Spi_LED_Chain:BSPIM:count_0\ * 
-              !\Spi_LED_Chain:BSPIM:tx_status_1\
-        );
-        Output = \Spi_LED_Chain:BSPIM:state_2\ (fanout=15)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:ld_ident\, Mode=(T-Register) @ [UDB=(0,2)][LB=0][MC=1]
-        Total # of inputs        : 9
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              !\Spi_LED_Chain:BSPIM:state_0\ * !\Spi_LED_Chain:BSPIM:count_4\ * 
-              !\Spi_LED_Chain:BSPIM:count_3\ * !\Spi_LED_Chain:BSPIM:count_2\ * 
-              !\Spi_LED_Chain:BSPIM:count_1\ * \Spi_LED_Chain:BSPIM:count_0\ * 
-              \Spi_LED_Chain:BSPIM:ld_ident\
-            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              !\Spi_LED_Chain:BSPIM:state_0\ * 
-              !\Spi_LED_Chain:BSPIM:ld_ident\
-        );
-        Output = \Spi_LED_Chain:BSPIM:ld_ident\ (fanout=6)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(0,2)][LB=1] #macrocells=3, #inputs=10, #pterms=7
-{
-    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:state_0\, Mode=(T-Register) @ [UDB=(0,2)][LB=1][MC=0]
-        Total # of inputs        : 10
+    [McSlotId=0]: (empty)
+    [McSlotId=1]:     MacroCell: Name=Net_74, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=1]
+        Total # of inputs        : 4
         Total # of product terms : 3
         List of special equations: 
             Clock  = (Net_58) => Global
             Clock Enable: True
         Main Equation            : 3 pterms
-        !(
-              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\
-            + !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:tx_status_1\
-            + !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_0\ * 
-              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
-              !\Spi_LED_Chain:BSPIM:count_2\ * \Spi_LED_Chain:BSPIM:count_1\ * 
-              !\Spi_LED_Chain:BSPIM:count_0\ * 
-              !\Spi_LED_Chain:BSPIM:ld_ident\
-        );
-        Output = \Spi_LED_Chain:BSPIM:state_0\ (fanout=15)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:state_1\, Mode=(D-Register) @ [UDB=(0,2)][LB=1][MC=2]
-        Total # of inputs        : 10
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        !(
-              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              !\Spi_LED_Chain:BSPIM:state_0\
-            + !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\ * !\Spi_LED_Chain:BSPIM:count_4\ * 
-              !\Spi_LED_Chain:BSPIM:count_3\ * !\Spi_LED_Chain:BSPIM:count_2\ * 
-              \Spi_LED_Chain:BSPIM:count_1\ * !\Spi_LED_Chain:BSPIM:count_0\ * 
-              !\Spi_LED_Chain:BSPIM:ld_ident\
-            + !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\ * !\Spi_LED_Chain:BSPIM:count_4\ * 
-              !\Spi_LED_Chain:BSPIM:count_3\ * \Spi_LED_Chain:BSPIM:count_2\ * 
-              \Spi_LED_Chain:BSPIM:count_1\ * !\Spi_LED_Chain:BSPIM:count_0\ * 
-              !\Spi_LED_Chain:BSPIM:tx_status_1\
-            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\
-        );
-        Output = \Spi_LED_Chain:BSPIM:state_1\ (fanout=15)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:tx_status_0\, Mode=(Combinatorial) @ [UDB=(0,2)][LB=1][MC=3]
-        Total # of inputs        : 3
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
         (
-              \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\
+              \Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              Net_74
+            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_0\
+            + \Spi_LED_Chain:BSPIM:state_1\ * !\Spi_LED_Chain:BSPIM:state_0\
         );
-        Output = \Spi_LED_Chain:BSPIM:tx_status_0\ (fanout=1)
-        Properties               : 
-        {
-        }
-}
-
-UDB [UDB=(0,3)] contents:
-LAB@[UDB=(0,3)][LB=0] #macrocells=2, #inputs=12, #pterms=5
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_hs_reg\, Mode=(D-Register) @ [UDB=(0,3)][LB=0][MC=1]
-        Total # of inputs        : 6
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\ * 
-              \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\
-            + \Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\ * 
-              \Spi_LED_Chain:BSPIM:mosi_from_dp\
-            + !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
-            + !\Spi_LED_Chain:BSPIM:state_0\ * 
-              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
-        );
-        Output = \Spi_LED_Chain:BSPIM:mosi_hs_reg\ (fanout=2)
+        Output = Net_74 (fanout=2)
         Properties               : 
         {
         }
 
-    [McSlotId=2]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:rx_status_6\, Mode=(Combinatorial) @ [UDB=(0,3)][LB=0][MC=2]
-        Total # of inputs        : 6
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              !\Spi_LED_Chain:BSPIM:count_4\ * !\Spi_LED_Chain:BSPIM:count_3\ * 
-              !\Spi_LED_Chain:BSPIM:count_2\ * !\Spi_LED_Chain:BSPIM:count_1\ * 
-              \Spi_LED_Chain:BSPIM:count_0\ * 
-              \Spi_LED_Chain:BSPIM:rx_status_4\
-        );
-        Output = \Spi_LED_Chain:BSPIM:rx_status_6\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(0,3)][LB=1] #macrocells=1, #inputs=1, #pterms=1
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\, Mode=(D-Register) @ [UDB=(0,3)][LB=1][MC=2]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Spi_LED_Chain:BSPIM:mosi_from_dp\
-        );
-        Output = \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ (fanout=1)
-        Properties               : 
-        {
-        }
-
+    [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
@@ -1625,17 +1575,24 @@ datapathcell: Name =\Frame_Timer:TimerUDB:sT16:timerdp:u0\
     Clock Enable: True
     Next in chain : \Frame_Timer:TimerUDB:sT16:timerdp:u1\
 
-statusicell: Name =\Spi_LED_Chain:BSPIM:RxStsReg\
+controlcell: Name =\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
     PORT MAP (
-        clock => Net_58 ,
-        status_6 => \Spi_LED_Chain:BSPIM:rx_status_6\ ,
-        status_5 => \Spi_LED_Chain:BSPIM:rx_status_5\ ,
-        status_4 => \Spi_LED_Chain:BSPIM:rx_status_4\ );
+        clock => Net_10 ,
+        control_7 => \Frame_Timer:TimerUDB:control_7\ ,
+        control_6 => \Frame_Timer:TimerUDB:control_6\ ,
+        control_5 => \Frame_Timer:TimerUDB:control_5\ ,
+        control_4 => \Frame_Timer:TimerUDB:control_4\ ,
+        control_3 => \Frame_Timer:TimerUDB:control_3\ ,
+        control_2 => \Frame_Timer:TimerUDB:control_2\ ,
+        control_1 => \Frame_Timer:TimerUDB:control_1\ ,
+        control_0 => \Frame_Timer:TimerUDB:control_0\ );
     Properties:
     {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
         cy_force_order = 1
-        cy_int_mask = "0000000"
-        cy_md_select = "1000000"
+        cy_init_value = "00000000"
     }
     Clock Polarity: Active High
     Clock Enable: True
@@ -1644,61 +1601,9 @@ UDB [UDB=(0,4)] is empty.
 UDB [UDB=(0,5)] is empty.
 UDB [UDB=(1,0)] is empty.
 UDB [UDB=(1,1)] contents:
-LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=5, #pterms=3
+LAB@[UDB=(1,1)][LB=0] #macrocells=1, #inputs=11, #pterms=8
 {
-    [McSlotId=0]:     MacroCell: Name=Net_73, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=0]
-        Total # of inputs        : 5
-        Total # of product terms : 3
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        (
-              !\Spi_LED_Chain:BSPIM:state_2\ * !Net_113 * 
-              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
-            + \Spi_LED_Chain:BSPIM:state_1\ * !Net_113 * 
-              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
-            + !\Spi_LED_Chain:BSPIM:state_0\ * !Net_113 * 
-              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
-        );
-        Output = Net_73 (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(1,1)][LB=1] #macrocells=1, #inputs=4, #pterms=3
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=Net_113, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 3
-        List of special equations: 
-            Clock  = (Net_58) => Global
-            Clock Enable: True
-        Main Equation            : 3 pterms
-        !(
-              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
-              \Spi_LED_Chain:BSPIM:state_0\
-            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_0\ * 
-              !Net_113
-            + \Spi_LED_Chain:BSPIM:state_1\ * !Net_113
-        );
-        Output = Net_113 (fanout=2)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-UDB [UDB=(1,2)] contents:
-LAB@[UDB=(1,2)][LB=0] #macrocells=1, #inputs=11, #pterms=8
-{
-    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=0][MC=0]
         Total # of inputs        : 11
         Total # of product terms : 8
             Clock Enable: True
@@ -1749,9 +1654,9 @@ LAB@[UDB=(1,2)][LB=0] #macrocells=1, #inputs=11, #pterms=8
     [McSlotId=3]: (empty)
 }
 
-LAB@[UDB=(1,2)][LB=1] #macrocells=2, #inputs=12, #pterms=7
+LAB@[UDB=(1,1)][LB=1] #macrocells=2, #inputs=12, #pterms=7
 {
-    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\, Mode=(Combinatorial) @ [UDB=(1,2)][LB=1][MC=0]
+    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\, Mode=(Combinatorial) @ [UDB=(1,1)][LB=1][MC=0]
         Total # of inputs        : 10
         Total # of product terms : 6
             Clock Enable: True
@@ -1775,7 +1680,7 @@ LAB@[UDB=(1,2)][LB=1] #macrocells=2, #inputs=12, #pterms=7
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_pre_reg\, Mode=(D-Register) @ [UDB=(1,2)][LB=1][MC=1]
+    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_pre_reg\, Mode=(D-Register) @ [UDB=(1,1)][LB=1][MC=1]
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
@@ -1818,24 +1723,13 @@ count7cell: Name =\Spi_LED_Chain:BSPIM:BitCounter\
     Clock Polarity: Active High
     Clock Enable: True
 
-UDB [UDB=(1,3)] contents:
-LAB@[UDB=(1,3)][LB=0] #macrocells=2, #inputs=6, #pterms=4
+UDB [UDB=(1,2)] contents:
+LAB@[UDB=(1,2)][LB=1] #macrocells=1, #inputs=4, #pterms=3
 {
-    [McSlotId=0]:     MacroCell: Name=\Frame_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Frame_Timer:TimerUDB:control_7\ * 
-              \Frame_Timer:TimerUDB:per_zero\
-        );
-        Output = \Frame_Timer:TimerUDB:status_tc\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:cnt_enable\, Mode=(T-Register) @ [UDB=(1,3)][LB=0][MC=1]
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]: (empty)
+    [McSlotId=3]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:cnt_enable\, Mode=(T-Register) @ [UDB=(1,2)][LB=1][MC=3]
         Total # of inputs        : 4
         Total # of product terms : 3
         List of special equations: 
@@ -1854,6 +1748,105 @@ LAB@[UDB=(1,3)][LB=0] #macrocells=2, #inputs=6, #pterms=4
               !\Spi_LED_Chain:BSPIM:cnt_enable\
         );
         Output = \Spi_LED_Chain:BSPIM:cnt_enable\ (fanout=3)
+        Properties               : 
+        {
+        }
+}
+
+UDB [UDB=(1,3)] contents:
+LAB@[UDB=(1,3)][LB=0] #macrocells=3, #inputs=7, #pterms=7
+{
+    [McSlotId=0]:     MacroCell: Name=\Frame_Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Frame_Timer:TimerUDB:control_7\ * 
+              \Frame_Timer:TimerUDB:per_zero\
+        );
+        Output = \Frame_Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=Net_73, Mode=(Combinatorial) @ [UDB=(1,3)][LB=0][MC=1]
+        Total # of inputs        : 5
+        Total # of product terms : 3
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              !\Spi_LED_Chain:BSPIM:state_2\ * !Net_113 * 
+              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
+            + \Spi_LED_Chain:BSPIM:state_1\ * !Net_113 * 
+              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
+            + !\Spi_LED_Chain:BSPIM:state_0\ * !Net_113 * 
+              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
+        );
+        Output = Net_73 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=Net_113, Mode=(D-Register) @ [UDB=(1,3)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        !(
+              !\Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\
+            + \Spi_LED_Chain:BSPIM:state_2\ * !\Spi_LED_Chain:BSPIM:state_0\ * 
+              !Net_113
+            + \Spi_LED_Chain:BSPIM:state_1\ * !Net_113
+        );
+        Output = Net_113 (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]: (empty)
+}
+
+LAB@[UDB=(1,3)][LB=1] #macrocells=2, #inputs=6, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_hs_reg\, Mode=(D-Register) @ [UDB=(1,3)][LB=1][MC=0]
+        Total # of inputs        : 6
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\ * 
+              \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\
+            + \Spi_LED_Chain:BSPIM:state_2\ * \Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:state_0\ * 
+              \Spi_LED_Chain:BSPIM:mosi_from_dp\
+            + !\Spi_LED_Chain:BSPIM:state_1\ * 
+              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
+            + !\Spi_LED_Chain:BSPIM:state_0\ * 
+              \Spi_LED_Chain:BSPIM:mosi_hs_reg\
+        );
+        Output = \Spi_LED_Chain:BSPIM:mosi_hs_reg\ (fanout=2)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\, Mode=(D-Register) @ [UDB=(1,3)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_58) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Spi_LED_Chain:BSPIM:mosi_from_dp\
+        );
+        Output = \Spi_LED_Chain:BSPIM:mosi_from_dp_reg\ (fanout=1)
         Properties               : 
         {
         }
@@ -1904,35 +1897,12 @@ statusicell: Name =\Frame_Timer:TimerUDB:rstSts:stsreg\
         clock => Net_10 ,
         status_3 => \Frame_Timer:TimerUDB:status_3\ ,
         status_2 => \Frame_Timer:TimerUDB:status_2\ ,
-        status_0 => \Frame_Timer:TimerUDB:status_tc\ ,
-        interrupt => Net_5 );
+        status_0 => \Frame_Timer:TimerUDB:status_tc\ );
     Properties:
     {
         cy_force_order = 1
         cy_int_mask = "1111111"
         cy_md_select = "0000011"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-controlcell: Name =\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
-    PORT MAP (
-        clock => Net_10 ,
-        control_7 => \Frame_Timer:TimerUDB:control_7\ ,
-        control_6 => \Frame_Timer:TimerUDB:control_6\ ,
-        control_5 => \Frame_Timer:TimerUDB:control_5\ ,
-        control_4 => \Frame_Timer:TimerUDB:control_4\ ,
-        control_3 => \Frame_Timer:TimerUDB:control_3\ ,
-        control_2 => \Frame_Timer:TimerUDB:control_2\ ,
-        control_1 => \Frame_Timer:TimerUDB:control_1\ ,
-        control_0 => \Frame_Timer:TimerUDB:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
     }
     Clock Polarity: Active High
     Clock Enable: True
@@ -1953,24 +1923,6 @@ UDB [UDB=(3,4)] is empty.
 UDB [UDB=(3,5)] is empty.
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
-    interrupt: Name =\Spi_LED_Chain:TxInternalInterrupt\
-        PORT MAP (
-            interrupt => Net_88 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-  Intr@ [IntrContainer=(0)][IntrId=(1)] 
-    interrupt: Name =isr_frame
-        PORT MAP (
-            interrupt => Net_5 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-  Intr@ [IntrContainer=(0)][IntrId=(2)] 
     interrupt: Name =isr_spi_tx_done
         PORT MAP (
             interrupt => Net_88 );
@@ -2131,33 +2083,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |        Name | Connections
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.080ms
-Digital Placement phase: Elapsed time ==> 2s.076ms
+Digital component placer commit/Report: Elapsed time ==> 0s.046ms
+Digital Placement phase: Elapsed time ==> 1s.921ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.4\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "LED_Space_Fighter_r.vh2" --pcf-path "LED_Space_Fighter.pco" --des-name "LED_Space_Fighter" --dsf-path "LED_Space_Fighter.dsf" --sdc-path "LED_Space_Fighter.sdc" --lib-path "LED_Space_Fighter_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.460ms
+Digital Routing phase: Elapsed time ==> 2s.140ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.571ms
+Bitstream Generation phase: Elapsed time ==> 0s.312ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.124ms
+Bitstream Verification phase: Elapsed time ==> 0s.062ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in LED_Space_Fighter_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.549ms
+Static timing analysis phase: Elapsed time ==> 0s.484ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.007ms
+Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.359ms
+Design database save phase: Elapsed time ==> 0s.234ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 7s.573ms
+cydsfit: Elapsed time ==> 5s.906ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 7s.586ms
-API generation phase: Elapsed time ==> 1s.449ms
-Dependency generation phase: Elapsed time ==> 0s.040ms
-Cleanup phase: Elapsed time ==> 0s.002ms
+Fitter phase: Elapsed time ==> 5s.906ms
+API generation phase: Elapsed time ==> 1s.734ms
+Dependency generation phase: Elapsed time ==> 0s.032ms
+Cleanup phase: Elapsed time ==> 0s.000ms

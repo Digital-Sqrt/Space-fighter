@@ -1,5 +1,5 @@
 -- Project:   LED_Space_Fighter
--- Generated: 02/06/2021 21:52:28
+-- Generated: 02/28/2021 00:47:33
 -- PSoC Creator  4.4
 
 ENTITY LED_Space_Fighter IS
@@ -36,7 +36,6 @@ ARCHITECTURE __DEFAULT__ OF LED_Space_Fighter IS
     SIGNAL Net_113 : bit;
     SIGNAL Net_12 : bit;
     ATTRIBUTE GROUND OF Net_12 : SIGNAL IS true;
-    SIGNAL Net_5 : bit;
     SIGNAL Net_58 : bit;
     ATTRIBUTE udbclken_assigned OF Net_58 : SIGNAL IS "True";
     ATTRIBUTE global_signal OF Net_58 : SIGNAL IS true;
@@ -819,8 +818,7 @@ BEGIN
             status_3 => \Frame_Timer:TimerUDB:status_3\,
             status_2 => \Frame_Timer:TimerUDB:status_2\,
             status_1 => open,
-            status_0 => \Frame_Timer:TimerUDB:status_tc\,
-            interrupt => Net_5);
+            status_0 => \Frame_Timer:TimerUDB:status_tc\);
 
     \Frame_Timer:TimerUDB:sT16:timerdp:u0\:datapathcell
         GENERIC MAP(
@@ -1015,28 +1013,12 @@ BEGIN
             f1_blk_stat_comb => \Spi_LED_Chain:BSPIM:rx_status_4\,
             busclk => ClockBlock_BUS_CLK);
 
-    \Spi_LED_Chain:TxInternalInterrupt\:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_88,
-            clock => ClockBlock_BUS_CLK);
-
     isr_spi_tx_done:interrupt
         GENERIC MAP(
             int_type => "10",
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_88,
-            clock => ClockBlock_BUS_CLK);
-
-    isr_frame:interrupt
-        GENERIC MAP(
-            int_type => "10",
-            is_nmi => 0)
-        PORT MAP(
-            interrupt => Net_5,
             clock => ClockBlock_BUS_CLK);
 
     \Spi_LED_Chain:BSPIM:state_2\:macrocell

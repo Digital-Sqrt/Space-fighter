@@ -38,8 +38,6 @@
   <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\SPI_CLK_aliases.h" value="HEADER;;;;;SPI_CLK" />
   <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\SPI_CLK.c" value="SOURCE_C;CortexM3;;;;SPI_CLK" />
   <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\SPI_CLK.h" value="HEADER;;;;;SPI_CLK" />
-  <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\isr_frame.c" value="SOURCE_C;CortexM3;;;;isr_frame" />
-  <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\isr_frame.h" value="HEADER;;;;;isr_frame" />
   <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\cy_em_eeprom.c" value="SOURCE_C;CortexM3;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\cy_em_eeprom.h" value="HEADER;;;;;Em_EEPROM_Dynamic" />
   <file name="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\codegentemp\cm3gcc.ld" value="LINKER_SCRIPT;;;b98f980c-3bd1-4fc7-a887-c56a20a46fdd;;cy_boot" />

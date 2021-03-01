@@ -1,4 +1,14 @@
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/CortexM3/ARM_GCC_541/Debug/DOT_STAR.o : C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.c C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.h 
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/CortexM3/ARM_GCC_541/Debug/SPI.o : C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_frame.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_spi_tx_done.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/SPI.c C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/SPI.h 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain.h : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyPm.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice.h : 
 
@@ -8,19 +18,19 @@ C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cyd
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cytypes.h : 
 
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.c : 
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_frame.h : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_spi_tx_done.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.h : 
 
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Frame_CLK.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Frame_Timer.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/I2C_CLK.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_CLK.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_CLK_aliases.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_DATA.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_DATA_aliases.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain_PVT.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_frame.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_spi_tx_done.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/project.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/main.c 
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/SPI.c : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/SPI.h : 
+
+C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Frame_CLK.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Frame_Timer.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/I2C_CLK.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_CLK.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_CLK_aliases.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_DATA.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_DATA_aliases.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain_PVT.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_spi_tx_done.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/project.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/DOT_STAR.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/SPI.h C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/main.c 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyDmac.h : 
-
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyFlash.h : 
-
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CyLib.h : 
-
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/CySpc.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Frame_CLK.h : 
 
@@ -36,8 +46,6 @@ C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cyd
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/SPI_DATA_aliases.h : 
 
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain.h : 
-
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/Spi_LED_Chain_PVT.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
@@ -50,8 +58,6 @@ C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cyd
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
 
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyPm.h : 
-
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
@@ -59,10 +65,6 @@ C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cyd
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/cypins.h : 
-
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_frame.h : 
-
-C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/isr_spi_tx_done.h : 
 
 C:/Users/Digital-Sqrt/Documents/Git_Hub/Space-fighter/Code/LED_Space_Fighter.cydsn/Generated_Source/PSoC5/project.h : 
 

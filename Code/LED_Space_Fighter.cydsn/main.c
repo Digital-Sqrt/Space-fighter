@@ -12,6 +12,7 @@
 #include "project.h"
 #include "cytypes.h"
 #include "DOT_STAR.h"
+#include "SPI.h"
 
 int main(void)
 {
@@ -19,13 +20,14 @@ int main(void)
       
     Frame_Timer_Init();
     Frame_Timer_Enable();
-    isr_frame_Stop();
     
-    Spi_LED_Chain_Init();
-    Spi_LED_Chain_Start();
-    Spi_LED_Chain_Enable();        
+    Spi_LED_Chain_Start();       
     Spi_LED_Chain_EnableTxInt();
-    isr_spi_tx_done_Start();
+    isr_spi_tx_done_Disable();
+    Spi_LED_Chain_ClearRxBuffer();
+    
+    
+    
 
     /* Place your initialization/startup code here (e.g. MyInst_Start()) */
     for(;;)

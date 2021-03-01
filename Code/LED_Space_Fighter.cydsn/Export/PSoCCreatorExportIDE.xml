@@ -38,8 +38,10 @@
         <Files Root="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn">
           <File BuildType="BUILD" Toolchain="">main.c</File>
           <File BuildType="BUILD" Toolchain="">DOT_STAR.c</File>
+          <File BuildType="BUILD" Toolchain="">SPI.c</File>
           <File BuildType="BUILD" Toolchain="">cyapicallbacks.h</File>
           <File BuildType="BUILD" Toolchain="">DOT_STAR.h</File>
+          <File BuildType="BUILD" Toolchain="">SPI.h</File>
         </Files>
       </Folder>
       <Folder BuildType="STRICT" Path="C:\Users\Digital-Sqrt\Documents\Git_Hub\Space-fighter\Code\LED_Space_Fighter.cydsn\Generated_Source\PSoC5">
@@ -80,8 +82,6 @@
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_CLK_aliases.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_CLK.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\SPI_CLK.h</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_frame.c</File>
-          <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\isr_frame.h</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.c</File>
           <File BuildType="BUILD" Toolchain="">Generated_Source\PSoC5\cy_em_eeprom.h</File>
           <File BuildType="BUILD" Toolchain="ARM GCC Generic">Generated_Source\PSoC5\cm3gcc.ld</File>

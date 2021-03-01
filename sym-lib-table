@@ -1,3 +1,4 @@
 (sym_lib_table
   (lib (name MyComp)(type Legacy)(uri ${KIPRJMOD}/Componets/MyComp.lib)(options "")(descr ""))
+  (lib (name MyLibrary)(type Legacy)(uri C:/Users/Digital-Sqrt/Documents/Git_Hub/CAN-IO/MyLibrary.lib)(options "")(descr ""))
 )

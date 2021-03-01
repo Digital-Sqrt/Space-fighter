@@ -165,6 +165,8 @@ CY_ISR(isr_spi_tx_done_Interrupt)
 
     /*  Place your Interrupt code here. */
     /* `#START isr_spi_tx_done_Interrupt` */
+    
+    SpiSendNextByte();   
 
     /* `#END` */
 }

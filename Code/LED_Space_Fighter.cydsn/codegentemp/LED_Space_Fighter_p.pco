@@ -1,37 +1,35 @@
 dont_use_io iocell 1 0
 dont_use_io iocell 1 1
 dont_use_io iocell 1 3
-set_location "\Frame_Timer:TimerUDB:sT16:timerdp:u1\" datapathcell 1 3 2 
-set_location "\Spi_LED_Chain:BSPIM:tx_status_4\" macrocell 0 1 0 2
+set_location "\Spi_LED_Chain:BSPIM:tx_status_4\" macrocell 0 2 0 3
 set_location "\Frame_Timer:TimerUDB:status_tc\" macrocell 1 3 0 0
-set_location "\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\" macrocell 1 2 0 0
-set_location "\Spi_LED_Chain:BSPIM:rx_status_6\" macrocell 0 3 0 2
-set_location "\Spi_LED_Chain:BSPIM:mosi_pre_reg\" macrocell 1 2 1 1
-set_location "\Spi_LED_Chain:BSPIM:RxStsReg\" statusicell 0 3 4 
-set_location "\Frame_Timer:TimerUDB:rstSts:stsreg\" statusicell 1 3 4 
-set_location "\Spi_LED_Chain:BSPIM:sR8:Dp:u0\" datapathcell 0 1 2 
-set_location "\Spi_LED_Chain:BSPIM:mosi_hs_reg\" macrocell 0 3 0 1
-set_location "\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\" macrocell 0 3 1 2
-set_location "\Spi_LED_Chain:BSPIM:state_0\" macrocell 0 2 1 0
-set_location "\Spi_LED_Chain:BSPIM:state_2\" macrocell 0 2 0 0
-set_location "\Spi_LED_Chain:BSPIM:tx_status_0\" macrocell 0 2 1 3
-set_location "\Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\" macrocell 1 2 1 0
-set_location "\Spi_LED_Chain:BSPIM:ld_ident\" macrocell 0 2 0 1
-set_location "\Spi_LED_Chain:BSPIM:BitCounter\" count7cell 1 2 7 
-set_location "\Spi_LED_Chain:BSPIM:load_cond\" macrocell 0 1 0 0
+set_location "\Spi_LED_Chain:BSPIM:mosi_pre_reg_split\" macrocell 1 1 0 0
+set_location "\Spi_LED_Chain:BSPIM:rx_status_6\" macrocell 0 1 0 3
+set_location "\Spi_LED_Chain:BSPIM:mosi_pre_reg\" macrocell 1 1 1 1
+set_location "\Spi_LED_Chain:BSPIM:RxStsReg\" statusicell 0 1 4 
+set_location "\Spi_LED_Chain:BSPIM:sR8:Dp:u0\" datapathcell 0 2 2 
 set_location "\Frame_Timer:TimerUDB:sT16:timerdp:u0\" datapathcell 0 3 2 
-set_location "\Spi_LED_Chain:BSPIM:state_1\" macrocell 0 2 1 2
-set_location "\Spi_LED_Chain:BSPIM:load_rx_data\" macrocell 0 1 0 3
-set_location "Net_113" macrocell 1 1 1 1
-set_location "Net_74" macrocell 0 1 1 0
-set_location "__ONE__" macrocell 0 0 0 0
-set_location "\Spi_LED_Chain:BSPIM:cnt_enable\" macrocell 1 3 0 1
-set_location "Net_73" macrocell 1 1 0 0
-set_location "\Spi_LED_Chain:BSPIM:TxStsReg\" statusicell 0 1 4 
-set_location "\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 1 3 6 
-set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "\Spi_LED_Chain:BSPIM:TxStsReg\" statusicell 0 2 4 
+set_location "\Frame_Timer:TimerUDB:rstSts:stsreg\" statusicell 1 3 4 
+set_location "\Spi_LED_Chain:BSPIM:mosi_hs_reg\" macrocell 1 3 1 0
+set_location "\Spi_LED_Chain:BSPIM:mosi_from_dp_reg\" macrocell 1 3 1 1
+set_location "\Spi_LED_Chain:BSPIM:state_0\" macrocell 0 1 1 0
+set_location "\Spi_LED_Chain:BSPIM:state_2\" macrocell 0 1 1 2
+set_location "\Spi_LED_Chain:BSPIM:tx_status_0\" macrocell 0 1 1 3
+set_location "\Spi_LED_Chain:BSPIM:mosi_pre_reg_split_1\" macrocell 1 1 1 0
+set_location "\Spi_LED_Chain:BSPIM:ld_ident\" macrocell 0 1 0 1
+set_location "\Spi_LED_Chain:BSPIM:BitCounter\" count7cell 1 1 7 
+set_location "\Spi_LED_Chain:BSPIM:load_cond\" macrocell 0 2 1 0
+set_location "\Spi_LED_Chain:BSPIM:state_1\" macrocell 0 1 0 0
+set_location "\Spi_LED_Chain:BSPIM:load_rx_data\" macrocell 0 2 1 2
+set_location "Net_113" macrocell 1 3 0 2
+set_location "\Frame_Timer:TimerUDB:sT16:timerdp:u1\" datapathcell 1 3 2 
+set_location "Net_74" macrocell 0 3 0 1
+set_location "__ONE__" macrocell 0 0 0 1
+set_location "\Spi_LED_Chain:BSPIM:cnt_enable\" macrocell 1 2 1 3
+set_location "Net_73" macrocell 1 3 0 1
+set_location "\Frame_Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\" controlcell 0 3 6 
 set_io "SPI_CLK(0)" iocell 1 7
-set_location "isr_frame" interrupt -1 -1 1
-set_location "\Spi_LED_Chain:TxInternalInterrupt\" interrupt -1 -1 0
-set_location "isr_spi_tx_done" interrupt -1 -1 2
+set_location "ClockBlock" clockblockcell -1 -1 0
+set_location "isr_spi_tx_done" interrupt -1 -1 0
 set_io "SPI_DATA(0)" iocell 1 6

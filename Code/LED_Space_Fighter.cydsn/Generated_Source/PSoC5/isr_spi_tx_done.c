@@ -20,6 +20,7 @@
 #include <CyLib.h>
 #include <isr_spi_tx_done.h>
 #include "cyapicallbacks.h"
+#include "SPI.h"
 
 #if !defined(isr_spi_tx_done__REMOVED) /* Check for removal by optimization */
 
@@ -165,6 +166,9 @@ CY_ISR(isr_spi_tx_done_Interrupt)
 
     /*  Place your Interrupt code here. */
     /* `#START isr_spi_tx_done_Interrupt` */
+    
+    SpiSendNextByte();
+    isr_spi_tx_done_ClearPending();
 
     /* `#END` */
 }

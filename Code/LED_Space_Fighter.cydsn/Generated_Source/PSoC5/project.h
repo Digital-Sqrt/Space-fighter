@@ -29,7 +29,6 @@
 #include "isr_spi_tx_done.h"
 #include "SPI_CLK_aliases.h"
 #include "SPI_CLK.h"
-#include "isr_frame.h"
 #include "cy_em_eeprom.h"
 #include "core_cm3_psoc5.h"
 #include "CyDmac.h"
